@@ -53,6 +53,6 @@ python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/i
 
 未來新書可以把每個章節連到固定 GitHub URL。正式 repo：
 
-https://github.com/twhsi/yonghsi-agent-skills
+https://github.com/twhsi/skills
 
 書籍用連結整理在 [`docs/book-links.md`](docs/book-links.md)。

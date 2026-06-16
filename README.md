@@ -1,6 +1,12 @@
 # 永錫 Agent Skill 庫
 
-這個資料夾整理五個已成熟、可分享、可放進 GitHub，也適合在新書中連結引用的 Codex Skills。
+這個資料夾整理已成熟、可分享、可放進 GitHub，也適合在新書中連結引用的 Codex Skills。
+
+## Hermes HyperCard Loop
+
+![Hermes HyperCard Loop](assets/hermes-four-axis-nonoverlap.svg)
+
+這張圖說明目前核心技能在 Hermes Loop 中的位置：時間管理、卡片盒、Skill tree 與 Agent 四條軸如何交會。
 
 ## Core Skills
 
@@ -15,7 +21,7 @@
 ## Repo Layout
 
 ```text
-skills/      五個正式 Skills
+skills/      正式 Skills
 docs/        GitHub、安裝、書籍連結說明
 examples/    未來放每個 Skill 的輸入與輸出範例
 archive/     舊版或暫不公開的 Skill 草稿

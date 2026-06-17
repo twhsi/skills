@@ -7,6 +7,7 @@
 ```bash
 cp -R skills/personal-athlete-81-grid ~/.codex/skills/
 cp -R skills/project-note-json-to-epub ~/.codex/skills/
+cp -R skills/epub-hypercard-obsidian ~/.codex/skills/
 cp -R skills/obsidian-graph-view ~/.codex/skills/
 cp -R skills/imandalart ~/.codex/skills/
 cp -R skills/markdown-nine-grid-clipboard ~/.codex/skills/
@@ -21,6 +22,7 @@ cp -R skills/pdca ~/.codex/skills/
 ```bash
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/personal-athlete-81-grid
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/project-note-json-to-epub
+python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/epub-hypercard-obsidian
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/obsidian-graph-view
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/imandalart
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/markdown-nine-grid-clipboard
@@ -33,6 +35,7 @@ python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/p
 ```text
 Use $personal-athlete-81-grid to create an Ohtani-style 81 grid for my sport goal.
 Use $project-note-json-to-epub to convert this project-note JSON into an EPUB.
+Use $epub-hypercard-obsidian to convert this EPUB into an Obsidian HyperCard folder with verified links and a portable zip.
 Use $obsidian-graph-view to render a weighted graph view from this keyword index.
 Use $imandalart to turn this theme into a nine-grid card.
 Use $markdown-nine-grid-clipboard to turn this iMandalArt into an Obsidian Markdown nine-grid table.

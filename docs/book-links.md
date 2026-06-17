@@ -8,6 +8,7 @@ Use this file as the link registry for the new book.
 |---|---|
 | 個人運動員81宮格 | `https://github.com/twhsi/skills/tree/main/skills/personal-athlete-81-grid` |
 | JSON 到 EPUB | `https://github.com/twhsi/skills/tree/main/skills/project-note-json-to-epub` |
+| EPUB 到 HyperCard / Obsidian | `https://github.com/twhsi/skills/tree/main/skills/epub-hypercard-obsidian` |
 | Graph view | `https://github.com/twhsi/skills/tree/main/skills/obsidian-graph-view` |
 | 九宮格 / iMandalArt | `https://github.com/twhsi/skills/tree/main/skills/imandalart` |
 | Markdown / Obsidian 九宮格 | `https://github.com/twhsi/skills/tree/main/skills/markdown-nine-grid-clipboard` |

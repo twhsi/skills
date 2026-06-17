@@ -12,6 +12,7 @@ Use this file as the link registry for the new book.
 | 九宮格 / iMandalArt | `https://github.com/twhsi/skills/tree/main/skills/imandalart` |
 | Markdown / Obsidian 九宮格 | `https://github.com/twhsi/skills/tree/main/skills/markdown-nine-grid-clipboard` |
 | FIRE 原則 | `https://github.com/twhsi/skills/tree/main/skills/fire-analysis-card` |
+| PDCA / CAPD 方位卡 | `https://github.com/twhsi/skills/tree/main/skills/pdca` |
 
 ## Suggested Chapter Text
 

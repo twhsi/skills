@@ -18,6 +18,7 @@
 | 九宮格 / iMandalArt | 產生九宮格、曼陀羅卡、Hermes/Discord 文字卡 | [`skills/imandalart/`](skills/imandalart/) |
 | Markdown / Obsidian 九宮格 | 把素材、iMandalArt 或八領域草稿轉成可在 Obsidian、AIDA、GitHub 渲染的 Markdown 九宮表格 | [`skills/markdown-nine-grid-clipboard/`](skills/markdown-nine-grid-clipboard/) |
 | FIRE 原則 | 以 Fact、Index、Relation、Encyclopedia 分析中文文章 | [`skills/fire-analysis-card/`](skills/fire-analysis-card/) |
+| PDCA / CAPD 方位卡 | 把問題、事件、決策取捨轉成中文方位羅盤式 PDCA/CAPD 文字圖卡 | [`skills/pdca/`](skills/pdca/) |
 
 ## Repo Layout
 
@@ -39,6 +40,7 @@ cp -R skills/obsidian-graph-view ~/.codex/skills/
 cp -R skills/imandalart ~/.codex/skills/
 cp -R skills/markdown-nine-grid-clipboard ~/.codex/skills/
 cp -R skills/fire-analysis-card ~/.codex/skills/
+cp -R skills/pdca ~/.codex/skills/
 ```
 
 更多說明見 [`docs/install.md`](docs/install.md)。

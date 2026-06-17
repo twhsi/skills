@@ -54,6 +54,26 @@ def text_content(el: ET.Element) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
+def visible_text_content(el: ET.Element, skip_classes: set[str] | None = None) -> str:
+    skip_classes = skip_classes or {"keyword-backlink", "page", "count"}
+    pieces: list[str] = []
+
+    def walk(node: ET.Element) -> None:
+        if class_tokens(node) & skip_classes:
+            if node.tail:
+                pieces.append(node.tail)
+            return
+        if node.text:
+            pieces.append(node.text)
+        for child in list(node):
+            walk(child)
+        if node.tail:
+            pieces.append(node.tail)
+
+    walk(el)
+    return re.sub(r"\s+", " ", "".join(pieces)).strip()
+
+
 def markdown_escape_cell(text: str) -> str:
     return escape_pipes(text).strip()
 
@@ -123,13 +143,15 @@ def parse_epub(epub_path: Path) -> tuple[str, list[Card], list[Keyword], dict[st
                 keywords = parse_keywords(root)
                 continue
 
-            article = find_first(root, "article")
-            if article is not None:
-                cards.append(parse_card(article, path))
+            card_containers = find_card_containers(root)
+            if card_containers:
+                for card_container in card_containers:
+                    cards.append(parse_card(card_container, path))
                 continue
 
-            if not directory_meta:
-                directory_meta = parse_directory_meta(root)
+            page_meta = parse_directory_meta(root)
+            if page_meta and (not directory_meta or is_directory_page(root)):
+                directory_meta = page_meta
 
         return book_title, cards, keywords, directory_meta
 
@@ -145,22 +167,56 @@ def children_named(el: ET.Element, name: str) -> list[ET.Element]:
     return [child for child in list(el) if local_name(child.tag) == name]
 
 
+def find_card_containers(root: ET.Element) -> list[ET.Element]:
+    articles = [el for el in root.iter() if local_name(el.tag) == "article"]
+    if articles:
+        return articles
+    return [
+        el
+        for el in root.iter()
+        if local_name(el.tag) == "section" and {"chunk", "card"} & class_tokens(el)
+    ]
+
+
 def is_index_page(root: ET.Element) -> bool:
     for el in root.iter():
-        if "index-card" in class_tokens(el):
+        if {"index-card", "index-list"} & class_tokens(el):
             return True
     h1 = find_first(root, "h1")
     return h1 is not None and "索引" in text_content(h1)
 
 
+def is_directory_page(root: ET.Element) -> bool:
+    for el in root.iter():
+        if "directory-card" in class_tokens(el):
+            return True
+    return False
+
+
 def parse_card(article: ET.Element, source: str) -> Card:
-    h1 = find_first(article, "h1")
-    title = text_content(h1) if h1 is not None else Path(source).stem
+    heading = find_first(article, "h1")
+    if heading is None:
+        heading = find_first(article, "h2")
+    heading_text = visible_text_content(heading) if heading is not None else Path(source).stem
+    title = heading_text
 
     code = ""
     char_count = ""
     body: list[str] = []
     keywords: list[str] = []
+
+    if heading is not None:
+        for child in heading.iter():
+            if local_name(child.tag) == "span" and "count" in class_tokens(child):
+                count_match = re.search(r"(\d+)", text_content(child))
+                if count_match:
+                    char_count = count_match.group(1)
+        title = re.sub(r"\s*P\d+\s*$", "", title)
+        title = re.sub(r"\s*中文字數\s*\d+\s*$", "", title)
+        title_match = re.match(r"(\d+(?:\.\d+)*)\s+(.+)$", title)
+        if title_match:
+            code, title = title_match.groups()
+            title = title.strip()
 
     for child in article.iter():
         if local_name(child.tag) == "p" and "code" in class_tokens(child):
@@ -169,15 +225,14 @@ def parse_card(article: ET.Element, source: str) -> Card:
             if match:
                 code = match.group(1).strip()
                 char_count = (match.group(2) or "").replace("字", "").strip()
-        elif local_name(child.tag) == "span" and "keyword-marker" in class_tokens(child):
-            raw = text_content(child)
-            keyword = re.sub(r"\s+K\d+.*$", "", raw).strip()
+        elif local_name(child.tag) == "span" and {"keyword-marker", "indexed-keyword"} & class_tokens(child):
+            keyword = visible_text_content(child).strip()
             if keyword and keyword not in keywords:
                 keywords.append(keyword)
 
     for child in children_named(article, "p"):
-        if "code" not in class_tokens(child):
-            text = text_content(child)
+        if not ({"code", "backlink-strip"} & class_tokens(child)):
+            text = visible_text_content(child)
             if text:
                 body.append(text)
 
@@ -205,6 +260,29 @@ def parse_keywords(root: ET.Element) -> list[Keyword]:
                 if label:
                     targets.append(label)
         keywords.append(Keyword(kid=kid, keyword=keyword.strip(), weight=weight or "", targets=targets))
+    if keywords:
+        return keywords
+
+    for dl in root.iter():
+        if local_name(dl.tag) != "dl" or "index-list" not in class_tokens(dl):
+            continue
+        current: Keyword | None = None
+        for child in list(dl):
+            if local_name(child.tag) == "dt":
+                heading = text_content(child)
+                match = re.match(r"(K\d+)\s+(.+?)(?:\s+權重\s+(\d+))?$", heading)
+                if not match:
+                    current = None
+                    continue
+                kid, keyword, weight = match.groups()
+                current = Keyword(kid=kid, keyword=keyword.strip(), weight=weight or "")
+                keywords.append(current)
+            elif local_name(child.tag) == "dd" and current is not None:
+                for link in child.iter():
+                    if local_name(link.tag) == "a":
+                        label = text_content(link)
+                        if label:
+                            current.targets.append(label)
     return keywords
 
 
@@ -490,7 +568,7 @@ def main() -> int:
 
     zip_path = None
     if args.zip:
-        zip_path = out_dir.with_suffix(".zip")
+        zip_path = Path(f"{out_dir}.zip")
         write_zip(out_dir, zip_path)
 
     print(f"title: {book_title}")

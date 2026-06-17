@@ -24,9 +24,47 @@ def count_cjk_chars(value):
     return sum(1 for char in value if "CJK" in unicodedata.name(char, ""))
 
 
+def is_cjk(char):
+    return "CJK" in unicodedata.name(char, "")
+
+
+def cjk_count_until(value, end_index):
+    return count_cjk_chars(value[:end_index])
+
+
+def choose_split_index(value, max_cjk):
+    candidates = []
+    cjk_seen = 0
+    soft_break_chars = set(" 熱冷、，,：:/／")
+    soft_break_terms = ["風險", "能力", "流程", "主場", "核心", "痛點", "訊號"]
+
+    for index, char in enumerate(value, start=1):
+        if is_cjk(char):
+            cjk_seen += 1
+        if 2 <= cjk_seen <= max_cjk and index < len(value) and char in soft_break_chars:
+            candidates.append(index)
+
+    for term in soft_break_terms:
+        start = value.find(term)
+        if start == -1:
+            continue
+        end = start + len(term)
+        cjk_total = cjk_count_until(value, end)
+        if 2 <= cjk_total <= max_cjk and end < len(value):
+            candidates.append(end)
+
+    return max(candidates) if candidates else None
+
+
 def split_by_cjk_count(value, max_cjk):
     if count_cjk_chars(value) <= max_cjk:
         return [value]
+
+    split_index = choose_split_index(value, max_cjk)
+    if split_index:
+        first = value[:split_index].strip()
+        second = value[split_index:].strip()
+        return [part for part in [first, second] if part]
 
     current = []
     current_cjk = 0

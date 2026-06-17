@@ -15,6 +15,7 @@
 | 個人運動員81宮格 | 參考大谷翔平 81 宮格，產生可編輯 JSON 與大谷風格 SVG 的個人運動員訓練圖 | [`skills/personal-athlete-81-grid/`](skills/personal-athlete-81-grid/) |
 | 自動魯曼編號機 | 為書稿與卡片盒分配魯曼式編號，清理公開案例 catalog，並附 EPUB 使用手冊 | [`skills/auto-luhmann-numberer/`](skills/auto-luhmann-numberer/) |
 | JSON 到 EPUB | 把結構化專案筆記 JSON 轉成可驗證的 EPUB | [`skills/project-note-json-to-epub/`](skills/project-note-json-to-epub/) |
+| EPUB 到 HyperCard / Obsidian | 把 EPUB 卡片書轉成可跳轉的 Obsidian HyperCard Markdown 資料夾與 Zip | [`skills/epub-hypercard-obsidian/`](skills/epub-hypercard-obsidian/) |
 | Graph view | 從 JSON、索引、TOC、卡片資料產生 Obsidian 風格關係圖 | [`skills/obsidian-graph-view/`](skills/obsidian-graph-view/) |
 | 九宮格 / iMandalArt | 產生九宮格、曼陀羅卡、Hermes/Discord 文字卡 | [`skills/imandalart/`](skills/imandalart/) |
 | Markdown / Obsidian 九宮格 | 把素材、iMandalArt 或八領域草稿轉成可在 Obsidian、AIDA、GitHub 渲染的 Markdown 九宮表格 | [`skills/markdown-nine-grid-clipboard/`](skills/markdown-nine-grid-clipboard/) |
@@ -38,6 +39,7 @@ archive/     舊版或暫不公開的 Skill 草稿
 cp -R skills/personal-athlete-81-grid ~/.codex/skills/
 cp -R skills/auto-luhmann-numberer ~/.codex/skills/
 cp -R skills/project-note-json-to-epub ~/.codex/skills/
+cp -R skills/epub-hypercard-obsidian ~/.codex/skills/
 cp -R skills/obsidian-graph-view ~/.codex/skills/
 cp -R skills/imandalart ~/.codex/skills/
 cp -R skills/markdown-nine-grid-clipboard ~/.codex/skills/

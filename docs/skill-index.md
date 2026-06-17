@@ -18,6 +18,12 @@
 - Main file: [`../skills/project-note-json-to-epub/SKILL.md`](../skills/project-note-json-to-epub/SKILL.md)
 - Current resources: `agents/openai.yaml`
 
+## epub-hypercard-obsidian
+
+- Purpose: Convert EPUB card books into Obsidian-ready HyperCard Markdown folders and portable zip files.
+- Main file: [`../skills/epub-hypercard-obsidian/SKILL.md`](../skills/epub-hypercard-obsidian/SKILL.md)
+- Current resources: `scripts/epub_to_hypercard_obsidian.py`, `assets/hypercard-card-template.md`, `assets/hypercard-folder-layout.txt`, `agents/openai.yaml`
+
 ## obsidian-graph-view
 
 - Purpose: Render Obsidian-style weighted graph views from node-link, book, TOC, keyword, or card data.

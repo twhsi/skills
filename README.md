@@ -2,6 +2,18 @@
 
 這個資料夾整理已成熟、可分享、可放進 GitHub，也適合在新書中連結引用的 Codex Skills。
 
+## 今日首頁：今日的日計畫
+
+[`今日的日計畫`](skills/todays-daily-plan/) 是新的正式 Skill：把口語輸入、青蛙標記、日計劃、九宮、時段與日記，安全寫入 Obsidian Mandala Grid 的年度日計畫 Markdown。
+
+快速說法：
+
+```text
+Use $todays-daily-plan 今日的日計畫，上午羽球，下午三點林君，日記 Miru 來訪，狀況不是很好，加油。
+```
+
+教學見 [`docs/todays-daily-plan.md`](docs/todays-daily-plan.md)。
+
 ## Hermes HyperCard Loop
 
 ![Hermes HyperCard Loop](assets/hermes-four-axis-nonoverlap.svg)
@@ -12,6 +24,7 @@
 
 | Skill | 用途 | 入口 |
 |---|---|---|
+| 今日的日計畫 | 用青蛙口語把今天的日計劃寫入 Obsidian Mandala Grid 九宮時段與日記 | [`skills/todays-daily-plan/`](skills/todays-daily-plan/) |
 | 個人運動員81宮格 | 參考大谷翔平 81 宮格，產生可編輯 JSON 與大谷風格 SVG 的個人運動員訓練圖 | [`skills/personal-athlete-81-grid/`](skills/personal-athlete-81-grid/) |
 | 自動魯曼編號機 | 為書稿與卡片盒分配魯曼式編號，清理公開案例 catalog，並附 EPUB 使用手冊 | [`skills/auto-luhmann-numberer/`](skills/auto-luhmann-numberer/) |
 | JSON 到 EPUB | 把結構化專案筆記 JSON 轉成可驗證的 EPUB | [`skills/project-note-json-to-epub/`](skills/project-note-json-to-epub/) |
@@ -35,6 +48,7 @@ archive/     舊版或暫不公開的 Skill 草稿
 把需要的 Skill 複製到 Codex skills 目錄：
 
 ```bash
+cp -R skills/todays-daily-plan ~/.codex/skills/
 cp -R skills/personal-athlete-81-grid ~/.codex/skills/
 cp -R skills/auto-luhmann-numberer ~/.codex/skills/
 cp -R skills/project-note-json-to-epub ~/.codex/skills/

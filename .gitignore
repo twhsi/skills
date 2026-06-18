@@ -1,2 +1,4 @@
 .DS_Store
 /book-companion-skill/
+__pycache__/
+*.pyc

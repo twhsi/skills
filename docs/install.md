@@ -5,6 +5,7 @@
 從 repo 根目錄執行：
 
 ```bash
+cp -R skills/todays-daily-plan ~/.codex/skills/
 cp -R skills/personal-athlete-81-grid ~/.codex/skills/
 cp -R skills/auto-luhmann-numberer ~/.codex/skills/
 cp -R skills/project-note-json-to-epub ~/.codex/skills/
@@ -20,6 +21,7 @@ cp -R skills/pdca ~/.codex/skills/
 ## Validate
 
 ```bash
+python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/todays-daily-plan
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/personal-athlete-81-grid
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/auto-luhmann-numberer
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/project-note-json-to-epub
@@ -33,6 +35,7 @@ python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/p
 ## Trigger Examples
 
 ```text
+Use $todays-daily-plan 今日的日計畫，上午羽球，下午三點林君，日記今天完成正式 Skill。
 Use $personal-athlete-81-grid to create an Ohtani-style 81 grid for my sport goal.
 Use $auto-luhmann-numberer to scan this folder and assign Luhmann-style book/card numbers.
 Use $project-note-json-to-epub to convert this project-note JSON into an EPUB.

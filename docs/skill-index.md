@@ -1,5 +1,12 @@
 # Skill Index
 
+## todays-daily-plan
+
+- Purpose: Write spoken daily-plan notes into today's Obsidian Mandala Grid nine-grid time blocks and diary.
+- Main file: [`../skills/todays-daily-plan/SKILL.md`](../skills/todays-daily-plan/SKILL.md)
+- Current resources: `scripts/update_today_plan.py`, `references/mandala-grid-day-plan.md`, `agents/openai.yaml`
+- Keywords: 青蛙, 日計劃, 日計畫, 九宮, 時段, 日記, Mandala Grid.
+
 ## personal-athlete-81-grid
 
 - Purpose: Create Ohtani-style editable 81-cell MandalArt training grids for personal athletes.

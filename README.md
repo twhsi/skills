@@ -2,6 +2,27 @@
 
 用 Desktop 概念幫助知識工作者：**Agent 高效率，人腦慢生活**。
 
+## Featured Skill：今日的日計畫
+
+[`今日的日計畫`](skills/todays-daily-plan/) 是這個 repo 目前主打的正式 Skill。它專門服務 Obsidian 的 Mandala Grid 日計畫檔：當你用口語說「上午羽球」「下午三點林君」「晚上合唱」「補今天日記」時，Codex 會把內容分配到今天的九宮時段，並安全追加到正確的 `<!--section: N.x-->` 區塊。
+
+這個 Skill 的關鍵字是：`青蛙`、`日計劃`、`日計畫`、`九宮`、`時段`、`日記`、`Mandala Grid`。它特別適合每天早上或晚上用嘴巴整理一天，不需要手動在 Markdown 裡找今天的 section。
+
+它會做三件事：
+
+- 找到今天在年度日計畫中的 section，例如 `2026-06-18` 是 `169`。
+- 補齊今天的 8 個九宮格時段：`陽光起床運動`、`09-12`、`12-13`、`13-15`、`15-18`、`18-19`、`19-21`、`日記`。
+- 只追加到目標時段或日記，不重排全年檔案，不破壞 Mandala Grid 的 section marker。
+
+快速說法：
+
+```text
+Use $todays-daily-plan 今日的日計畫，上午羽球，下午三點林君，日記 Miru 來訪，狀況不是很好，加油。
+```
+
+正式 Skill：[`skills/todays-daily-plan/`](skills/todays-daily-plan/)  
+完整教學：[`docs/todays-daily-plan.md`](docs/todays-daily-plan.md)
+
 ## 指揮官入口
 
 先看這裡：**[`Hermes.md`](Hermes.md)**
@@ -34,6 +55,7 @@
 
 把「今天、本週、長期訓練、新書進度」整理成可執行節奏。
 
+- [`skills/todays-daily-plan/`](skills/todays-daily-plan/)：用口語把今天的九宮時段與日記寫進 Obsidian Mandala Grid。
 - [`skills/imandalart/`](skills/imandalart/)：每日重心、章節重心、手機九宮卡。
 - [`skills/personal-athlete-81-grid/`](skills/personal-athlete-81-grid/)：長期目標與 8+64 行動展開。
 
@@ -68,6 +90,12 @@ Desktop 軸的重點不是更多工具，而是降低切換成本：
 - 慢想、重讀、畫線、沉澱交給紙本與桌面環境。
 
 ## Core Skills
+
+### 今日的日計畫
+
+用青蛙口語把今天的日計劃寫入 Obsidian Mandala Grid 九宮時段與日記。
+
+入口：[`skills/todays-daily-plan/`](skills/todays-daily-plan/)
 
 ### 個人運動員81宮格
 
@@ -117,11 +145,23 @@ Desktop 軸的重點不是更多工具，而是降低切換成本：
 
 入口：[`skills/epub-hypercard-obsidian/`](skills/epub-hypercard-obsidian/)
 
+## Repo Layout
+
+```text
+skills/      正式、可安裝、可分享的 Skills
+docs/        安裝說明、書籍連結、索引與操作文件
+examples/    每個 Skill 的輸入、輸出、測試樣本
+archive/     舊版、草稿、暫不公開或已退役的 Skill
+Hermes.md    四軸管理總控台
+README.md    GitHub 首頁與讀者入口
+```
+
 ## Install Locally
 
 從 repo 根目錄把需要的 Skill 複製到 Codex skills 目錄：
 
 ```bash
+cp -R skills/todays-daily-plan ~/.codex/skills/
 cp -R skills/personal-athlete-81-grid ~/.codex/skills/
 cp -R skills/fire-analysis-card ~/.codex/skills/
 cp -R skills/imandalart ~/.codex/skills/
@@ -147,18 +187,7 @@ https://github.com/twhsi/skills
 書中可用句型：
 
 ```markdown
-本章延伸 Skill: https://github.com/twhsi/skills/tree/main/skills/imandalart
-```
-
-## Repo Layout
-
-```text
-skills/      正式、可安裝、可分享的 Skills
-docs/        安裝說明、書籍連結、索引與操作文件
-examples/    每個 Skill 的輸入、輸出、測試樣本
-archive/     舊版、草稿、暫不公開或已退役的 Skill
-Hermes.md    四軸管理總控台
-README.md    GitHub 首頁與讀者入口
+本章延伸 Skill: https://github.com/twhsi/skills/tree/main/skills/todays-daily-plan
 ```
 
 ## Maintain
@@ -167,6 +196,7 @@ README.md    GitHub 首頁與讀者入口
 
 ```bash
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/fire-card-to-epub
+python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/todays-daily-plan
 ```
 
 每週用 [`Hermes.md`](Hermes.md) 裡的 Weekly Hermes Sync 檢查：哪些 Skill 要升級、補範例、移到 archive，或變成新書章節連結。

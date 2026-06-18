@@ -226,19 +226,19 @@ README.md    GitHub 首頁與讀者入口
 ## Weekly Hermes Sync - YYYY-MM-DD
 
 Promote:
--
+- 
 
 Improve:
--
+- 
 
 Archive:
--
+- 
 
 Book Links:
--
+- 
 
 Next smallest change:
--
+- 
 ```
 
 ## 7. Design Principles

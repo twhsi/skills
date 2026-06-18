@@ -1,11 +1,11 @@
 ---
 name: project-note-json-to-epub
-description: Convert structured project-note JSON manuscripts into validated EPUB files. Use when the user asks to turn project notes, book-system JSON, FIRE-indexed notes, Luhmann/Zettelkasten numbered chunks, table-of-contents cards, index cards, cross-linked project notes, or manuscript JSON into an EPUB with chapter directories, keyword index cards, weighted links, bidirectional backlinks, versioned filenames, chapter-splitting plans, and full link testing.
+description: Convert structured project-note JSON manuscripts into validated EPUB and optional Kindle-clickable PDF files. Use when the user asks to turn project notes, book-system JSON, FIRE-indexed notes, Luhmann/Zettelkasten numbered chunks, table-of-contents cards, index cards, cross-linked project notes, or manuscript JSON into an EPUB/PDF with chapter directories, keyword index cards, weighted links, bidirectional backlinks, versioned filenames, chapter-splitting plans, and full link testing.
 ---
 
 # 專案筆記Json變成Epub
 
-Use this skill when a project-note JSON or folder-derived JSON manuscript needs to become an EPUB, especially when the user wants chapter directories, index cards, cross-links, keyword numbering, versioned check editions, Chinese character counts, chapter-splitting plans, or full EPUB link verification.
+Use this skill when a project-note JSON or folder-derived JSON manuscript needs to become an EPUB, or an EPUB plus a PDF review/distribution edition, especially when the user wants chapter directories, index cards, cross-links, keyword numbering, versioned check editions, Chinese character counts, chapter-splitting plans, Kindle-clickable PDF links, or full EPUB/PDF link verification.
 
 Chinese trigger phrases include:
 
@@ -15,6 +15,8 @@ Chinese trigger phrases include:
 - `章節拆書`
 - `關鍵字索引卡`
 - `雙向連結EPUB`
+- `同時生成PDF`
+- `Kindle可以點擊連結`
 
 ## Core Workflow
 
@@ -62,7 +64,16 @@ Chinese trigger phrases include:
    - Keep canonical JSON targets if useful, but convert hrefs correctly during XHTML rendering.
    - Put the keyword index card at the end of the book spine as book back matter: directory/intro first,正文 chunks next, `index.xhtml` last. This matches normal human book structure where an index appears after the main text.
 
-8. Validate before delivery.
+8. Generate a PDF companion when requested.
+   - Use the same enriched JSON, TOC, chunk anchors, keyword ids, and backlink data as the EPUB.
+   - Preserve the same human link model: directory/index entries jump to正文 anchors, and正文 keyword markers jump back to keyword index anchors.
+   - Use PDF internal destinations and link annotations, not external file URLs, so links remain clickable after sideloading to Kindle.
+   - Prefer visible blue linked text for PDF review copies because Kindle users need a clear tap target.
+   - Embed a CJK-capable font when generating Chinese PDFs. Avoid relying on a viewer's fallback fonts; black square glyphs are a build failure.
+   - Keep PDF anchors semantically aligned with EPUB anchors when possible: chunk `p099` in EPUB should map to PDF destination `p099`, and keyword `K001` should map to `idx-k001`.
+   - Treat PDF as a companion format; do not let PDF layout constraints mutate the canonical JSON or EPUB href rules.
+
+9. Validate before delivery.
    - Open the EPUB zip and parse every XHTML file as XML.
    - Collect all `id` anchors and all `href` links.
    - Resolve every href relative to its source XHTML path.
@@ -73,6 +84,8 @@ Chinese trigger phrases include:
    - Recalculate `true_body_cjk_count` from正文 body/chunk text only, excluding TOC, index cards, navigation files, metadata, CSS, generated link labels, and markup.
    - Report the true body count separately from total EPUB or generated XHTML text counts.
    - Confirm `orthogonal_check.ok` is true when the JSON includes directory/index/cross-link fields.
+   - For PDF output, inspect the PDF annotations with `pypdf` or equivalent and fail if internal GoTo/destination link counts do not match the expected forward/backlink model.
+   - Render the PDF to PNG and visually confirm Chinese text, blue link text, spacing, and page flow. If Chinese text renders as boxes, fix font embedding and rebuild.
 
 ## EPUB Requirements
 
@@ -83,6 +96,17 @@ Chinese trigger phrases include:
 - The OPF spine must place the keyword index page after all正文 pages unless the user explicitly requests a front-loaded index for review.
 -正文 keyword markers should show the keyword plus a small clickable `Kxxx` backlink.
 - Preserve readable styling; backlinks should not disrupt paragraph flow.
+
+## PDF Requirements
+
+- Generate PDF only when requested, or when the user asks for Kindle-compatible clickable links.
+- PDF links must be internal document links using named destinations or explicit GoTo actions.
+- The書末索引 must include clickable links back to正文 chunk destinations.
+-正文 keyword markers must include clickable `Kxxx` backlinks to the keyword index destination.
+- PDF link counts should mirror EPUB expectations unless layout requires an explicitly documented exception.
+- Use a CJK-capable embedded font for Chinese output. On macOS, a ReportLab build may use a TTC font such as `/System/Library/Fonts/STHeiti Medium.ttc` with a selected subfont index; in other environments choose an available Noto/Source Han CJK font.
+- Render at least one representative page to PNG before delivery and inspect for missing glyphs, clipped text, overlapping links, and unreadable spacing.
+- Kindle note: PDF internal links are the compatibility target. Do not depend on JavaScript, web URLs, or EPUB-only href behavior for the PDF edition.
 
 ## Validation Checklist
 
@@ -97,6 +121,9 @@ body_return_links_tested: ...
 index_entries: ...
 true_body_cjk_count: ...
 file type: EPUB document
+pdf_internal_links_tested: ...
+pdf_render_checked: ...
+pdf file type: PDF document
 ```
 
 If any count fails, fix the generator and rebuild rather than editing EPUB output by hand.
@@ -107,5 +134,7 @@ Return two links when possible:
 
 - A simple mobile-safe link: `download.epub`
 - The formal versioned EPUB filename
+- The companion PDF filename when generated
+- A validation report or short count summary when both EPUB and PDF are generated
 
 Mention the version title and the link-test summary briefly.

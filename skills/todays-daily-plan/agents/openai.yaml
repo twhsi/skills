@@ -1,0 +1,4 @@
+interface:
+  display_name: "今日的日計畫"
+  short_description: "用青蛙口語把今天的日計劃寫入 Obsidian Mandala Grid 九宮時段與日記"
+  default_prompt: "今日的日計畫：把我接下來口述的事情分配到今天的九宮時段與日記。"

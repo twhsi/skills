@@ -12,6 +12,7 @@ cp -R skills/project-note-json-to-epub ~/.codex/skills/
 cp -R skills/epub-hypercard-obsidian ~/.codex/skills/
 cp -R skills/obsidian-graph-view ~/.codex/skills/
 cp -R skills/imandalart ~/.codex/skills/
+cp -R skills/imessage-nine-grid-hypercard ~/.codex/skills/
 cp -R skills/markdown-nine-grid-clipboard ~/.codex/skills/
 cp -R skills/fire-analysis-card ~/.codex/skills/
 cp -R skills/fire-card-to-epub ~/.codex/skills/
@@ -30,6 +31,7 @@ python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/p
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/epub-hypercard-obsidian
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/obsidian-graph-view
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/imandalart
+python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/imessage-nine-grid-hypercard
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/markdown-nine-grid-clipboard
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/fire-analysis-card
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/fire-card-to-epub
@@ -46,6 +48,7 @@ Use $project-note-json-to-epub to convert this project-note JSON into an EPUB.
 Use $epub-hypercard-obsidian to convert this EPUB into an Obsidian HyperCard folder with verified links and a portable zip.
 Use $obsidian-graph-view to render a weighted graph view from this keyword index.
 Use $imandalart to turn this theme into a nine-grid card.
+Use $imessage-nine-grid-hypercard to organize these notes into an iMessage-ready 九宮 short card with Context below.
 Use $markdown-nine-grid-clipboard to turn this iMandalArt into an Obsidian Markdown nine-grid table.
 Use $fire-analysis-card to analyze this Chinese article with FIRE.
 Use $fire-card-to-epub to turn FIRE cards into a validated EPUB with keyword index links.

@@ -13,6 +13,7 @@ Use this file as the link registry for the new book.
 | EPUB 到 HyperCard / Obsidian | `https://github.com/twhsi/skills/tree/main/skills/epub-hypercard-obsidian` |
 | Graph view | `https://github.com/twhsi/skills/tree/main/skills/obsidian-graph-view` |
 | 九宮格 / iMandalArt | `https://github.com/twhsi/skills/tree/main/skills/imandalart` |
+| iMessage 九宮 HyperCard | `https://github.com/twhsi/skills/tree/main/skills/imessage-nine-grid-hypercard` |
 | Markdown / Obsidian 九宮格 | `https://github.com/twhsi/skills/tree/main/skills/markdown-nine-grid-clipboard` |
 | FIRE 原則 | `https://github.com/twhsi/skills/tree/main/skills/fire-analysis-card` |
 | FIRE 卡到 EPUB | `https://github.com/twhsi/skills/tree/main/skills/fire-card-to-epub` |

@@ -43,6 +43,12 @@
 - Main file: [`../skills/imandalart/SKILL.md`](../skills/imandalart/SKILL.md)
 - Current resources: script, style reference, sample JSON, sample HTML, sample PNG
 
+## imessage-nine-grid-hypercard
+
+- Purpose: Create narrow iMessage/PTT Border-Light HyperCard style nine-grid cards with long data moved into Context.
+- Main file: [`../skills/imessage-nine-grid-hypercard/SKILL.md`](../skills/imessage-nine-grid-hypercard/SKILL.md)
+- Current resources: `agents/openai.yaml`
+
 ## markdown-nine-grid-clipboard
 
 - Purpose: Convert text, iMandalArt cards, Obsidian 九宮 notes, or eight-domain outlines into Markdown 3x3 tables with an ◎ center.

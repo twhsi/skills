@@ -31,6 +31,41 @@ Use $todays-daily-plan 今日的日計畫，上午羽球，下午三點林君，
 
 這個 repo 收納可安裝、可分享、可放進新書連結的 Codex Skills。它不是單純工具箱，而是一套 Hermes HyperCard Loop：把時間管理、卡片筆記、Agent Skill、Desktop 工作桌連成一個知識工作系統。
 
+## 最新首頁卡：iMessage 九宮 HyperCard
+
+把 Skill 說明、日計畫、圖片觀察、產品卡點整理成手機可讀的 iMessage／PTT Border-Light 九宮短卡；長連結、長路徑、完整規則下放 Context。
+
+入口：[`skills/imessage-nine-grid-hypercard/`](skills/imessage-nine-grid-hypercard/)
+
+```text
+╭──────────────────╮
+  HERMÈS／iMessage
+  普通用戶卡點
+  TARS 已整理圖片
+  Type／Speak／Go
+├──────────────────┤
+  主文
+  這張圖的核心不是：
+  「普通人沒有能力」。
+
+  真正卡點是：
+  缺少 AI 互動心智。
+
+  Skill 產品不能只賣安裝，
+  還要教使用者怎麼對話、
+  迭代、給素材、抽流程。
+├──────────────────┤
+  ①非能力 ②能使用 ③場景廣
+  不是不會 多職能可用 咖啡健身
+
+  ④舊軟體   ◎   ⑤可迭代
+  一次生成 交互心智 chat調整
+
+  ⑥缺Context ⑦產品需求 ⑧教育
+  不會給素材 安裝不夠 使用教育
+╰──────────────────╯
+```
+
 ## Hermes HyperCard Loop
 
 ### 指揮官：[`Hermes.md`](Hermes.md)
@@ -65,6 +100,7 @@ Use $todays-daily-plan 今日的日計畫，上午羽球，下午三點林君，
 
 - [`skills/fire-analysis-card/`](skills/fire-analysis-card/)：用 FIRE 分析中文文章。
 - [`skills/imandalart/`](skills/imandalart/)：把概念壓成 3x3 方形索引卡。
+- [`skills/imessage-nine-grid-hypercard/`](skills/imessage-nine-grid-hypercard/)：輸出 iMessage 可貼的 Border-Light 九宮短卡，長資料下放 Context。
 - [`skills/markdown-nine-grid-clipboard/`](skills/markdown-nine-grid-clipboard/)：輸出 Obsidian、AIDA、GitHub 可讀的 Markdown 九宮格。
 - [`skills/obsidian-graph-view/`](skills/obsidian-graph-view/)：把關鍵字、章節、卡片做成 Obsidian 風格 graph。
 
@@ -121,6 +157,12 @@ Desktop 軸的重點不是更多工具，而是降低切換成本：
 
 入口：[`skills/imandalart/`](skills/imandalart/)
 
+### iMessage 九宮 HyperCard
+
+產生 iMessage／PTT Border-Light 短卡：18 線外框、無左右直線、內容縮排兩格、九宮三段用空行，長資料下放 Context。
+
+入口：[`skills/imessage-nine-grid-hypercard/`](skills/imessage-nine-grid-hypercard/)
+
 ### Markdown / Obsidian 九宮格
 
 把素材、iMandalArt 或八領域草稿轉成 Markdown 3x3 表格，可貼到 Obsidian、AIDA、GitHub。
@@ -165,6 +207,7 @@ cp -R skills/todays-daily-plan ~/.codex/skills/
 cp -R skills/personal-athlete-81-grid ~/.codex/skills/
 cp -R skills/fire-analysis-card ~/.codex/skills/
 cp -R skills/imandalart ~/.codex/skills/
+cp -R skills/imessage-nine-grid-hypercard ~/.codex/skills/
 cp -R skills/markdown-nine-grid-clipboard ~/.codex/skills/
 cp -R skills/obsidian-graph-view ~/.codex/skills/
 cp -R skills/project-note-json-to-epub ~/.codex/skills/

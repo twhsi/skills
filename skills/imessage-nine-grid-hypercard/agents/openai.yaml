@@ -1,0 +1,4 @@
+interface:
+  display_name: "iMessage 九宮 HyperCard"
+  short_description: "手機可貼的九宮短卡與 Context 下放格式整理"
+  default_prompt: "Use $imessage-nine-grid-hypercard to organize these notes into an iMessage-ready 九宮 short card with Context below."

@@ -1,24 +1,26 @@
 ---
 name: imandalart
-description: Design iMandalArt and iMandala 3x3 square index cards. Default output is iMandala 1.0: no visible borders, no vertical dividers, no Markdown table, exactly five counted characters per visible cell row, and an ◎ center. Use when the user asks for iMandalArt, iMandala, I MandalArt, 五字定格, 無框九宮, ◎中心, 手機方形曼陀羅, 正方形九宮索引卡, or a square 3x3 card that is not an 81-cell Mandala.
+description: Design iMandalArt and iMandala 3x3 square index cards. Default output is iMandalArt 九宮卡 1.0: open-card top borders, no vertical dividers, no Markdown table, short 2-4 character headings, five-character plain-language content lines, and an ◎ center. Use when the user asks for iMandalArt, iMandala, I MandalArt, 五字定格, ◎中心, 手機方形曼陀羅, 正方形九宮索引卡, open-card 九宮, or a square 3x3 card that is not an 81-cell Mandala.
 ---
 
 # iMandalArt
 
 ## Hard Default
 
-When the user asks for iMandalArt or iMandala, always default to iMandala 1.0:
+When the user asks for iMandalArt or iMandala, default to **iMandalArt 九宮卡 1.0**:
 
-- No visible borders.
-- No vertical divider characters.
+- Open-card top borders: `+----------+   +----------+   +----------+`.
+- No vertical divider characters around content.
 - No Markdown table.
-- Exactly five counted characters per visible cell row.
-- A quiet ◎ in the center cell.
-- A square 3x3 body formed by spacing and rhythm, not by frames.
+- Center title line uses bracket form, e.g. `[ 年計劃八領域 ]`; maximum 10 Chinese characters, normally 6–8.
+- Center cell uses a quiet `◎`, e.g. `◎年計劃`.
+- Outer cell headings are short: 2–4 Chinese characters.
+- Content/action lines are five Chinese characters when possible, in a plain-language five-character verse rhythm.
+- One or two five-character lines normally represent a cell; use up to four lines only for complex source material.
 
-This default overrides older PE2, terminal, boxed, Discord-safe, and Markdown-table habits.
+This default overrides older PE2 full-box, terminal-debug, Discord-table, and Markdown-table habits.
 
-Use framed PE2-style output only when the user explicitly asks for borders, PE2, terminal frame, boxed text, or renderer debugging.
+Use no-frame output only when the user explicitly asks for 無框 / no-box. Use fully framed PE2 output only when the user explicitly asks for boxed text, PE2, terminal frame, or renderer debugging.
 
 ## Purpose
 
@@ -38,30 +40,58 @@ It is not:
 - A long article.
 - A bordered terminal UI unless explicitly requested.
 
-## Five-Character Counting
+## Five-Character Content Rhythm
 
-Each visible cell row must contain exactly five counted characters.
-
-For this mode, count each CJK character, kana, English letter, digit, punctuation mark, symbol, full-width space, and half-width space as one character.
-
-Good five-character rows:
+The normal card body is an open-card grid with top borders and centered content:
 
 ```text
-觸 發 源
-輸入材料 
-　 ◎ 　
-下一技能 
+[ 年計劃八領域 ]
+
++----------+   +----------+   +----------+
+    健康           工作           財務
+ 跑步呼吸緩     課程交付好     現金正流向
+
++----------+   +========+     +----------+
+    家庭         ◎年計劃         社群
+ 時間確認好     八領域平衡     約人一對一
+
++----------+   +----------+   +----------+
+    內在           學習           休閒
+ 反向週檢視      日文考N5      練合唱吉他
+
++----------+   +----------+   +----------+
 ```
 
-Bad rows:
+Rules:
+
+- The bracketed center title is at most 10 Chinese characters; normally 6–8.
+- The center marker is `◎`.
+- Each outer heading is 2–4 Chinese characters.
+- Content/action lines should be five Chinese characters when possible.
+- The writing feel is like a white-language five-character quatrain: compact, rhythmic, actionable.
+- One or two five-character lines usually represent a cell; use up to four lines only when the message is complex.
+- Center headings and content should be visually centered between the `+` marks using measured display width, not hand-guessed spaces.
+
+Good five-character content lines:
 
 ```text
-觸發
-輸入材料來源
-◎
+跑步呼吸緩
+課程交付好
+現金正流向
+時間確認好
+反向週檢視
+練合唱吉他
 ```
 
-Fix short rows with deliberate spacing. Fix long rows by compressing the wording.
+Bad content lines:
+
+```text
+跑步
+課程交付與追蹤
+現金流
+```
+
+Fix short rows by sharpening the phrase. Fix long rows by compressing the wording into one or two five-character lines.
 
 ## Default Structure
 
@@ -87,33 +117,34 @@ Position logic:
 
 ## Default Output
 
-Return the no-frame card first in a fenced text block.
+Return the open-card 九宮卡 first in a fenced text block.
 
 Use this pattern:
 
 ```text
-[ 標題 ]
+[ 中心標題 ]
 
-觸 發 源　　輸 入 物　　辨 識 法
-從何開始　　材料入口　　看見模式
-　　　　　素材入場　　判斷線索
++----------+   +----------+   +----------+
+    抬頭           抬頭           抬頭
+ 五字內容句     五字內容句     五字內容句
 
-輸 出 形　　 ◎ 　　流 程 線
-成品樣貌　　 中　心 　　步驟節奏
-看得見物　　 主　題 　　先後次序
++----------+   +========+     +----------+
+    抬頭          ◎中心詞         抬頭
+ 五字內容句     五字內容句     五字內容句
 
-保 存 處　　避 免 事　　下 一 步
-留下證據　　不要混雜　　立刻行動
-回到卡盒　　界線清楚　　接上技能
++----------+   +----------+   +----------+
+    抬頭           抬頭           抬頭
+ 五字內容句     五字內容句     五字內容句
+
++----------+   +----------+   +----------+
 ```
 
-Each of the nine cells normally has three rows:
+Each cell normally has two visible lines:
 
-- Title row.
-- Content row.
-- Breath row.
+- Heading row: 2–4 characters.
+- Content row: one five-character plain-language line.
 
-The center cell may use more whitespace, but it must still contain ◎.
+If needed, add a second content row; for complex messages, use up to four five-character content rows inside a cell.
 
 Do not include a Markdown table as the default answer.
 
@@ -132,20 +163,24 @@ Do not include a Markdown table as the default answer.
 Before replying, check:
 
 - There are exactly nine cells.
-- The center includes ◎.
-- Every visible cell row is five counted characters.
-- The card contains no visible frame.
+- The bracketed title is no more than 10 Chinese characters, ideally 6–8.
+- The center includes `◎`.
+- Each outer heading is 2–4 Chinese characters.
+- Content rows are five Chinese characters when possible, unless a mixed token such as `N5` is intentionally needed.
+- The card uses open-card top borders and no vertical content rails.
 - The card contains no Markdown table.
 - The card fits phone reading.
 - The final answer starts with the card, not with explanation.
 
 ## If The User Says You Forgot
 
-Immediately correct the output into iMandala 1.0:
+Immediately correct the output into iMandalArt 九宮卡 1.0:
 
-- Remove all frames.
-- Remove all Markdown table structure.
-- Recompress every cell row to five counted characters.
-- Keep ◎ in the center.
+- Use bracketed title, max 10 characters.
+- Use open-card top borders.
+- Remove vertical content rails and Markdown table structure.
+- Keep `◎` in the center.
+- Compress headings to 2–4 characters.
+- Rewrite content rows into five-character plain-language lines where possible.
 - Return only the corrected card unless a brief apology is necessary.
 

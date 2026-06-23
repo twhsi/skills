@@ -10,7 +10,9 @@ Use this file as the link registry for the new book.
 | JSON 到 EPUB | `https://github.com/twhsi/skills/tree/main/skills/project-note-json-to-epub` |
 | Graph view | `https://github.com/twhsi/skills/tree/main/skills/obsidian-graph-view` |
 | 九宮格 / iMandalArt | `https://github.com/twhsi/skills/tree/main/skills/imandalart` |
+| Markdown / Obsidian 九宮格 | `https://github.com/twhsi/skills/tree/main/skills/markdown-nine-grid-clipboard` |
 | FIRE 原則 | `https://github.com/twhsi/skills/tree/main/skills/fire-analysis-card` |
+| Fantastical Calendar | `https://github.com/twhsi/skills/tree/main/skills/fantastical-calendar` |
 
 ## Suggested Chapter Text
 

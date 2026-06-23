@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fantastical Calendar"
+  short_description: "Create Fantastical events from Codex"
+  default_prompt: "Use $fantastical-calendar to add my next meeting to Fantastical."

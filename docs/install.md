@@ -17,6 +17,7 @@ cp -R skills/markdown-nine-grid-clipboard ~/.codex/skills/
 cp -R skills/fire-analysis-card ~/.codex/skills/
 cp -R skills/fire-card-to-epub ~/.codex/skills/
 cp -R skills/pdca ~/.codex/skills/
+cp -R skills/fantastical-calendar ~/.codex/skills/
 ```
 
 如果已經安裝過同名 Skill，先在 VS Code 比對差異，再決定是否覆蓋。
@@ -36,6 +37,7 @@ python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/m
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/fire-analysis-card
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/fire-card-to-epub
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/pdca
+python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/fantastical-calendar
 ```
 
 ## Trigger Examples
@@ -53,4 +55,5 @@ Use $markdown-nine-grid-clipboard to turn this iMandalArt into an Obsidian Markd
 Use $fire-analysis-card to analyze this Chinese article with FIRE.
 Use $fire-card-to-epub to turn FIRE cards into a validated EPUB with keyword index links.
 Use $pdca to turn this problem into a Chinese compass-style PDCA/CAPD card.
+Use $fantastical-calendar to add tomorrow's project review to Fantastical.
 ```

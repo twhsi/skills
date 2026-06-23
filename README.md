@@ -1,18 +1,12 @@
 # 永錫 Agent Skill 庫
 
-用 Desktop 概念幫助知識工作者：**Agent 高效率，人腦慢生活**。
+> 知識工作者的第二大腦系統：Agent 高效率，人腦慢生活。
+
+[![Hermes All Skills Map](assets/hermes-all-skills-map.png)](assets/hermes-all-skills-map.png)
 
 ## Featured Skill：今日的日計畫
 
 [`今日的日計畫`](skills/todays-daily-plan/) 是這個 repo 目前主打的正式 Skill。它專門服務 Obsidian 的 Mandala Grid 日計畫檔：當你用口語說「上午羽球」「下午三點林君」「晚上合唱」「補今天日記」時，Codex 會把內容分配到今天的九宮時段，並安全追加到正確的 `<!--section: N.x-->` 區塊。
-
-這個 Skill 的關鍵字是：`青蛙`、`日計劃`、`日計畫`、`九宮`、`時段`、`日記`、`Mandala Grid`。它特別適合每天早上或晚上用嘴巴整理一天，不需要手動在 Markdown 裡找今天的 section。
-
-它會做三件事：
-
-- 找到今天在年度日計畫中的 section，例如 `2026-06-18` 是 `169`。
-- 補齊今天的 8 個九宮格時段：`陽光起床運動`、`09-12`、`12-13`、`13-15`、`15-18`、`18-19`、`19-21`、`日記`。
-- 只追加到目標時段或日記，不重排全年檔案，不破壞 Mandala Grid 的 section marker。
 
 快速說法：
 
@@ -27,9 +21,54 @@ Use $todays-daily-plan 今日的日計畫，上午羽球，下午三點林君，
 
 先看這裡：**[`Hermes.md`](Hermes.md)**
 
-`Hermes.md` 是這個 repo 的指揮官，負責統一調度時間管理、卡片筆記、Agent Skill 與 Desktop 工作桌。
+`Hermes.md` 是這個 repo 的指揮官，負責統一調度時間聚焦、卡片筆記、Agent Skill、Desktop 工作桌與新書連結。這裡不是單純工具箱，而是一套 Hermes HyperCard Loop：把「收集 → 結構化 → 連結 → 輸出 → 迭代」變成可重複的知識工作流程。
 
-這個 repo 收納可安裝、可分享、可放進新書連結的 Codex Skills。它不是單純工具箱，而是一套 Hermes HyperCard Loop：把時間管理、卡片筆記、Agent Skill、Desktop 工作桌連成一個知識工作系統。
+## FIRE 總整理
+
+```text
+　　　　　　　　　　【Ⓕ Fact 事實】
+　　　　　　　　　　定義：技能總圖
+　　　　　　　　　　主張：人機分工
+　　　　　　　　　　證據：八類入口
+
+
+　　　　　↗　　　　　　　　　　　　　　　↘
+　　【Ⓘ Index】　　　中【◎核心】　　　【Ⓡ Relation】
+　　　重新入口　　　　◎技能中樞　　　　關係網絡
+　　　────────　────────　────────
+　　　Hermes.md　　　All Skills　　　　時間聚焦
+　　　四軸首頁　　　　知識工作　　　　　卡片成書
+　　　書籍連結　　　　慢快分工　　　　　Agent沉澱
+
+
+　　　　　↖　　　　　　　　　　　　　　　↙
+　　　　　　　　　　【Ⓔ Encyclopedia】
+　　　　　　　　　　概念：技能作業系統
+　　　　　　　　　　用途：書稿到桌面
+　　　　　　　　　　判斷：人留慢想
+```
+
+**F｜Fact**
+
+- 這個 repo 管理多個可安裝 Codex Skills，核心是 `Hermes.md`。
+- 圖中把技能分成時間聚焦、FIRE 分析、Graph 視圖、九宮卡片、Agent Skill、EPUB 出版、HyperCard 回流、書籍連結。
+- 北極星是「快交給 Agent，慢留給人」。
+
+**I｜Index**
+
+- 入口頁：[`Hermes.md`](Hermes.md)
+- 書籍連結：[`docs/book-links.md`](docs/book-links.md)
+- Skill 索引：[`docs/skill-index.md`](docs/skill-index.md)
+
+**R｜Relation**
+
+- 時間管理產生每日焦點，九宮卡把焦點壓成可讀卡片。
+- FIRE 抽取知識骨架，Graph view 建立章節與關鍵字關係。
+- JSON、EPUB、HyperCard、Obsidian 形成「出版 → 回流 → 再整理」循環。
+
+**E｜Encyclopedia**
+
+Hermes All Skills 是一個知識工作者的技能作業系統。它把人的慢思考、桌面工作流、Codex Agent、自動化腳本、GitHub 分享與書籍連結放在同一張圖裡，讓每個 Skill 都不是孤立工具，而是能回到日常、書稿與知識庫的循環節點。
 
 ## 最新首頁卡：iMessage 九宮 HyperCard
 
@@ -66,23 +105,18 @@ Use $todays-daily-plan 今日的日計畫，上午羽球，下午三點林君，
 ╰──────────────────╯
 ```
 
-## Hermes HyperCard Loop
+## 八個入口
 
-### 指揮官：[`Hermes.md`](Hermes.md)
-
-核心循環：
-
-```text
-人腦慢想
-  -> 卡片整理
-  -> Agent 執行
-  -> Skill 沉澱
-  -> GitHub 分享
-  -> 書籍連結
-  -> 回到 Desktop 日常
-```
-
-四軸總控台：**[`Hermes.md`](Hermes.md)**
+| # | 入口 | 作用 | Skill |
+|---|---|---|---|
+| 1 | 時間聚焦 | 今日、本週、長期訓練與章節重心 | [`todays-daily-plan`](skills/todays-daily-plan/), [`imandalart`](skills/imandalart/), [`personal-athlete-81-grid`](skills/personal-athlete-81-grid/) |
+| 2 | FIRE 分析 | Fact / Index / Relation / Encyclopedia | [`fire-analysis-card`](skills/fire-analysis-card/) |
+| 3 | Graph 視圖 | 關鍵字、章節、卡片關係圖 | [`obsidian-graph-view`](skills/obsidian-graph-view/) |
+| 4 | 九宮卡片 | 邏輯想法、手機可讀、Markdown 九宮 | [`imandalart`](skills/imandalart/), [`imessage-nine-grid-hypercard`](skills/imessage-nine-grid-hypercard/), [`markdown-nine-grid-clipboard`](skills/markdown-nine-grid-clipboard/) |
+| 5 | Agent Skill | Prompt → JSON → Codex → Hermes | [`docs/skill-index.md`](docs/skill-index.md) |
+| 6 | EPUB 出版 | 卡片成書、Project Note、JSON → EPUB | [`project-note-json-to-epub`](skills/project-note-json-to-epub/), [`fire-card-to-epub`](skills/fire-card-to-epub/) |
+| 7 | HyperCard 回流 | EPUB → 卡片盒 → Obsidian → 知識循環 | [`epub-hypercard-obsidian`](skills/epub-hypercard-obsidian/) |
+| 8 | 書籍連結 | 書中 QR、章節工具入口、Companion Docs | [`docs/book-links.md`](docs/book-links.md) |
 
 ## 四軸首頁
 
@@ -93,6 +127,7 @@ Use $todays-daily-plan 今日的日計畫，上午羽球，下午三點林君，
 - [`skills/todays-daily-plan/`](skills/todays-daily-plan/)：用口語把今天的九宮時段與日記寫進 Obsidian Mandala Grid。
 - [`skills/imandalart/`](skills/imandalart/)：每日重心、章節重心、手機九宮卡。
 - [`skills/personal-athlete-81-grid/`](skills/personal-athlete-81-grid/)：長期目標與 8+64 行動展開。
+- [`skills/fantastical-calendar/`](skills/fantastical-calendar/)：把會議、時段與提醒送進 Fantastical。
 
 ### 2. 卡片筆記軸
 
@@ -117,8 +152,6 @@ Use $todays-daily-plan 今日的日計畫，上午羽球，下午三點林君，
 
 把 Agent 之外的工作桌納入系統：ChatGPT、Codex、Obsidian、AIDA、Bike、Finder、VS Code、紙本、手機、桌面硬體。
 
-Desktop 軸的重點不是更多工具，而是降低切換成本：
-
 - 快速轉換交給 Agent。
 - 深層判斷留給人腦。
 - 長期記憶交給卡片系統。
@@ -127,69 +160,26 @@ Desktop 軸的重點不是更多工具，而是降低切換成本：
 
 ## Core Skills
 
-### 今日的日計畫
-
-用青蛙口語把今天的日計劃寫入 Obsidian Mandala Grid 九宮時段與日記。
-
-入口：[`skills/todays-daily-plan/`](skills/todays-daily-plan/)
-
-### 個人運動員81宮格
-
-參考大谷翔平 81 宮格，產生可編輯 JSON 與大谷風格 SVG/PNG 的個人訓練圖。
-
-入口：[`skills/personal-athlete-81-grid/`](skills/personal-athlete-81-grid/)
-
-### FIRE 原則分析卡
-
-以 Fact、Index、Relation、Encyclopedia 分析中文文章，適合書稿、筆記、研究材料。
-
-入口：[`skills/fire-analysis-card/`](skills/fire-analysis-card/)
-
-### FIRE 卡到 EPUB
-
-把 FIRE 分析卡或專案筆記 JSON 轉成可驗證 EPUB，支援目錄卡、章節卡、關鍵詞索引卡與回鏈驗證。
-
-入口：[`skills/fire-card-to-epub/`](skills/fire-card-to-epub/)
-
-### iMandalArt 九宮卡
-
-產生手機可讀的 3x3 方形索引卡，用於 Hermes、Discord、章節卡、每日重心。
-
-入口：[`skills/imandalart/`](skills/imandalart/)
-
-### iMessage 九宮 HyperCard
-
-產生 iMessage／PTT Border-Light 短卡：18 線外框、無左右直線、內容縮排兩格、九宮三段用空行，長資料下放 Context。
-
-入口：[`skills/imessage-nine-grid-hypercard/`](skills/imessage-nine-grid-hypercard/)
-
-### Markdown / Obsidian 九宮格
-
-把素材、iMandalArt 或八領域草稿轉成 Markdown 3x3 表格，可貼到 Obsidian、AIDA、GitHub。
-
-入口：[`skills/markdown-nine-grid-clipboard/`](skills/markdown-nine-grid-clipboard/)
-
-### Obsidian Graph View
-
-從 JSON、索引、TOC、卡片資料產生 Obsidian 風格關係圖。
-
-入口：[`skills/obsidian-graph-view/`](skills/obsidian-graph-view/)
-
-### Project Note JSON 到 EPUB
-
-把結構化專案筆記 JSON 轉成可驗證 EPUB，支援章節目錄、索引卡、雙向連結。
-
-入口：[`skills/project-note-json-to-epub/`](skills/project-note-json-to-epub/)
-
-### EPUB 到 HyperCard / Obsidian
-
-把 EPUB 卡片書轉成可跳轉的 Obsidian HyperCard Markdown folder 與 zip。
-
-入口：[`skills/epub-hypercard-obsidian/`](skills/epub-hypercard-obsidian/)
+| Skill | 用途 |
+|---|---|
+| [`todays-daily-plan`](skills/todays-daily-plan/) | 用口語把今天的日計畫寫入 Obsidian Mandala Grid |
+| [`personal-athlete-81-grid`](skills/personal-athlete-81-grid/) | 個人運動員 81 宮格，產生可編輯 JSON 與圖像 |
+| [`auto-luhmann-numberer`](skills/auto-luhmann-numberer/) | 自動魯曼編號與書籍卡片索引 |
+| [`fire-analysis-card`](skills/fire-analysis-card/) | 以 FIRE 原則分析中文文章 |
+| [`fire-card-to-epub`](skills/fire-card-to-epub/) | 把 FIRE 分析卡或 project-note JSON 變成可驗證 EPUB |
+| [`imandalart`](skills/imandalart/) | 產生手機可讀的 3x3 方形索引卡 |
+| [`imessage-nine-grid-hypercard`](skills/imessage-nine-grid-hypercard/) | 產生 iMessage／PTT Border-Light 九宮短卡 |
+| [`markdown-nine-grid-clipboard`](skills/markdown-nine-grid-clipboard/) | 產生 Obsidian、AIDA、GitHub 可讀的 Markdown 九宮格 |
+| [`obsidian-graph-view`](skills/obsidian-graph-view/) | 產生 Obsidian 風格關係圖 |
+| [`project-note-json-to-epub`](skills/project-note-json-to-epub/) | 把 project-note JSON 變成可驗證 EPUB |
+| [`epub-hypercard-obsidian`](skills/epub-hypercard-obsidian/) | 把 EPUB 回流成 Obsidian HyperCard folder |
+| [`pdca`](skills/pdca/) | 產生中文方位式 PDCA / CAPD 問題解決卡 |
+| [`fantastical-calendar`](skills/fantastical-calendar/) | 把 Codex 解析出的會議、時段與提醒送到 macOS Fantastical |
 
 ## Repo Layout
 
 ```text
+assets/      首頁圖像與公開展示素材
 skills/      正式、可安裝、可分享的 Skills
 docs/        安裝說明、書籍連結、索引與操作文件
 examples/    每個 Skill 的輸入、輸出、測試樣本
@@ -205,14 +195,17 @@ README.md    GitHub 首頁與讀者入口
 ```bash
 cp -R skills/todays-daily-plan ~/.codex/skills/
 cp -R skills/personal-athlete-81-grid ~/.codex/skills/
+cp -R skills/auto-luhmann-numberer ~/.codex/skills/
 cp -R skills/fire-analysis-card ~/.codex/skills/
+cp -R skills/fire-card-to-epub ~/.codex/skills/
 cp -R skills/imandalart ~/.codex/skills/
 cp -R skills/imessage-nine-grid-hypercard ~/.codex/skills/
 cp -R skills/markdown-nine-grid-clipboard ~/.codex/skills/
 cp -R skills/obsidian-graph-view ~/.codex/skills/
 cp -R skills/project-note-json-to-epub ~/.codex/skills/
-cp -R skills/fire-card-to-epub ~/.codex/skills/
 cp -R skills/epub-hypercard-obsidian ~/.codex/skills/
+cp -R skills/pdca ~/.codex/skills/
+cp -R skills/fantastical-calendar ~/.codex/skills/
 ```
 
 更多說明：[`docs/install.md`](docs/install.md)

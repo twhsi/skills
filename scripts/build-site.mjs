@@ -168,9 +168,9 @@ function extractVersion(markdown, frontmatter) {
 function createAgentManifest(skills) {
   return {
     id: "twhsi/skills",
-    name: "永錫 Agent Skill 庫",
-    tagline: "80% 給 Agent，20% 給人看",
-    north_star: "Agent 高效率，人腦慢生活",
+    name: "Yonghsi Agent Skill Registry",
+    tagline: "Fast work for agents, slow judgment for humans",
+    north_star: "Fast work for agents, slow judgment for humans",
     audience_split: {
       agent: 0.8,
       human: 0.2
@@ -239,7 +239,7 @@ function createLlmsText(manifest, skillsIndex) {
     .map((axis) => `- ${axis.label} (${axis.route}): ${axis.summary} Skills: ${axis.skills.join(", ")}`)
     .join("\n");
 
-  return `# 永錫 Agent Skill 庫
+  return `# Yonghsi Agent Skill Registry
 
 This is the public agent-first registry for https://github.com/twhsi/skills.
 

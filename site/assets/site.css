@@ -95,12 +95,13 @@ code {
 
 .brand-mark {
   display: grid;
-  width: 38px;
+  width: 42px;
   height: 38px;
   place-items: center;
   border: 3px solid var(--ink);
-  font-family: var(--serif);
-  font-size: 1.35rem;
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  font-weight: 820;
   line-height: 1;
 }
 
@@ -148,6 +149,15 @@ code {
   line-height: 1.02;
   font-weight: 820;
   letter-spacing: 0;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--cyan-dark);
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  font-weight: 760;
+  text-transform: uppercase;
 }
 
 .split-line {
@@ -277,6 +287,11 @@ code {
 
 .console-body span {
   color: #ffffff;
+}
+
+.console-body b {
+  color: #ffffff;
+  font-weight: 700;
 }
 
 .signal-chart {
@@ -422,6 +437,81 @@ code {
   background: var(--bg);
 }
 
+.updates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.update-card {
+  display: grid;
+  min-height: 260px;
+  align-content: space-between;
+  gap: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: var(--shadow);
+}
+
+.update-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.update-card strong {
+  font-family: var(--mono);
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+}
+
+.update-card code {
+  flex: 0 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 8px;
+  background: var(--soft);
+  color: var(--cyan-dark);
+}
+
+.update-card p {
+  display: -webkit-box;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.56;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+}
+
+.update-card dl {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+}
+
+.update-card dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border-top: 1px solid var(--line);
+  padding-top: 8px;
+}
+
+.update-card dt {
+  color: var(--muted);
+}
+
+.update-card dd {
+  margin: 0;
+  text-align: right;
+}
+
 .route-row {
   display: grid;
   grid-template-columns: 190px minmax(0, 1fr) minmax(260px, 0.8fr);
@@ -559,12 +649,27 @@ code {
   color: #ffffff;
 }
 
-.skill-table td:nth-child(2) span {
+.table-scroll {
+  overflow-x: auto;
+}
+
+.skill-table td:nth-child(4) span {
   display: inline-block;
   margin: 0 5px 5px 0;
   border-bottom: 2px solid var(--amber);
   font-family: var(--mono);
   font-size: 0.78rem;
+}
+
+.skill-table td:nth-child(3) {
+  min-width: 190px;
+}
+
+.skill-table td:nth-child(3) small {
+  display: block;
+  margin-top: 6px;
+  color: var(--cyan-dark);
+  font-family: var(--mono);
 }
 
 .skill-table code {
@@ -701,6 +806,7 @@ code {
 
   .section-head,
   .route-row,
+  .updates-grid,
   .deploy-strip,
   .footer-grid {
     grid-template-columns: 1fr;

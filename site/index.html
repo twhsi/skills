@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>永錫 Agent Skill 庫</title>
+    <title>Yonghsi Agent Skill Registry</title>
     <meta
       name="description"
-      content="80% 給 Agent，20% 給人看。永錫 Agent Skill 庫把 twhsi/skills 變成 Agent 可讀、人可瀏覽的公開 Skill registry。"
+      content="A public, agent-first registry for Codex and Hermes skills with generated manifests, skill metadata, versions, revisions, and update timestamps."
     />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/assets/site.css" />
@@ -15,17 +15,21 @@
     <header class="site-header">
       <div class="site-shell">
         <a class="brand" href="/">
-          <span class="brand-mark">永</span>
-          <span>永錫 Agent Skill 庫</span>
+          <span class="brand-mark">YS</span>
+          <span>Yonghsi Agent Skill Registry</span>
         </a>
-        <nav class="top-nav" aria-label="Main">
+        <nav class="top-nav" aria-label="Main navigation">
+          <a class="nav-link" href="#updates">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h5l3-7 3 14 3-7h2" /></svg>
+            Updates
+          </a>
           <a class="nav-link" href="#agent-index">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7l5 5-5 5" /><path d="M13 17h6" /></svg>
             Agent Index
           </a>
-          <a class="nav-link" href="#human-map">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l5-2 6 2 5-2v14l-5 2-6-2-5 2z" /><path d="M9 4v14" /><path d="M15 6v14" /></svg>
-            Human Map
+          <a class="nav-link" href="#skills">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z" /><path d="M8 9h3" /><path d="M8 13h8" /></svg>
+            Skills
           </a>
           <a class="nav-link" href="/install">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12" /><path d="M7 11l5 5 5-5" /><path d="M5 20h14" /></svg>
@@ -43,27 +47,29 @@
       <section class="hero site-shell">
         <div class="hero-grid">
           <div class="hero-copy">
-            <h1>永錫 Agent Skill 庫</h1>
-            <p class="split-line"><span>80% 給 Agent，</span><span>20% 給人看</span></p>
+            <p class="eyebrow">Agent-first, human-readable</p>
+            <h1>Codex skills with live metadata.</h1>
+            <p class="split-line"><span>Fast work for agents,</span><span> slow judgment for humans.</span></p>
             <p class="lead">
-              Agent 高效率，人腦慢生活。這個網站把 GitHub repo 變成公開 Skill registry：
-              機器先讀 manifest、技能索引與安裝路徑，人再看地圖、案例與判斷入口。
+              This site turns the <strong>twhsi/skills</strong> GitHub repository into a public skill registry.
+              Agents read generated JSON manifests. Humans see the current skill map, version labels,
+              last update times, and install paths from the same source of truth.
             </p>
             <div class="hero-actions">
               <a class="button" href="/agent.json">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7l5 5-5 5" /><path d="M13 17h6" /></svg>
                 Open Agent Manifest
               </a>
-              <a class="button secondary" href="#human-map">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l5-2 6 2 5-2v14l-5 2-6-2-5 2z" /><path d="M9 4v14" /><path d="M15 6v14" /></svg>
-                Browse Human Map
+              <a class="button secondary" href="#updates">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h5l3-7 3 14 3-7h2" /></svg>
+                View Latest Updates
               </a>
             </div>
             <div class="status-rail" aria-label="Registry status">
               <span>registry: <strong>twhsi/skills</strong></span>
-              <span>version: <strong>live</strong></span>
-              <span>license: <strong>MIT</strong></span>
-              <span>format: <strong>JSON / Markdown</strong></span>
+              <span>revision: <strong data-registry-revision>loading</strong></span>
+              <span>generated: <strong data-registry-generated>loading</strong></span>
+              <span>skills: <strong data-registry-count>loading</strong></span>
             </div>
           </div>
 
@@ -72,7 +78,7 @@
               <div class="panel-label"><span>Agent View</span><span>80%</span></div>
               <pre class="console-body">{
   <span>"registry"</span>: "twhsi/skills",
-  <span>"agent"</span>: "codex|hermes",
+  <span>"revision"</span>: "<b data-console-revision>loading</b>",
   <span>"endpoints"</span>: [
     "/agent.json",
     "/skills.json",
@@ -88,27 +94,41 @@
             </div>
             <aside class="human-rail">
               <div class="panel-label human"><span>Human View</span><span>20%</span></div>
-              <a class="human-item" href="#human-map">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 18-8-4-8 4z" /><path d="M12 3v14" /></svg>
-                <span><strong>地圖導覽</strong><span>全局與八個入口</span></span>
+              <a class="human-item" href="#updates">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h5l3-7 3 14 3-7h2" /></svg>
+                <span><strong>Freshness</strong><span>Versions, revisions, and timestamps</span></span>
               </a>
               <a class="human-item" href="#skills">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z" /><path d="M8 9h3" /><path d="M8 13h8" /></svg>
-                <span><strong>技能目錄</strong><span>分類與索引</span></span>
+                <span><strong>Skill Index</strong><span>Searchable install registry</span></span>
               </a>
               <a class="human-item" href="/install">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6z" /><path d="M14 3v4h4" /><path d="M9 12h6" /><path d="M9 16h6" /></svg>
-                <span><strong>使用說明</strong><span>安裝與部署</span></span>
+                <span><strong>Install</strong><span>Local and web deployment guide</span></span>
               </a>
             </aside>
           </div>
         </div>
       </section>
 
+      <section id="updates" class="section site-shell">
+        <div class="section-head">
+          <h2>Latest Skill Updates</h2>
+          <p>Every card is generated from Git history and skill metadata: semantic version when declared, latest commit revision, and last update time.</p>
+          <a href="/skills.json">/skills.json</a>
+        </div>
+        <div class="updates-grid" data-latest-updates>
+          <article class="update-card">
+            <strong>Loading registry</strong>
+            <span>Version and update metadata will appear here.</span>
+          </article>
+        </div>
+      </section>
+
       <section id="agent-index" class="section site-shell">
         <div class="section-head">
           <h2>Agent Endpoints</h2>
-          <p>Agent 讀取的標準入口。首頁給人看，這四個端點給下一個 Agent 直接接手。</p>
+          <p>These are the canonical machine-readable entry points for another agent to continue the work without reading the whole repository first.</p>
           <a href="/agent.json">/agent.json</a>
         </div>
         <table class="endpoint-table">
@@ -123,25 +143,25 @@
           <tbody>
             <tr>
               <td><a href="/agent.json">/agent.json</a></td>
-              <td>Agent Manifest：能力宣告、路由總覽、使用協定。</td>
+              <td>Canonical manifest with registry identity, routes, skill metadata, and agent contract.</td>
               <td><code>application/json</code></td>
               <td><button data-copy="/agent.json">Copy</button></td>
             </tr>
             <tr>
               <td><a href="/skills.json">/skills.json</a></td>
-              <td>技能清單：從 <code>skills/*/SKILL.md</code> 自動生成。</td>
+              <td>Generated skill index from <code>skills/*/SKILL.md</code>, including versions and update timestamps.</td>
               <td><code>application/json</code></td>
               <td><button data-copy="/skills.json">Copy</button></td>
             </tr>
             <tr>
               <td><a href="/llms.txt">/llms.txt</a></td>
-              <td>LLM 友善索引：快速取得 repo 目的、路由與 Skill 摘要。</td>
+              <td>Compact LLM context with routes, skills, version labels, update times, and GitHub links.</td>
               <td><code>text/plain</code></td>
               <td><button data-copy="/llms.txt">Copy</button></td>
             </tr>
             <tr>
               <td><a href="/install">/install</a></td>
-              <td>一鍵安裝與免費部署指引：GitHub、Vercel、Cloudflare。</td>
+              <td>Human and agent install guide for local Codex usage and static website deployment.</td>
               <td><code>text/html</code></td>
               <td><button data-copy="/install">Copy</button></td>
             </tr>
@@ -152,18 +172,13 @@
       <section class="section site-shell" aria-labelledby="route-title">
         <div class="section-head">
           <h2 id="route-title">Skill Routes</h2>
-          <p>技能路由曲線：Agent 用分類選 Skill，人用路由理解整套工作流。</p>
+          <p>Routes help agents select the right skill and help humans understand how the operating system is organized.</p>
           <a href="/skills.json">View all</a>
         </div>
         <div class="route-grid" data-route-grid>
           <article class="route-row">
-            <div><strong>Time</strong><a href="#skills">/time</a></div>
-            <p>時間節奏、排程、時區、提醒、長期訓練。</p>
-            <code>imandalart  personal-athlete-81-grid  fantastical-calendar</code>
-          </article>
-          <article class="route-row">
             <div><strong>Cards</strong><a href="#skills">/cards</a></div>
-            <p>FIRE、九宮卡、Markdown 表格與 Obsidian graph。</p>
+            <p>FIRE analysis, grid cards, Markdown tables, and graph views.</p>
             <code>fire-analysis-card  markdown-nine-grid-clipboard  obsidian-graph-view</code>
           </article>
         </div>
@@ -171,16 +186,16 @@
 
       <section id="human-map" class="section site-shell">
         <div class="section-head">
-          <h2>Human Map</h2>
-          <p>人看的 20%：不是把每個檔案讀完，而是知道這套 Skill OS 如何回到生活、書稿與桌面。</p>
+          <h2>System Map</h2>
+          <p>The map is the human-readable layer: it shows where skills sit inside a broader writing, planning, desktop, and publishing workflow.</p>
           <a href="https://github.com/twhsi/skills">GitHub</a>
         </div>
         <div class="map-layout">
           <div class="map-copy">
-            <h3>Hermes 是駕駛艙，不是工具箱。</h3>
+            <h3>Hermes is the cockpit, not a toolbox.</h3>
             <p>
-              地圖保留人的慢判斷：哪件事要沉澱成 Skill、哪個輸出要出版、哪個節奏要留給紙本與桌面。
-              Agent 讀 JSON，人讀關係圖，兩邊共用同一個 GitHub source of truth。
+              The repository keeps the source files, the website publishes live metadata, and the map helps a human decide
+              which work should become a reusable skill, a book note, a card, or a desktop routine.
             </p>
             <div class="map-list">
               <a href="https://github.com/twhsi/skills/blob/main/Hermes.md">Hermes.md <span>commander file</span></a>
@@ -197,7 +212,7 @@
       <section id="skills" class="section site-shell">
         <div class="section-head">
           <h2>Skill Index</h2>
-          <p>從 repo metadata 自動生成。搜尋、分類、安裝指令都在這裡。</p>
+          <p>Search the generated registry. Each row includes semantic version, latest Git revision, update time, route axes, description, and install command.</p>
           <span data-skill-count>loading</span>
         </div>
         <div class="skill-tools">
@@ -211,57 +226,63 @@
             <button data-axis="publish" aria-pressed="false">Publish</button>
           </div>
         </div>
-        <table class="skill-table">
-          <thead>
-            <tr>
-              <th>Skill</th>
-              <th>Axes</th>
-              <th>Description</th>
-              <th>Install</th>
-            </tr>
-          </thead>
-          <tbody data-skills-table>
-            <tr>
-              <td><a href="https://github.com/twhsi/skills/tree/main/skills/imandalart">imandalart</a></td>
-              <td><span>Time</span><span>Cards</span></td>
-              <td>Design iMandalArt and iMandala 3x3 square index cards.</td>
-              <td><code>cp -R skills/imandalart ~/.codex/skills/</code></td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-scroll">
+          <table class="skill-table">
+            <thead>
+              <tr>
+                <th>Skill</th>
+                <th>Version</th>
+                <th>Updated</th>
+                <th>Axes</th>
+                <th>Description</th>
+                <th>Install</th>
+              </tr>
+            </thead>
+            <tbody data-skills-table>
+              <tr>
+                <td><a href="https://github.com/twhsi/skills/tree/main/skills/fire-analysis-card">fire-analysis-card</a></td>
+                <td><code>v2.0</code></td>
+                <td>loading</td>
+                <td><span>Cards</span></td>
+                <td>Prepare card-box material for semantic search.</td>
+                <td><code>cp -R skills/fire-analysis-card ~/.codex/skills/</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section class="section site-shell">
         <div class="section-head">
           <h2>Install & Deploy</h2>
-          <p>免費部署建議：GitHub 當內容源，Vercel 自動 build，Cloudflare 管 DNS 與 HTTPS。</p>
+          <p>Use GitHub as the source of truth, Vercel as the static build host, and the generated JSON files as the agent entry points.</p>
           <a href="/install">/install</a>
         </div>
         <div class="deploy-strip">
           <article class="deploy-step">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3 19v-4c-3 1-4-1-4-1m11 5v-4c0-1 0-2-1-2 3 0 5-2 5-5 0-1 0-2-1-3 0-1 0-2-1-3 0 0-1 0-3 1a11 11 0 0 0-6 0C7 4 6 4 6 4c-1 1-1 2-1 3-1 1-1 2-1 3 0 3 2 5 5 5-1 0-1 1-1 2" /></svg>
             <h3>GitHub</h3>
-            <p>維持 repo 是 source of truth。每個 Skill 的 frontmatter 會進入網站 JSON。</p>
+            <p>Keep every skill in versioned Markdown and let the build step derive registry metadata from the repository.</p>
             <a href="https://github.com/twhsi/skills">twhsi/skills</a>
           </article>
           <article class="deploy-step">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 16H3z" /></svg>
-            <h3>Vercel deploy</h3>
-            <p>匯入 GitHub 專案，build command 使用 <code>npm run build</code>，output directory 使用 <code>dist</code>。</p>
+            <h3>Vercel</h3>
+            <p>Build with <code>npm run build</code> and serve <code>dist</code>. The live site publishes JSON, text, and HTML surfaces.</p>
             <a href="https://vercel.com/home">vercel.com</a>
           </article>
           <article class="deploy-step">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 17h11a4 4 0 0 0 0-8 6 6 0 0 0-11-1 5 5 0 0 0 0 9z" /><path d="M3 17h18" /></svg>
-            <h3>Cloudflare DNS</h3>
-            <p>把自訂網域接到 Vercel 提供的 DNS record，Cloudflare 負責 DNS、HTTPS 與日後轉址。</p>
-            <a href="https://dash.cloudflare.com/">dash.cloudflare.com</a>
+            <h3>Custom Domain</h3>
+            <p>Point <code>www.twhsi.com</code> to the Vercel project so the registry stays stable for humans and agents.</p>
+            <a href="https://www.twhsi.com/">www.twhsi.com</a>
           </article>
         </div>
         <div class="terminal-strip" aria-label="Deployment summary">
-          <span>$ skills registry is live.</span>
+          <span>$ registry live</span>
+          <span>versions generated</span>
+          <span>timestamps published</span>
           <span>agent-first</span>
-          <span>human-readable</span>
-          <span>open & free</span>
         </div>
       </section>
     </main>
@@ -270,10 +291,10 @@
       <div class="site-shell footer-grid">
         <div>
           <a class="brand" href="/">
-            <span class="brand-mark">永</span>
-            <span>永錫 Agent Skill 庫</span>
+            <span class="brand-mark">YS</span>
+            <span>Yonghsi Agent Skill Registry</span>
           </a>
-          <p>一個為 Codex / Hermes 設計的公開 Skill registry：讓 Agent 高效率，讓人腦回到慢生活。</p>
+          <p>A public Codex and Hermes skill registry with generated manifests, install commands, versions, revisions, and update timestamps.</p>
         </div>
         <div>
           <h3>Agent</h3>
@@ -286,13 +307,13 @@
         <div>
           <h3>Human</h3>
           <div class="footer-links">
-            <a href="#human-map">Human Map</a>
+            <a href="#updates">Latest Updates</a>
+            <a href="#skills">Skill Index</a>
             <a href="/install">Install</a>
-            <a href="https://github.com/twhsi/skills/blob/main/Hermes.md">Hermes.md</a>
           </div>
         </div>
         <div>
-          <h3>About</h3>
+          <h3>Source</h3>
           <div class="footer-links">
             <a href="https://github.com/twhsi/skills">GitHub repo</a>
             <a href="https://github.com/twhsi/skills/issues">Issues</a>

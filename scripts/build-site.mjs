@@ -84,6 +84,7 @@ async function listSkills() {
     const markdown = await readFile(skillPath, "utf8");
     const frontmatter = parseFrontmatter(markdown);
     const dir = path.join("skills", slug);
+    const gitInfo = skillGitInfo(dir);
     const files = await readdir(path.join(skillsDir, slug), { withFileTypes: true });
     const resources = files
       .filter((file) => file.isDirectory() && ["agents", "assets", "references", "scripts"].includes(file.name))
@@ -98,6 +99,8 @@ async function listSkills() {
       slug,
       name: frontmatter.name || slug,
       description: sentence(frontmatter.description || ""),
+      version: extractVersion(markdown, frontmatter),
+      ...gitInfo,
       axes: axes.length ? axes : ["agent"],
       repo_path: dir,
       skill_file: `${dir}/SKILL.md`,
@@ -119,6 +122,47 @@ function gitRevision() {
   } catch {
     return "unknown";
   }
+}
+
+function skillGitInfo(relativeDir) {
+  try {
+    const output = execSync(`git log -1 --format=%h%x09%H%x09%cI -- ${relativeDir}`, {
+      cwd: root,
+      stdio: ["ignore", "pipe", "ignore"]
+    })
+      .toString()
+      .trim();
+
+    const [revisionShort, revision, updatedAt] = output.split("\t");
+    return {
+      revision: revision || "unknown",
+      revision_short: revisionShort || "unknown",
+      updated_at: updatedAt || null
+    };
+  } catch {
+    return {
+      revision: "unknown",
+      revision_short: "unknown",
+      updated_at: null
+    };
+  }
+}
+
+function extractVersion(markdown, frontmatter) {
+  if (frontmatter.version) return frontmatter.version.replace(/^v/i, "");
+
+  const patterns = [
+    /Current version:\s*`?v?([0-9]+(?:\.[0-9]+){0,2})`?/i,
+    /^# .*\b(?:v|version\s*)?([0-9]+(?:\.[0-9]+){1,2})\b/im,
+    /\b(?:skill\s+version|version)\s*[:：]\s*`?v?([0-9]+(?:\.[0-9]+){1,2})`?/i
+  ];
+
+  for (const pattern of patterns) {
+    const match = markdown.match(pattern);
+    if (match) return match[1];
+  }
+
+  return "Unversioned";
 }
 
 function createAgentManifest(skills) {
@@ -151,6 +195,10 @@ function createAgentManifest(skills) {
       name: skill.name,
       axes: skill.axes,
       description: skill.description,
+      version: skill.version,
+      updated_at: skill.updated_at,
+      revision: skill.revision,
+      revision_short: skill.revision_short,
       skill_file: skill.skill_file,
       github_url: skill.github_url,
       install_command: skill.install_command,
@@ -181,7 +229,10 @@ function createSkillsIndex(skills) {
 
 function createLlmsText(manifest, skillsIndex) {
   const skillLines = skillsIndex.skills
-    .map((skill) => `- ${skill.slug}: ${skill.description} GitHub: ${skill.github_url}`)
+    .map(
+      (skill) =>
+        `- ${skill.slug}: version ${skill.version}; updated ${skill.updated_at || "unknown"}; revision ${skill.revision_short}. ${skill.description} GitHub: ${skill.github_url}`
+    )
     .join("\n");
 
   const axisLines = manifest.axes

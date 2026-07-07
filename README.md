@@ -29,23 +29,18 @@ LLM context: [https://www.twhsi.com/llms.txt](https://www.twhsi.com/llms.txt)
 
 ## Skill Versions And Updates
 
-The website generates this metadata from skill files and Git history. `Unversioned` means the skill does not yet declare a semantic version inside its `SKILL.md`.
+The live website generates freshness metadata from skill files and Git history on every deployment. Each skill entry includes:
 
-| Skill | Version | Latest revision | Last updated |
-|---|---:|---|---|
-| [`fire-analysis-card`](skills/fire-analysis-card/) | v2.0 | `87cf7d2` | 2026-07-07 21:53 +08:00 |
-| [`fantastical-calendar`](skills/fantastical-calendar/) | Unversioned | `f8551b0` | 2026-06-23 15:30 +08:00 |
-| [`imessage-nine-grid-hypercard`](skills/imessage-nine-grid-hypercard/) | Unversioned | `9b2b06b` | 2026-06-20 18:24 +08:00 |
-| [`fire-card-to-epub`](skills/fire-card-to-epub/) | Unversioned | `8814959` | 2026-06-18 18:47 +08:00 |
-| [`todays-daily-plan`](skills/todays-daily-plan/) | Unversioned | `979af0c` | 2026-06-18 18:13 +08:00 |
-| [`project-note-json-to-epub`](skills/project-note-json-to-epub/) | Unversioned | `5981878` | 2026-06-18 14:48 +08:00 |
-| [`auto-luhmann-numberer`](skills/auto-luhmann-numberer/) | Unversioned | `9d8c5c5` | 2026-06-17 17:34 +08:00 |
-| [`pdca`](skills/pdca/) | Unversioned | `fdf3a6a` | 2026-06-17 16:59 +08:00 |
-| [`epub-hypercard-obsidian`](skills/epub-hypercard-obsidian/) | Unversioned | `8fe4fe8` | 2026-06-17 16:57 +08:00 |
-| [`markdown-nine-grid-clipboard`](skills/markdown-nine-grid-clipboard/) | Unversioned | `2cadea6` | 2026-06-17 08:04 +08:00 |
-| [`imandalart`](skills/imandalart/) | Unversioned | `885dd5b` | 2026-06-16 21:31 +08:00 |
-| [`personal-athlete-81-grid`](skills/personal-athlete-81-grid/) | Unversioned | `dc30402` | 2026-06-16 21:02 +08:00 |
-| [`obsidian-graph-view`](skills/obsidian-graph-view/) | Unversioned | `56dea8b` | 2026-06-16 11:45 +08:00 |
+- `version`: the semantic skill version when declared, otherwise `Unversioned`
+- `revision` and `revision_short`: the latest Git commit for that skill path
+- `updated_at`: the latest update timestamp for that skill path
+
+Open the live generated table:
+
+- [https://www.twhsi.com/#updates](https://www.twhsi.com/#updates)
+- [https://www.twhsi.com/skills.json](https://www.twhsi.com/skills.json)
+
+Current highlight: [`fire-analysis-card`](skills/fire-analysis-card/) declares `v2.0`.
 
 ## Registry Routes
 

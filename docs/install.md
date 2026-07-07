@@ -52,7 +52,7 @@ Use $obsidian-graph-view to render a weighted graph view from this keyword index
 Use $imandalart to turn this theme into a nine-grid card.
 Use $imessage-nine-grid-hypercard to organize these notes into an iMessage-ready 九宮 short card with Context below.
 Use $markdown-nine-grid-clipboard to turn this iMandalArt into an Obsidian Markdown nine-grid table.
-Use $fire-analysis-card to analyze this Chinese article with FIRE.
+Use $fire-analysis-card to prepare this note for semantic search with Full-D, Index, Route, and Evolution.
 Use $fire-card-to-epub to turn FIRE cards into a validated EPUB with keyword index links.
 Use $pdca to turn this problem into a Chinese compass-style PDCA/CAPD card.
 Use $fantastical-calendar to add tomorrow's project review to Fantastical.

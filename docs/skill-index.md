@@ -57,7 +57,7 @@
 
 ## fire-analysis-card
 
-- Purpose: Analyze Chinese articles around 1000 characters with Fact, Index, Relation, and Encyclopedia.
+- Purpose: Prepare Chinese notes, articles, and card-box material for semantic search with Full-D, Index, Route, and Evolution.
 - Main file: [`../skills/fire-analysis-card/SKILL.md`](../skills/fire-analysis-card/SKILL.md)
 - Current resources: `agents/openai.yaml`
 

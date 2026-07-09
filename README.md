@@ -1,15 +1,39 @@
-# Yunghsi LLM Skill Registry
+# AI Agent Skills for Chinese Knowledge Workers
 
-> Reusable thinking skills for mainstream LLMs, with live metadata for humans and machines.
+> iMandalArt, FIRE semantic analysis, planning, and publishing workflows for Claude Code, Codex, and mainstream LLM agents.
 
 [![Hermes All Skills Map](assets/hermes-all-skills-map.png)](assets/hermes-all-skills-map.png)
 
-This repository is a public skill registry for mainstream LLMs: ChatGPT, Claude, Gemini, Codex, Hermes, and other agentic clients. The source of truth lives in `skills/*/SKILL.md`; the website turns those files into generated LLM manifests, a searchable skill index, install commands, version labels, Git revisions, and update timestamps.
+This repository is Yunghsi's public agent-skill system for Chinese knowledge workers. It turns repeatable writing, planning, note-making, and publishing workflows into skills that can be used by Claude Code, Codex, ChatGPT, Gemini, Hermes, and other LLM agents.
+
+The source of truth lives in `skills/*/SKILL.md`; the website turns those files into generated LLM manifests, a searchable skill index, install commands, version labels, Git revisions, and update timestamps.
 
 Live site: [https://www.twhsi.com/](https://www.twhsi.com/)  
 Agent manifest: [https://www.twhsi.com/agent.json](https://www.twhsi.com/agent.json)  
 Skill index: [https://www.twhsi.com/skills.json](https://www.twhsi.com/skills.json)  
 LLM context: [https://www.twhsi.com/llms.txt](https://www.twhsi.com/llms.txt)
+
+## What It Does
+
+- Convert long Markdown notes into iMandalArt 2.01 hard-line 9-grid cards.
+- Apply FIRE semantic analysis for card-box thinking, retrieval, and writing structure.
+- Generate agent-readable metadata through `agent.json`, `skills.json`, and `llms.txt`.
+- Route daily planning, weekly planning, booklet, EPUB, Markdown, and knowledge-management workflows.
+- Package Chinese-first workflows so LLM agents can operate on them consistently.
+
+## Copyable Demo
+
+```text
+Input: 200 days of daily plans, manuscript notes, or Markdown drafts
+Skills: imandalart + fire-analysis-card + project-note-json-to-epub
+Output: FIRE JSON + iMandalArt 2.01 card + Markdown / EPUB / booklet path
+```
+
+For an LLM or agent, start with:
+
+```bash
+curl -s https://www.twhsi.com/llms.txt
+```
 
 ## Featured: iMandalArt 2.01
 
@@ -44,10 +68,20 @@ Use it for weekly planning, writing focus, knowledge capture, and CJK note workf
 
 ## What This Is
 
-- A GitHub-backed skill registry for mainstream LLMs.
+- A GitHub-backed skill registry for Chinese agent workflows.
 - A machine-readable index for LLM agents that need routing, install commands, and resource discovery.
 - A human-readable map for deciding which workflows should become reusable skills.
 - A static website that publishes each skill's semantic version when declared, latest Git revision, and latest update time.
+
+## Core Skill Stack
+
+| Skill | Role |
+|---|---|
+| [`imandalart`](skills/imandalart/) | Compress source material into one CJK-friendly 3x3 Mandala card. |
+| [`fire-analysis-card`](skills/fire-analysis-card/) | Turn Chinese notes and manuscripts into FIRE semantic analysis cards. |
+| [`todays-daily-plan`](skills/todays-daily-plan/) | Convert spoken planning notes into an Obsidian day-plan Mandala grid. |
+| [`project-note-json-to-epub`](skills/project-note-json-to-epub/) | Turn structured project-note JSON into EPUB and publishing outputs. |
+| [`markdown-nine-grid-clipboard`](skills/markdown-nine-grid-clipboard/) | Convert grids and cards into Markdown table workflows. |
 
 ## Current Metadata Highlight
 

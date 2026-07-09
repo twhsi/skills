@@ -556,6 +556,72 @@ code {
   line-height: 1.7;
 }
 
+.demo-section {
+  padding-top: 48px;
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) repeat(3, minmax(0, 0.75fr));
+  gap: 14px;
+}
+
+.demo-card {
+  display: grid;
+  align-content: space-between;
+  gap: 16px;
+  min-height: 250px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--shadow);
+}
+
+.demo-primary {
+  border-color: var(--line-strong);
+  border-left: 5px solid var(--amber);
+}
+
+.demo-card h3 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.14;
+}
+
+.demo-card strong {
+  font-family: var(--mono);
+  font-size: 1rem;
+}
+
+.demo-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.demo-card code,
+.demo-code {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 12px;
+  background: var(--soft);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.demo-code {
+  margin: 0;
+  background: var(--code);
+  color: #45e6ff;
+  white-space: pre;
+}
+
 .imandalart-showcase {
   padding-top: 54px;
 }
@@ -888,6 +954,7 @@ code {
   .section-head,
   .route-row,
   .updates-grid,
+  .demo-grid,
   .deploy-strip,
   .footer-grid {
     grid-template-columns: 1fr;

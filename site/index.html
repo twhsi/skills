@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Yunghsi LLM Skill Registry</title>
+    <title>AI Agent Skills for Chinese Knowledge Workers | Yunghsi</title>
     <meta
       name="description"
-      content="A public multi-LLM skill registry for ChatGPT, Claude, Gemini, Codex, Hermes, and other agentic clients, with generated manifests, skill metadata, versions, revisions, and update timestamps."
+      content="A Chinese-first agent skill system for Claude Code, Codex, ChatGPT, Gemini, Hermes, and other LLM agents: iMandalArt, FIRE semantic analysis, planning, and publishing workflows."
     />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/assets/site.css" />
@@ -16,12 +16,16 @@
       <div class="site-shell">
         <a class="brand" href="/">
           <span class="brand-mark">YS</span>
-          <span>Yunghsi LLM Skill Registry</span>
+          <span>Yunghsi Agent Skills</span>
         </a>
         <nav class="top-nav" aria-label="Main navigation">
           <a class="nav-link" href="#imandalart">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v6H4z" /><path d="M14 4h6v6h-6z" /><path d="M4 14h6v6H4z" /><path d="M14 14h6v6h-6z" /></svg>
             iMandalArt
+          </a>
+          <a class="nav-link" href="#demo">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v16H6z" /><path d="M9 8h6" /><path d="M9 12h6" /><path d="M9 16h4" /></svg>
+            Demo
           </a>
           <a class="nav-link" href="#updates">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h5l3-7 3 14 3-7h2" /></svg>
@@ -51,23 +55,22 @@
       <section class="hero site-shell">
         <div class="hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Multi-LLM, human-readable</p>
-            <h1>Reusable skills with live metadata.</h1>
-            <p class="split-line"><span>Fast structure for LLMs,</span><span> slow judgment for humans.</span></p>
+            <p class="eyebrow">AI agent skills for Chinese knowledge workers</p>
+            <h1>Turn Chinese notes into agent-ready workflows.</h1>
+            <p class="split-line"><span>iMandalArt, FIRE, planning,</span><span> publishing.</span></p>
             <p class="lead">
-              This site turns the <strong>twhsi/skills</strong> GitHub repository into a public skill registry
-              for ChatGPT, Claude, Gemini, Codex, Hermes, and other LLM agents. Machines read generated
-              manifests. Humans see the current skill map, version labels, last update times, and install paths
-              from the same source of truth.
+              This is Yunghsi's public skill system for Claude Code, Codex, ChatGPT, Gemini, Hermes, and other
+              LLM agents. It packages Chinese-first knowledge workflows into reusable skills for 9-grid thinking,
+              FIRE semantic analysis, daily planning, Markdown, EPUB, and booklet outputs.
             </p>
             <div class="hero-actions">
               <a class="button" href="/agent.json">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7l5 5-5 5" /><path d="M13 17h6" /></svg>
                 Open LLM Manifest
               </a>
-              <a class="button secondary" href="#updates">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h5l3-7 3 14 3-7h2" /></svg>
-                View Latest Updates
+              <a class="button secondary" href="#demo">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v16H6z" /><path d="M9 8h6" /><path d="M9 12h6" /><path d="M9 16h4" /></svg>
+                See Copyable Demo
               </a>
             </div>
             <div class="status-rail" aria-label="Registry status">
@@ -86,6 +89,9 @@
   <span>"revision"</span>: "<b data-console-revision>loading</b>",
   <span>"runtimes"</span>: [
     "ChatGPT", "Claude", "Gemini", "Codex", "Hermes"
+  ],
+  <span>"stack"</span>: [
+    "iMandalArt", "FIRE", "planning", "publishing"
   ],
   <span>"endpoints"</span>: [
     "/agent.json",
@@ -116,6 +122,42 @@
               </a>
             </aside>
           </div>
+        </div>
+      </section>
+
+      <section id="demo" class="section site-shell demo-section">
+        <div class="section-head feature-head">
+          <h2>Copyable Demo</h2>
+          <p>Phase one focuses on a clear repo story and an immediately understandable workflow. Screenshots come in phase two.</p>
+          <a href="https://github.com/twhsi/skills">GitHub</a>
+        </div>
+        <div class="demo-grid">
+          <article class="demo-card demo-primary">
+            <p class="eyebrow">One line promise</p>
+            <h3>AI Agent Skills for Chinese Knowledge Workers</h3>
+            <p>
+              Turn daily plans, manuscript notes, and Markdown drafts into structured agent workflows:
+              iMandalArt cards, FIRE semantic analysis, reusable metadata, and publishing paths.
+            </p>
+            <pre class="demo-code">Input: 200 days of daily plans
+Skills: imandalart + fire-analysis-card + project-note-json-to-epub
+Output: FIRE JSON + iMandalArt 2.01 + Markdown / EPUB / booklet</pre>
+          </article>
+          <article class="demo-card">
+            <strong>For LLM agents</strong>
+            <p>Start from the compact context file, then route to the right skill.</p>
+            <code>curl -s https://www.twhsi.com/llms.txt</code>
+          </article>
+          <article class="demo-card">
+            <strong>For GitHub visitors</strong>
+            <p>Five seconds should reveal the project category, flagship skill, and proof of workflow.</p>
+            <code>iMandalArt + FIRE + planning + publish</code>
+          </article>
+          <article class="demo-card">
+            <strong>For phase two</strong>
+            <p>Visual proof will come after the message is stable: screenshots, share cards, and example outputs.</p>
+            <code>no screenshots in phase one</code>
+          </article>
         </div>
       </section>
 
@@ -346,7 +388,7 @@
         <div>
           <a class="brand" href="/">
             <span class="brand-mark">YS</span>
-            <span>Yunghsi LLM Skill Registry</span>
+            <span>Yunghsi Agent Skills</span>
           </a>
           <p>A public skill registry for mainstream LLMs with generated manifests, install commands, versions, revisions, and update timestamps.</p>
         </div>

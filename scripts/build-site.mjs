@@ -168,9 +168,9 @@ function extractVersion(markdown, frontmatter) {
 function createAgentManifest(skills) {
   return {
     id: "twhsi/skills",
-    name: "Yunghsi LLM Skill Registry",
-    tagline: "Reusable skills for mainstream LLMs",
-    north_star: "Let LLMs handle repeatable structure while humans keep judgment, taste, and pace.",
+    name: "AI Agent Skills for Chinese Knowledge Workers",
+    tagline: "iMandalArt, FIRE, planning, and publishing workflows for mainstream LLM agents",
+    north_star: "Package Chinese-first knowledge workflows so LLM agents can handle repeatable structure while humans keep judgment, taste, and pace.",
     audience_split: {
       agent: 0.8,
       human: 0.2
@@ -239,9 +239,9 @@ function createLlmsText(manifest, skillsIndex) {
     .map((axis) => `- ${axis.label} (${axis.route}): ${axis.summary} Skills: ${axis.skills.join(", ")}`)
     .join("\n");
 
-  return `# Yunghsi LLM Skill Registry
+  return `# AI Agent Skills for Chinese Knowledge Workers
 
-This is the public multi-LLM skill registry for https://github.com/twhsi/skills.
+This is Yunghsi's public agent-skill system for Chinese knowledge workers: iMandalArt, FIRE semantic analysis, daily planning, Markdown, EPUB, and booklet workflows for Claude Code, Codex, ChatGPT, Gemini, Hermes, and other LLM agents.
 
 North Star: ${manifest.north_star}
 Split: 80% machine-readable LLM endpoints, 20% human-readable map.
@@ -255,7 +255,13 @@ Split: 80% machine-readable LLM endpoints, 20% human-readable map.
 
 ## Featured skill
 
-iMandalArt 2.01 is a CJK-friendly hard-line 3x3 thinking card format. It uses eight orthogonal angles labeled Ⓐ-Ⓗ, a double ◎◎◎◎◎ center axis, and exactly 11 physical text lines so the card survives chat previews, note apps, and clipboard workflows. An English-native version is planned.
+iMandalArt 2.01 is the flagship CJK-friendly hard-line 3x3 thinking card format. It uses eight orthogonal angles labeled Ⓐ-Ⓗ, a double ◎◎◎◎◎ center axis, and exactly 11 physical text lines so the card survives chat previews, note apps, and clipboard workflows. An English-native version is planned.
+
+## Copyable demo
+
+Input: 200 days of daily plans, manuscript notes, or Markdown drafts.
+Skills: imandalart + fire-analysis-card + project-note-json-to-epub.
+Output: FIRE JSON + iMandalArt 2.01 card + Markdown / EPUB / booklet path.
 
 ## Routes
 

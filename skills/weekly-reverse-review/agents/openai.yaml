@@ -1,0 +1,4 @@
+interface:
+  display_name: "反向週檢視"
+  short_description: "用生活證據反推幸福寧靜的一週計劃"
+  default_prompt: "Use $weekly-reverse-review to turn my inbox, diary, calendar, and long-range plan into a reverse weekly review and 8 Big Rocks."

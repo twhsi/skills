@@ -1,5 +1,14 @@
 # Skill Index
 
+## Lab Notes
+
+### peter-brand-market-captain
+
+- Purpose: Moneyball 型市場缺口隊長，用資料找出新書、線上課、B2B 培訓與產品的低估機會。
+- Mandala template: [`../../outputs/peter-brand-mandala-template.md`](../../outputs/peter-brand-mandala-template.md)
+- Design draft: [`../../outputs/peter-brand-agent-design.md`](../../outputs/peter-brand-agent-design.md)
+- Status: lab note, not yet installed as a formal Skill.
+
 ## personal-athlete-81-grid
 
 - Purpose: Create Ohtani-style editable 81-cell MandalArt training grids for personal athletes.
@@ -24,8 +33,27 @@
 - Main file: [`../skills/imandalart/SKILL.md`](../skills/imandalart/SKILL.md)
 - Current resources: script, style reference, sample JSON, sample HTML, sample PNG
 
+## weekly-reverse-review
+
+- Purpose: Turn inbox notes, daily plans, diaries, calendars, annual plans, and hundred-year life plans into one happiness-and-peace-centered weekly plan.
+- Main file: [`../skills/weekly-reverse-review/SKILL.md`](../skills/weekly-reverse-review/SKILL.md)
+- Current resources: `references/weekly-eight-domain-layout.md`, `references/reverse-review-questions.md`, `references/output-json-schema.md`, `agents/openai.yaml`
+- Connects to: `fire-analysis-card`, `imandalart`, `markdown-nine-grid-clipboard`, `project-note-json-to-epub`, calendar evidence workflows.
+
+## markdown-nine-grid-clipboard
+
+- Purpose: Convert text, iMandalArt cards, Obsidian 九宮 notes, or eight-domain outlines into Markdown 3x3 tables with an ◎ center.
+- Main file: [`../skills/markdown-nine-grid-clipboard/SKILL.md`](../skills/markdown-nine-grid-clipboard/SKILL.md)
+- Current resources: `scripts/copy_grid.py`, `agents/openai.yaml`
+
 ## fire-analysis-card
 
 - Purpose: Analyze Chinese articles around 1000 characters with Fact, Index, Relation, and Encyclopedia.
 - Main file: [`../skills/fire-analysis-card/SKILL.md`](../skills/fire-analysis-card/SKILL.md)
 - Current resources: `agents/openai.yaml`
+
+## fantastical-calendar
+
+- Purpose: Create Fantastical calendar events and reminders from Codex on macOS.
+- Main file: [`../skills/fantastical-calendar/SKILL.md`](../skills/fantastical-calendar/SKILL.md)
+- Current resources: `scripts/fantastical_parse.py`, `references/fantastical-macos.md`, `agents/openai.yaml`

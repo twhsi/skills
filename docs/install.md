@@ -9,6 +9,7 @@ cp -R skills/personal-athlete-81-grid ~/.codex/skills/
 cp -R skills/project-note-json-to-epub ~/.codex/skills/
 cp -R skills/obsidian-graph-view ~/.codex/skills/
 cp -R skills/imandalart ~/.codex/skills/
+cp -R skills/weekly-reverse-review ~/.codex/skills/
 cp -R skills/markdown-nine-grid-clipboard ~/.codex/skills/
 cp -R skills/fire-analysis-card ~/.codex/skills/
 cp -R skills/fantastical-calendar ~/.codex/skills/
@@ -23,6 +24,7 @@ python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/p
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/project-note-json-to-epub
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/obsidian-graph-view
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/imandalart
+python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/weekly-reverse-review
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/markdown-nine-grid-clipboard
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/fire-analysis-card
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/fantastical-calendar
@@ -35,6 +37,7 @@ Use $personal-athlete-81-grid to create an Ohtani-style 81 grid for my sport goa
 Use $project-note-json-to-epub to convert this project-note JSON into an EPUB.
 Use $obsidian-graph-view to render a weighted graph view from this keyword index.
 Use $imandalart to turn this theme into a nine-grid card.
+Use $weekly-reverse-review to turn my inbox, diary, calendar, and long-range plan into a reverse weekly review and 8 Big Rocks.
 Use $markdown-nine-grid-clipboard to turn this iMandalArt into an Obsidian Markdown nine-grid table.
 Use $fire-analysis-card to analyze this Chinese article with FIRE.
 Use $fantastical-calendar to add tomorrow's project review to Fantastical.

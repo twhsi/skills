@@ -114,6 +114,37 @@ Use this order unless the user gives a different map:
 - `Ⓖ` constraint / avoid: What must be avoided?
 - `Ⓗ` next action: What is the next concrete move?
 
+## Weekly Plan Layout
+
+When the source is a weekly plan (`週計劃`, `週計画`, `Weekly Plan`, `2026Wxx`, or an eight-domain week card) and the user does not request the default orthogonal map, use this fixed weekly eight-domain layout:
+
+```text
+Ⓕ內在　Ⓒ財流　Ⓖ學習
+...
+...
+
+Ⓑ工作　◎◎◎◎◎　Ⓓ家庭
+...　中心五字句　...
+...　◎◎◎◎◎　...
+
+Ⓔ社群　Ⓐ健康　Ⓗ休閒
+...
+...
+```
+
+Weekly labels map to the user's recurring life domains:
+
+- `Ⓐ` health / body / exercise: 健康第一.
+- `Ⓑ` work / writing / book: 書稿推進.
+- `Ⓒ` finance / money / subscriptions: 財流降噪.
+- `Ⓓ` family / partner / children: 家人互動.
+- `Ⓔ` community / people / relationships: 人脈路徑.
+- `Ⓕ` inner life / letting go / teacher stance: 去我內在.
+- `Ⓖ` learning / Japanese / indexing: 日文沉澱.
+- `Ⓗ` leisure / music / joy / recovery: 開心休閒.
+
+This weekly layout overrides the default title-label order in the 2.01 card contract and validation gate. All other constraints still apply: 11 physical lines, blank lines 4 and 8, one full-width separator between columns, compact titles, five-Han-character content phrases when possible, and the center marker on lines 5 and 7.
+
 For non-process topics, keep the spatial order but rename the titles semantically. The eight angles must still be different kinds of attention, not eight synonyms.
 
 Orthogonality test:
@@ -171,6 +202,7 @@ Before returning a 2.01 card, check:
 - The output has exactly 11 physical lines.
 - Lines 4 and 8 are blank.
 - Title rows use `Ⓐ` through `Ⓗ` and center `◎◎◎◎◎`.
+- Weekly plan mode may use the fixed row order `ⒻⒸⒼ / Ⓑ center Ⓓ / ⒺⒶⒽ`.
 - Every surrounding title has four Han characters directly after its label when possible.
 - Every surrounding content cell has exactly five Han characters.
 - Line 6 center content has exactly five Han characters.

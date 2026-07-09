@@ -16,14 +16,14 @@ const axisRules = [
     label: "Time",
     route: "/time",
     summary: "Daily focus, weekly rhythm, calendar and long-range training loops.",
-    match: ["imandalart", "personal-athlete-81-grid", "fantastical-calendar"]
+    match: ["weekly-reverse-review", "imandalart", "personal-athlete-81-grid", "fantastical-calendar"]
   },
   {
     id: "cards",
     label: "Cards",
     route: "/cards",
     summary: "FIRE analysis, nine-grid cards, Markdown tables and graph views.",
-    match: ["fire-analysis-card", "imandalart", "markdown-nine-grid-clipboard", "obsidian-graph-view"]
+    match: ["weekly-reverse-review", "fire-analysis-card", "imandalart", "markdown-nine-grid-clipboard", "obsidian-graph-view"]
   },
   {
     id: "llm",
@@ -210,9 +210,11 @@ ${axisLines}
 
 ${skillLines}
 
-## Featured skill
+## Featured skills
 
 iMandalArt 2.01 is a CJK-friendly hard-line 3x3 card format. It uses eight orthogonal angles labeled Ⓐ-Ⓗ, a double ◎ center axis, and exactly 11 physical text lines. English-native iMandalArt output is planned for a future release.
+
+Weekly Reverse Review turns inbox notes, daily plans, diaries, calendars, annual plans, and hundred-year life plans into one happiness-and-peace-centered weekly plan. It connects FIRE analysis, iMandalArt, Markdown nine-grid output, and publishing workflows.
 
 ## Human review rule
 

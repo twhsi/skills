@@ -6,7 +6,7 @@
     <title>Yongxi LLM Skill Registry</title>
     <meta
       name="description"
-      content="A public skill registry for mainstream LLMs, featuring iMandalArt 2.01 and reusable thinking workflows from twhsi/skills."
+      content="A public skill registry for mainstream LLMs, featuring iMandalArt 2.01, Weekly Reverse Review, and reusable thinking workflows from twhsi/skills."
     />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/assets/site.css" />
@@ -26,6 +26,10 @@
           <a class="nav-link" href="#imandalart">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z" /><path d="M4 10h16" /><path d="M4 16h16" /><path d="M10 4v16" /><path d="M16 4v16" /></svg>
             iMandalArt
+          </a>
+          <a class="nav-link" href="#weekly-review">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2v4" /><path d="M17 2v4" /><path d="M4 6h16v15H4z" /><path d="M4 11h16" /><path d="M8 15h3" /><path d="M13 15h3" /></svg>
+            Weekly Review
           </a>
           <a class="nav-link" href="#human-map">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l5-2 6 2 5-2v14l-5 2-6-2-5 2z" /><path d="M9 4v14" /><path d="M15 6v14" /></svg>
@@ -170,6 +174,60 @@
         </div>
       </section>
 
+      <section id="weekly-review" class="section site-shell imandalart-showcase">
+        <div class="section-head feature-head">
+          <h2>Weekly Reverse Review</h2>
+          <p>
+            A twenty-year weekly review practice converted into an AI-assisted Skill:
+            read YEAR, Week, Day, and Inbox evidence, then build one quiet weekly plan.
+          </p>
+          <a href="https://github.com/twhsi/skills/tree/main/skills/weekly-reverse-review">GitHub</a>
+        </div>
+        <div class="imandalart-grid">
+          <article class="imandalart-copy">
+            <p class="eyebrow">New Skill</p>
+            <h3>Let AI burn tokens so the human keeps the quiet judgment.</h3>
+            <p>
+              Weekly Reverse Review gathers annual and hundred-year plans, last week's review,
+              daily plans, seven diary notes, calendar traces, and inbox noise. The goal is not
+              to add more tasks. It is to ask which actions bring real happiness and peace.
+            </p>
+            <div class="case-list" aria-label="Weekly Reverse Review highlights">
+              <article>
+                <strong>Brain load saved</strong>
+                <span>An 11-step weekly review that used to need two to three uninterrupted hours becomes lighter and less draining.</span>
+              </article>
+              <article>
+                <strong>Four evidence angles</strong>
+                <span>YEAR, Week, Day, and Inbox are compared before the next 8 Big Rocks are chosen.</span>
+              </article>
+              <article>
+                <strong>Reverse wish list</strong>
+                <span>Protect the week by asking what should be smaller, slower, deleted, delayed, or kept as presence.</span>
+              </article>
+            </div>
+          </article>
+          <article class="mandala-panel" aria-label="Weekly Reverse Review example">
+            <div class="panel-label"><span>Happiness-and-peace weekly plan</span><span>8 rocks</span></div>
+            <pre class="mandala-card">Ⓕ內在放下　Ⓒ財流降噪　Ⓖ日文沉澱
+少說更點火　訂閱先盤點　句子先編號
+不急證明我　現流養書路　接詞成路徑
+
+Ⓑ書稿收束　◎◎◎◎◎　Ⓓ家人點火
+書章拉中心　幸福寧靜週　問夢不說教
+青蛙先寫書　◎◎◎◎◎　陪走百年路
+
+Ⓔ人脈成路　Ⓐ健康復節　Ⓗ休閒充電
+約談留三卡　羽球慢回身　合唱鬆心身
+好友接技能　跑走養節奏　吉他聽太陽</pre>
+            <p>
+              Core question: 那件事情能帶來真正的幸福與寧靜？ Default answer:
+              少說，陪伴，慢慢做。
+            </p>
+          </article>
+        </div>
+      </section>
+
       <section id="agent-index" class="section site-shell">
         <div class="section-head">
           <h2>LLM Endpoints</h2>
@@ -224,12 +282,12 @@
           <article class="route-row">
             <div><strong>Time</strong><a href="#skills">/time</a></div>
             <p>Daily focus, schedules, reminders, and long-range training loops.</p>
-            <code>imandalart  personal-athlete-81-grid  fantastical-calendar</code>
+            <code>weekly-reverse-review  imandalart  personal-athlete-81-grid  fantastical-calendar</code>
           </article>
           <article class="route-row">
             <div><strong>Cards</strong><a href="#skills">/cards</a></div>
             <p>FIRE notes, iMandalArt cards, Markdown grids, and Obsidian-style graphs.</p>
-            <code>fire-analysis-card  markdown-nine-grid-clipboard  obsidian-graph-view</code>
+            <code>weekly-reverse-review  fire-analysis-card  markdown-nine-grid-clipboard  obsidian-graph-view</code>
           </article>
         </div>
       </section>
@@ -338,7 +396,7 @@
             <span class="brand-mark">永</span>
           <span>Yongxi LLM Skill Registry</span>
           </a>
-          <p>A public registry of reusable skills for mainstream LLMs, with iMandalArt 2.01 featured as a CJK-friendly card format.</p>
+          <p>A public registry of reusable skills for mainstream LLMs, with iMandalArt 2.01 and Weekly Reverse Review featured as CJK-friendly thinking workflows.</p>
         </div>
         <div>
           <h3>LLM</h3>

@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>永錫 Agent Skill 庫</title>
+    <title>Yongxi LLM Skill Registry</title>
     <meta
       name="description"
-      content="80% 給 Agent，20% 給人看。永錫 Agent Skill 庫把 twhsi/skills 變成 Agent 可讀、人可瀏覽的公開 Skill registry。"
+      content="A public skill registry for mainstream LLMs, featuring iMandalArt 2.01 and reusable thinking workflows from twhsi/skills."
     />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/assets/site.css" />
@@ -16,12 +16,16 @@
       <div class="site-shell">
         <a class="brand" href="/">
           <span class="brand-mark">永</span>
-          <span>永錫 Agent Skill 庫</span>
+          <span>Yongxi LLM Skill Registry</span>
         </a>
         <nav class="top-nav" aria-label="Main">
           <a class="nav-link" href="#agent-index">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7l5 5-5 5" /><path d="M13 17h6" /></svg>
-            Agent Index
+            LLM Index
+          </a>
+          <a class="nav-link" href="#imandalart">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z" /><path d="M4 10h16" /><path d="M4 16h16" /><path d="M10 4v16" /><path d="M16 4v16" /></svg>
+            iMandalArt
           </a>
           <a class="nav-link" href="#human-map">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l5-2 6 2 5-2v14l-5 2-6-2-5 2z" /><path d="M9 4v14" /><path d="M15 6v14" /></svg>
@@ -43,16 +47,17 @@
       <section class="hero site-shell">
         <div class="hero-grid">
           <div class="hero-copy">
-            <h1>永錫 Agent Skill 庫</h1>
-            <p class="split-line"><span>80% 給 Agent，</span><span>20% 給人看</span></p>
+            <h1>Yongxi LLM Skill Registry</h1>
+            <p class="split-line"><span>Reusable skills for</span><span>mainstream LLMs</span></p>
             <p class="lead">
-              Agent 高效率，人腦慢生活。這個網站把 GitHub repo 變成公開 Skill registry：
-              機器先讀 manifest、技能索引與安裝路徑，人再看地圖、案例與判斷入口。
+              A public registry that packages repeatable thinking workflows for ChatGPT, Claude, Gemini,
+              Codex, Hermes, and other LLM agents. Machines read manifests, indexes, and install paths;
+              humans read maps, examples, and judgment checkpoints.
             </p>
             <div class="hero-actions">
               <a class="button" href="/agent.json">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7l5 5-5 5" /><path d="M13 17h6" /></svg>
-                Open Agent Manifest
+                Open LLM Manifest
               </a>
               <a class="button secondary" href="#human-map">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l5-2 6 2 5-2v14l-5 2-6-2-5 2z" /><path d="M9 4v14" /><path d="M15 6v14" /></svg>
@@ -63,16 +68,22 @@
               <span>registry: <strong>twhsi/skills</strong></span>
               <span>version: <strong>live</strong></span>
               <span>license: <strong>MIT</strong></span>
-              <span>format: <strong>JSON / Markdown</strong></span>
+              <span>runtime: <strong>multi-LLM</strong></span>
             </div>
           </div>
 
-          <div class="hero-panels" aria-label="Agent and human views">
+          <div class="hero-panels" aria-label="LLM and human views">
             <div class="agent-console">
-              <div class="panel-label"><span>Agent View</span><span>80%</span></div>
+              <div class="panel-label"><span>LLM View</span><span>80%</span></div>
               <pre class="console-body">{
   <span>"registry"</span>: "twhsi/skills",
-  <span>"agent"</span>: "codex|hermes",
+  <span>"runtimes"</span>: [
+    "ChatGPT",
+    "Claude",
+    "Gemini",
+    "Codex",
+    "Hermes"
+  ],
   <span>"endpoints"</span>: [
     "/agent.json",
     "/skills.json",
@@ -90,25 +101,79 @@
               <div class="panel-label human"><span>Human View</span><span>20%</span></div>
               <a class="human-item" href="#human-map">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 18-8-4-8 4z" /><path d="M12 3v14" /></svg>
-                <span><strong>地圖導覽</strong><span>全局與八個入口</span></span>
+                <span><strong>Map</strong><span>routes and intent</span></span>
               </a>
               <a class="human-item" href="#skills">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z" /><path d="M8 9h3" /><path d="M8 13h8" /></svg>
-                <span><strong>技能目錄</strong><span>分類與索引</span></span>
+                <span><strong>Skill Index</strong><span>metadata and install</span></span>
               </a>
               <a class="human-item" href="/install">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6z" /><path d="M14 3v4h4" /><path d="M9 12h6" /><path d="M9 16h6" /></svg>
-                <span><strong>使用說明</strong><span>安裝與部署</span></span>
+                <span><strong>Install</strong><span>local and web</span></span>
               </a>
             </aside>
           </div>
         </div>
       </section>
 
+      <section id="imandalart" class="section site-shell imandalart-showcase">
+        <div class="section-head feature-head">
+          <h2>iMandalArt 2.01</h2>
+          <p>
+            A compact 3x3 thinking card for LLM-assisted planning, writing, study, and decision work.
+            Version 2.01 is currently CJK-friendly, with an English-native layout planned next.
+          </p>
+          <a href="https://github.com/twhsi/skills/tree/main/skills/imandalart">GitHub</a>
+        </div>
+        <div class="imandalart-grid">
+          <article class="imandalart-copy">
+            <p class="eyebrow">Featured Skill</p>
+            <h3>Turn any source into one hard-line 3x3 card.</h3>
+            <p>
+              iMandalArt 2.01 asks an LLM to read the source first, identify one center idea,
+              split it into eight orthogonal angles, and return an 11-line plain-text card that
+              survives copy, paste, and note-app previews.
+            </p>
+            <div class="case-list" aria-label="iMandalArt use cases">
+              <article>
+                <strong>Weekly planning</strong>
+                <span>Compress health, writing, money, family, network, study, rest, and next action into one scan.</span>
+              </article>
+              <article>
+                <strong>Writing focus</strong>
+                <span>Turn scattered notes into a center line plus eight non-overlapping editorial directions.</span>
+              </article>
+              <article>
+                <strong>Knowledge capture</strong>
+                <span>Use a stable CJK hard-line format that works in TheBrain, Hermes, Discord, and plain notes.</span>
+              </article>
+            </div>
+          </article>
+          <article class="mandala-panel" aria-label="iMandalArt 2.01 CJK example">
+            <div class="panel-label"><span>CJK-friendly 2.01 example</span><span>11 lines</span></div>
+            <pre class="mandala-card">Ⓐ健康復節　Ⓑ書稿收束　Ⓒ財流降噪
+羽球慢回身　書章拉中心　訂閱先盤點
+跑走養節奏　青蛙先寫書　現流養書路
+
+Ⓓ家人點火　◎◎◎◎◎　Ⓔ人脈成路
+問夢不說教　二九週計劃　約談留三卡
+陪走百年路　◎◎◎◎◎　好友接技能
+
+Ⓕ內在放下　Ⓖ日文沉澱　Ⓗ休閒充電
+少說更點火　句子先編號　合唱鬆心身
+不急證明我　接詞成路徑　吉他聽太陽</pre>
+            <p>
+              Current release: optimized for CJK five-Han-character rows, hard line breaks,
+              and full-width column spacing. Future release: English-native card rhythm.
+            </p>
+          </article>
+        </div>
+      </section>
+
       <section id="agent-index" class="section site-shell">
         <div class="section-head">
-          <h2>Agent Endpoints</h2>
-          <p>Agent 讀取的標準入口。首頁給人看，這四個端點給下一個 Agent 直接接手。</p>
+          <h2>LLM Endpoints</h2>
+          <p>Standard machine-readable entry points for mainstream LLM agents and automation clients.</p>
           <a href="/agent.json">/agent.json</a>
         </div>
         <table class="endpoint-table">
@@ -123,25 +188,25 @@
           <tbody>
             <tr>
               <td><a href="/agent.json">/agent.json</a></td>
-              <td>Agent Manifest：能力宣告、路由總覽、使用協定。</td>
+              <td>LLM manifest: capabilities, routes, endpoints, and usage contract.</td>
               <td><code>application/json</code></td>
               <td><button data-copy="/agent.json">Copy</button></td>
             </tr>
             <tr>
               <td><a href="/skills.json">/skills.json</a></td>
-              <td>技能清單：從 <code>skills/*/SKILL.md</code> 自動生成。</td>
+              <td>Skill index generated from <code>skills/*/SKILL.md</code> frontmatter.</td>
               <td><code>application/json</code></td>
               <td><button data-copy="/skills.json">Copy</button></td>
             </tr>
             <tr>
               <td><a href="/llms.txt">/llms.txt</a></td>
-              <td>LLM 友善索引：快速取得 repo 目的、路由與 Skill 摘要。</td>
+              <td>Compact context for ChatGPT, Claude, Gemini, Codex, Hermes, and other LLMs.</td>
               <td><code>text/plain</code></td>
               <td><button data-copy="/llms.txt">Copy</button></td>
             </tr>
             <tr>
               <td><a href="/install">/install</a></td>
-              <td>一鍵安裝與免費部署指引：GitHub、Vercel、Cloudflare。</td>
+              <td>Install and free deployment guide for GitHub, Vercel, and Cloudflare.</td>
               <td><code>text/html</code></td>
               <td><button data-copy="/install">Copy</button></td>
             </tr>
@@ -152,18 +217,18 @@
       <section class="section site-shell" aria-labelledby="route-title">
         <div class="section-head">
           <h2 id="route-title">Skill Routes</h2>
-          <p>技能路由曲線：Agent 用分類選 Skill，人用路由理解整套工作流。</p>
+          <p>Route skills by intent: LLMs choose the procedure, humans keep the map and judgment.</p>
           <a href="/skills.json">View all</a>
         </div>
         <div class="route-grid" data-route-grid>
           <article class="route-row">
             <div><strong>Time</strong><a href="#skills">/time</a></div>
-            <p>時間節奏、排程、時區、提醒、長期訓練。</p>
+            <p>Daily focus, schedules, reminders, and long-range training loops.</p>
             <code>imandalart  personal-athlete-81-grid  fantastical-calendar</code>
           </article>
           <article class="route-row">
             <div><strong>Cards</strong><a href="#skills">/cards</a></div>
-            <p>FIRE、九宮卡、Markdown 表格與 Obsidian graph。</p>
+            <p>FIRE notes, iMandalArt cards, Markdown grids, and Obsidian-style graphs.</p>
             <code>fire-analysis-card  markdown-nine-grid-clipboard  obsidian-graph-view</code>
           </article>
         </div>
@@ -172,15 +237,15 @@
       <section id="human-map" class="section site-shell">
         <div class="section-head">
           <h2>Human Map</h2>
-          <p>人看的 20%：不是把每個檔案讀完，而是知道這套 Skill OS 如何回到生活、書稿與桌面。</p>
+          <p>The human-readable 20%: context, taste, priority, and where the workflows return to life and writing.</p>
           <a href="https://github.com/twhsi/skills">GitHub</a>
         </div>
         <div class="map-layout">
           <div class="map-copy">
-            <h3>Hermes 是駕駛艙，不是工具箱。</h3>
+            <h3>Hermes is the cockpit, not just a toolbox.</h3>
             <p>
-              地圖保留人的慢判斷：哪件事要沉澱成 Skill、哪個輸出要出版、哪個節奏要留給紙本與桌面。
-              Agent 讀 JSON，人讀關係圖，兩邊共用同一個 GitHub source of truth。
+              The map preserves slow human judgment: which routines become reusable skills, which outputs should be
+              published, and which rhythms should stay on paper or the desktop. LLMs read JSON; humans read the map.
             </p>
             <div class="map-list">
               <a href="https://github.com/twhsi/skills/blob/main/Hermes.md">Hermes.md <span>commander file</span></a>
@@ -197,7 +262,7 @@
       <section id="skills" class="section site-shell">
         <div class="section-head">
           <h2>Skill Index</h2>
-          <p>從 repo metadata 自動生成。搜尋、分類、安裝指令都在這裡。</p>
+          <p>Generated from repository metadata. Search, route, and install reusable skills for LLM-assisted work.</p>
           <span data-skill-count>loading</span>
         </div>
         <div class="skill-tools">
@@ -206,7 +271,7 @@
             <button data-axis="all" aria-pressed="true">All</button>
             <button data-axis="time" aria-pressed="false">Time</button>
             <button data-axis="cards" aria-pressed="false">Cards</button>
-            <button data-axis="agent" aria-pressed="false">Agent</button>
+            <button data-axis="llm" aria-pressed="false">LLM</button>
             <button data-axis="desktop" aria-pressed="false">Desktop</button>
             <button data-axis="publish" aria-pressed="false">Publish</button>
           </div>
@@ -224,7 +289,7 @@
             <tr>
               <td><a href="https://github.com/twhsi/skills/tree/main/skills/imandalart">imandalart</a></td>
               <td><span>Time</span><span>Cards</span></td>
-              <td>Design iMandalArt and iMandala 3x3 square index cards.</td>
+              <td>Create iMandalArt 2.01 hard-line CJK-friendly 3x3 cards.</td>
               <td><code>cp -R skills/imandalart ~/.codex/skills/</code></td>
             </tr>
           </tbody>
@@ -234,32 +299,32 @@
       <section class="section site-shell">
         <div class="section-head">
           <h2>Install & Deploy</h2>
-          <p>免費部署建議：GitHub 當內容源，Vercel 自動 build，Cloudflare 管 DNS 與 HTTPS。</p>
+          <p>Use GitHub as source, Vercel as static build host, and Cloudflare for DNS and HTTPS.</p>
           <a href="/install">/install</a>
         </div>
         <div class="deploy-strip">
           <article class="deploy-step">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3 19v-4c-3 1-4-1-4-1m11 5v-4c0-1 0-2-1-2 3 0 5-2 5-5 0-1 0-2-1-3 0-1 0-2-1-3 0 0-1 0-3 1a11 11 0 0 0-6 0C7 4 6 4 6 4c-1 1-1 2-1 3-1 1-1 2-1 3 0 3 2 5 5 5-1 0-1 1-1 2" /></svg>
             <h3>GitHub</h3>
-            <p>維持 repo 是 source of truth。每個 Skill 的 frontmatter 會進入網站 JSON。</p>
+            <p>Keep the repository as the source of truth. Skill frontmatter becomes public JSON for LLM clients.</p>
             <a href="https://github.com/twhsi/skills">twhsi/skills</a>
           </article>
           <article class="deploy-step">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 16H3z" /></svg>
             <h3>Vercel deploy</h3>
-            <p>匯入 GitHub 專案，build command 使用 <code>npm run build</code>，output directory 使用 <code>dist</code>。</p>
+            <p>Import the GitHub project. Use <code>npm run build</code> and publish the generated <code>dist</code> folder.</p>
             <a href="https://vercel.com/home">vercel.com</a>
           </article>
           <article class="deploy-step">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 17h11a4 4 0 0 0 0-8 6 6 0 0 0-11-1 5 5 0 0 0 0 9z" /><path d="M3 17h18" /></svg>
             <h3>Cloudflare DNS</h3>
-            <p>把自訂網域接到 Vercel 提供的 DNS record，Cloudflare 負責 DNS、HTTPS 與日後轉址。</p>
+            <p>Connect the custom domain to Vercel records. Cloudflare handles DNS, HTTPS, and future redirects.</p>
             <a href="https://dash.cloudflare.com/">dash.cloudflare.com</a>
           </article>
         </div>
         <div class="terminal-strip" aria-label="Deployment summary">
           <span>$ skills registry is live.</span>
-          <span>agent-first</span>
+          <span>multi-LLM</span>
           <span>human-readable</span>
           <span>open & free</span>
         </div>
@@ -271,12 +336,12 @@
         <div>
           <a class="brand" href="/">
             <span class="brand-mark">永</span>
-            <span>永錫 Agent Skill 庫</span>
+          <span>Yongxi LLM Skill Registry</span>
           </a>
-          <p>一個為 Codex / Hermes 設計的公開 Skill registry：讓 Agent 高效率，讓人腦回到慢生活。</p>
+          <p>A public registry of reusable skills for mainstream LLMs, with iMandalArt 2.01 featured as a CJK-friendly card format.</p>
         </div>
         <div>
-          <h3>Agent</h3>
+          <h3>LLM</h3>
           <div class="footer-links">
             <a href="/agent.json">/agent.json</a>
             <a href="/skills.json">/skills.json</a>

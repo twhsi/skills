@@ -1,6 +1,6 @@
 # AI Agent Skills for Chinese Knowledge Workers
 
-> 讓 AI 協助週檢視、九宮格、FIRE 分析、卡片筆記、寫作出版與知識工作流；把重複結構交給 LLM，人保留慢判斷、關係、節奏與幸福感。
+> Reusable agent skills for weekly review, iMandalArt, FIRE analysis, card-based notes, writing, publishing, and Chinese knowledge workflows.
 
 iMandalArt, FIRE semantic analysis, planning, and publishing workflows for Claude Code, Codex, and mainstream LLM agents.
 
@@ -10,15 +10,15 @@ This repository is Yunghsi's public agent-skill system for Chinese knowledge wor
 
 The source of truth lives in `skills/*/SKILL.md`; the website turns those files into generated LLM manifests, a searchable skill index, install commands, version labels, Git revisions, and update timestamps.
 
-## 這個 repo 是什麼
+## What This Repository Is
 
-`twhsi/skills` 是一套可安裝、可分享、可被主流 LLM 讀取的 Skill 庫。它把我長年使用的週檢視、九宮格、FIRE 分析、卡片筆記、EPUB 出版、HyperCard 回流與 Desktop 工作流，整理成可以被 AI 重複執行、被人類檢查與改良的公開流程。
+`twhsi/skills` is an installable, shareable, LLM-readable skill registry. It turns long-running workflows for weekly review, iMandalArt, FIRE analysis, card-based notes, EPUB publishing, HyperCard returns, and desktop work into public procedures that agents can repeat and humans can inspect.
 
-這裡的核心不是讓人變成更快的機器，而是讓 AI 燒 tokens 處理繁瑣的結構工作，讓人腦回到慢生活：身體、家人、朋友、寫作、財務、學習、休閒，以及那個更安靜的問題：
+The point is not to make humans behave like faster machines. The point is to let AI spend tokens on repetitive structure, while humans keep judgment, relationships, pace, and the quieter question:
 
-> 那件事情能帶來真正的幸福與寧靜？
+> Which action brings real happiness and peace?
 
-最新焦點是 [`weekly-reverse-review`](skills/weekly-reverse-review/)：把年計劃、百年人生計劃、上週檢視、七天日記、行事曆與 inbox 雜事，反向整理成下一週的 8 Big Rocks。
+The newest featured skill is [`weekly-reverse-review`](skills/weekly-reverse-review/): it turns annual plans, hundred-year life plans, last week's review, seven days of diary notes, calendar evidence, and inbox noise into the next week's 8 Big Rocks.
 
 Live site: [https://www.twhsi.com/](https://www.twhsi.com/)  
 Agent manifest: [https://www.twhsi.com/agent.json](https://www.twhsi.com/agent.json)  
@@ -54,11 +54,11 @@ The skill reads four angles before writing the next week:
 
 It then asks what should be smaller, slower, deleted, delayed, or kept as presence instead of achievement. The center question is:
 
-> 那件事情能帶來真正的幸福與寧靜？
+> Which action brings real happiness and peace?
 
 Default answer:
 
-> 少說，陪伴，慢慢做。
+> Speak less. Stay present. Move slowly.
 
 For an LLM or agent, start with:
 
@@ -79,20 +79,20 @@ iMandalArt 2.01 is designed around a strict text contract:
 
 Current status: iMandalArt 2.01 is optimized for CJK workflows. An English-native version is planned so the same 3x3 thinking rhythm can work naturally for English notes without forcing a Chinese character contract.
 
-Example:
+Conceptual example:
 
 ```text
-Ⓐ健康復節　Ⓑ書稿收束　Ⓒ財流降噪
-羽球慢回身　書章拉中心　訂閱先盤點
-跑走養節奏　青蛙先寫書　現流養書路
+ⒶHealth Reset  ⒷManuscript  ⒸMoney Noise
+Move with care  Pull one center  Review first
+Build rhythm    Draft before all Fund the work
 
-Ⓓ家人點火　◎◎◎◎◎　Ⓔ人脈成路
-問夢不說教　二九週計劃　約談留三卡
-陪走百年路　◎◎◎◎◎　好友接技能
+ⒹFamily Spark  ◎◎◎◎◎    ⒺPeople Path
+Ask not lecture Weekly Review Keep three cards
+Walk the long   ◎◎◎◎◎    Connect next
 
-Ⓕ內在放下　Ⓖ日文沉澱　Ⓗ休閒充電
-少說更點火　句子先編號　合唱鬆心身
-不急證明我　接詞成路徑　吉他聽太陽
+ⒻInner Release ⒼLearning    ⒽJoyful Rest
+Speak less      Number lines  Sing and loosen
+Prove nothing   Build index   Guitar and sun
 ```
 
 Use it for weekly planning, writing focus, knowledge capture, and CJK note workflows where visual stability matters as much as semantic compression.

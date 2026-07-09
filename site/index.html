@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI Agent Skills for Chinese Knowledge Workers | twhsi/skills</title>
     <meta
       name="description"
-      content="twhsi/skills 是一套公開 LLM Skill 庫，讓 AI 協助週檢視、iMandalArt、FIRE 分析、卡片筆記與知識工作流，人保留慢判斷與幸福寧靜。"
+      content="twhsi/skills is a public LLM skill registry for weekly review, iMandalArt, FIRE analysis, card-based notes, publishing workflows, and Chinese knowledge work."
     />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/assets/site.css" />
@@ -60,21 +60,22 @@
         <div class="hero-grid">
           <div class="hero-copy">
             <p class="eyebrow">AI agent skills for Chinese knowledge workers</p>
-            <h1>讓 AI 做結構，人保留慢判斷。</h1>
-            <p class="split-line"><span>週檢視、九宮格、FIRE、</span><span>出版工作流。</span></p>
+            <h1>Let AI handle structure. Keep human judgment slow.</h1>
+            <p class="split-line"><span>Weekly review, iMandalArt, FIRE,</span><span> publishing workflows.</span></p>
             <p class="lead">
-              這是永錫的公開 LLM Skill 庫，整理週檢視、iMandalArt、FIRE 分析、
-              卡片筆記、EPUB 出版與 Desktop 工作流。AI 負責讀檔、比對、索引、
-              轉換與驗證；人保留關係、節奏，以及「哪件事帶來真正幸福與寧靜」的選擇。
+              Yunghsi's public LLM skill registry packages weekly review, iMandalArt, FIRE analysis,
+              card-based notes, EPUB publishing, and desktop workflows. AI handles reading, comparing,
+              indexing, conversion, and validation; humans keep relationships, pace, and the choice of
+              what brings real happiness and peace.
             </p>
             <div class="hero-actions">
               <a class="button" href="/agent.json">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7l5 5-5 5" /><path d="M13 17h6" /></svg>
-                開啟 LLM Manifest
+                Open LLM Manifest
               </a>
               <a class="button secondary" href="#demo">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v16H6z" /><path d="M9 8h6" /><path d="M9 12h6" /><path d="M9 16h4" /></svg>
-                看可複製範例
+                See Copyable Demo
               </a>
             </div>
             <div class="status-rail" aria-label="Registry status">
@@ -114,15 +115,15 @@
               <div class="panel-label human"><span>Human View</span><span>20%</span></div>
               <a class="human-item" href="#updates">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h5l3-7 3 14 3-7h2" /></svg>
-                <span><strong>Freshness</strong><span>版本、修訂與時間</span></span>
+                <span><strong>Freshness</strong><span>Versions, revisions, and timestamps</span></span>
               </a>
               <a class="human-item" href="#skills">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z" /><path d="M8 9h3" /><path d="M8 13h8" /></svg>
-                <span><strong>Skill Index</strong><span>可搜尋安裝索引</span></span>
+                <span><strong>Skill Index</strong><span>Searchable install registry</span></span>
               </a>
               <a class="human-item" href="/install">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6z" /><path d="M14 3v4h4" /><path d="M9 12h6" /><path d="M9 16h6" /></svg>
-                <span><strong>Install</strong><span>本機與網站部署</span></span>
+                <span><strong>Install</strong><span>Local and web deployment guide</span></span>
               </a>
             </aside>
           </div>
@@ -132,7 +133,7 @@
       <section id="demo" class="section site-shell demo-section">
         <div class="section-head feature-head">
           <h2>Copyable Demo</h2>
-          <p>先用一個可以複製的流程看懂這個 repo：AI 處理結構，人保留判斷。</p>
+          <p>A compact workflow shows the repository's purpose: AI handles structure, humans keep judgment.</p>
           <a href="https://github.com/twhsi/skills">GitHub</a>
         </div>
         <div class="demo-grid">
@@ -140,10 +141,10 @@
             <p class="eyebrow">One line promise</p>
             <h3>AI Agent Skills for Chinese Knowledge Workers</h3>
             <p>
-              把日計劃、週檢視、手稿筆記與 Markdown 草稿，轉成可被 Agent 接續的流程：
-              iMandalArt 卡、FIRE 語意分析、可重用 metadata 與出版路徑。
+              Turn daily plans, weekly reviews, manuscript notes, and Markdown drafts into agent-ready
+              workflows: iMandalArt cards, FIRE semantic analysis, reusable metadata, and publishing paths.
             </p>
-            <pre class="demo-code">Input: 年計劃 + 週檢視 + 七天日記 + inbox
+            <pre class="demo-code">Input: annual plan + weekly review + seven-day diary + inbox
 Skills: weekly-reverse-review + imandalart + fire-analysis-card
 Output: 8 Big Rocks + FIRE JSON + iMandalArt 2.01</pre>
           </article>
@@ -169,40 +170,40 @@ Output: 8 Big Rocks + FIRE JSON + iMandalArt 2.01</pre>
         <div class="section-head feature-head">
           <h2>Weekly Reverse Review</h2>
           <p>
-            一個迭代近二十年的週檢視流程，轉成 AI-assisted Skill：
-            讀取 YEAR、Week、Day、Inbox 四個角度，再生成一週安靜而精彩的 8 Big Rocks。
+            A nearly twenty-year weekly review practice converted into an AI-assisted Skill:
+            read YEAR, Week, Day, and Inbox evidence, then build one quiet and vivid 8 Big Rocks plan.
           </p>
           <a href="https://github.com/twhsi/skills/tree/main/skills/weekly-reverse-review">GitHub</a>
         </div>
         <div class="imandalart-grid">
           <div class="imandalart-copy">
             <p class="eyebrow">New skill</p>
-            <h3>讓 AI 燒 tokens，人腦保留安靜判斷。</h3>
+            <h3>Let AI spend tokens so the human keeps quiet judgment.</h3>
             <p>
-              Weekly Reverse Review 會收集年計劃、百年人生計劃、上週計劃與週檢視、
-              七天日計劃與日記、行事曆，以及 inbox 裡的雜事。目標不是增加任務，
-              而是問：哪件事能帶來真正的幸福與寧靜？
+              Weekly Reverse Review gathers annual plans, hundred-year life plans, last week's plan
+              and review, seven days of daily plans and diary notes, calendar evidence, and inbox noise.
+              The goal is not to add more tasks. The goal is to ask what brings real happiness and peace.
             </p>
             <div class="case-list">
-              <span>腦力節省：11 個步驟從兩三小時變得更輕。</span>
-              <span>四個視角：YEAR、Week、Day、Inbox 先互相比對。</span>
-              <span>反向願望清單：變小、變慢、刪掉、延後，或留下陪伴。</span>
-              <span>核心答案：少說，陪伴，慢慢做。</span>
+              <span>Lower cognitive load: an 11-step review becomes lighter.</span>
+              <span>Four evidence angles: YEAR, Week, Day, and Inbox are compared first.</span>
+              <span>Reverse wish list: shrink, slow down, delete, defer, or keep presence.</span>
+              <span>Default answer: speak less, stay present, move slowly.</span>
             </div>
           </div>
           <figure class="mandala-panel">
             <figcaption>Happiness-and-peace weekly plan</figcaption>
-            <pre class="mandala-card">Ⓕ內在放下　Ⓒ財流降噪　Ⓖ日文沉澱
-少說更點火　訂閱先盤點　句子先編號
-不急證明我　現流養書路　接詞成路徑
+            <pre class="mandala-card">ⒻInner Release ⒸMoney Noise   ⒼLearning Depth
+Speak less      Review first   Number lines
+Prove nothing   Fund the work  Build index
 
-Ⓑ書稿收束　◎◎◎◎◎　Ⓓ家人點火
-書章拉中心　幸福寧靜週　問夢不說教
-青蛙先寫書　◎◎◎◎◎　陪走百年路
+ⒷManuscript    ◎◎◎◎◎       ⒹFamily Spark
+Pull one center Peaceful Week  Ask not lecture
+Draft before all ◎◎◎◎◎      Walk the long
 
-Ⓔ人脈成路　Ⓐ健康復節　Ⓗ休閒充電
-約談留三卡　羽球慢回身　合唱鬆心身
-好友接技能　跑走養節奏　吉他聽太陽</pre>
+ⒺPeople Path   ⒶHealth Reset  ⒽJoyful Rest
+Keep three cards Move with care Sing and loosen
+Connect next    Build rhythm   Guitar and sun</pre>
           </figure>
         </div>
       </section>
@@ -238,17 +239,17 @@ Output: 8 Big Rocks + FIRE JSON + iMandalArt 2.01</pre>
           </div>
           <figure class="mandala-panel">
             <figcaption>Example card generated by iMandalArt 2.01</figcaption>
-            <pre class="mandala-card">Ⓐ健康復節　Ⓑ書稿收束　Ⓒ財流降噪
-羽球慢回身　書章拉中心　訂閱先盤點
-跑走養節奏　青蛙先寫書　現流養書路
+            <pre class="mandala-card">ⒶHealth Reset  ⒷManuscript   ⒸMoney Noise
+Move with care  Pull one center Review first
+Build rhythm    Draft before all Fund the work
 
-Ⓓ家人點火　◎◎◎◎◎　Ⓔ人脈成路
-問夢不說教　二九週計劃　約談留三卡
-陪走百年路　◎◎◎◎◎　好友接技能
+ⒹFamily Spark  ◎◎◎◎◎       ⒺPeople Path
+Ask not lecture Weekly Review Keep three cards
+Walk the long   ◎◎◎◎◎       Connect next
 
-Ⓕ內在放下　Ⓖ日文沉澱　Ⓗ休閒充電
-少說更點火　句子先編號　合唱鬆心身
-不急證明我　接詞成路徑　吉他聽太陽</pre>
+ⒻInner Release ⒼLearning     ⒽJoyful Rest
+Speak less      Number lines  Sing and loosen
+Prove nothing   Build index   Guitar and sun</pre>
           </figure>
         </div>
       </section>

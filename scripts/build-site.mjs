@@ -255,7 +255,7 @@ Split: 80% machine-readable LLM endpoints, 20% human-readable map.
 
 ## Featured skills
 
-Weekly Reverse Review turns annual plans, hundred-year life plans, last weekly reviews, seven-day diaries, calendars, and inbox notes into one happiness-and-peace-centered 8 Big Rocks weekly plan. Its center question is: 那件事情能帶來真正的幸福與寧靜？
+Weekly Reverse Review turns annual plans, hundred-year life plans, last weekly reviews, seven-day diaries, calendars, and inbox notes into one happiness-and-peace-centered 8 Big Rocks weekly plan. Its center question is: Which action brings real happiness and peace?
 
 iMandalArt 2.01 is the flagship CJK-friendly hard-line 3x3 thinking card format. It uses eight orthogonal angles labeled Ⓐ-Ⓗ, a double ◎◎◎◎◎ center axis, and exactly 11 physical text lines so the card survives chat previews, note apps, and clipboard workflows. An English-native version is planned.
 

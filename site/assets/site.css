@@ -556,6 +556,86 @@ code {
   line-height: 1.7;
 }
 
+.imandalart-showcase {
+  padding-top: 54px;
+}
+
+.feature-head h2 {
+  color: var(--cyan-dark);
+}
+
+.imandalart-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(520px, 1.18fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.imandalart-copy {
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--cyan);
+  padding: 26px;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.imandalart-copy h3 {
+  margin: 0;
+  font-size: 2.15rem;
+  line-height: 1.12;
+}
+
+.imandalart-copy p {
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.case-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.case-list span {
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 7px 11px;
+  background: var(--amber-soft);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+}
+
+.mandala-panel {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  border: 1px solid var(--line-strong);
+  padding: 18px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+}
+
+.mandala-panel figcaption {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+.mandala-card {
+  margin: 0;
+  overflow: auto;
+  border: 1px solid var(--line);
+  padding: 22px;
+  background: var(--code);
+  color: #ffffff;
+  font-family: "Noto Sans TC", "PingFang TC", var(--mono);
+  font-size: clamp(0.86rem, 1.15vw, 1.05rem);
+  font-weight: 650;
+  line-height: 1.9;
+  white-space: pre;
+}
+
 .map-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.78fr) minmax(360px, 1fr);
@@ -782,6 +862,7 @@ code {
 
   .hero-grid,
   .hero-panels,
+  .imandalart-grid,
   .map-layout {
     grid-template-columns: 1fr;
     min-width: 0;

@@ -26,10 +26,10 @@ const axisRules = [
     match: ["fire-analysis-card", "imandalart", "markdown-nine-grid-clipboard", "obsidian-graph-view"]
   },
   {
-    id: "agent",
-    label: "Agent",
-    route: "/agent",
-    summary: "Repeatable Codex skills, structured inputs, scripts and agent metadata.",
+    id: "llm",
+    label: "LLM",
+    route: "/llm",
+    summary: "Repeatable skills, structured inputs, scripts and metadata for mainstream LLM agents.",
     match: ["project-note-json-to-epub", "epub-hypercard-obsidian", "eight-page-booklet"]
   },
   {
@@ -101,7 +101,7 @@ async function listSkills() {
       description: sentence(frontmatter.description || ""),
       version: extractVersion(markdown, frontmatter),
       ...gitInfo,
-      axes: axes.length ? axes : ["agent"],
+      axes: axes.length ? axes : ["llm"],
       repo_path: dir,
       skill_file: `${dir}/SKILL.md`,
       github_url: `${repoUrl}/tree/main/${dir}`,
@@ -168,9 +168,9 @@ function extractVersion(markdown, frontmatter) {
 function createAgentManifest(skills) {
   return {
     id: "twhsi/skills",
-    name: "Yonghsi Agent Skill Registry",
-    tagline: "Fast work for agents, slow judgment for humans",
-    north_star: "Fast work for agents, slow judgment for humans",
+    name: "Yongxi LLM Skill Registry",
+    tagline: "Reusable skills for mainstream LLMs",
+    north_star: "Let LLMs handle repeatable structure while humans keep judgment, taste, and pace.",
     audience_split: {
       agent: 0.8,
       human: 0.2
@@ -239,19 +239,23 @@ function createLlmsText(manifest, skillsIndex) {
     .map((axis) => `- ${axis.label} (${axis.route}): ${axis.summary} Skills: ${axis.skills.join(", ")}`)
     .join("\n");
 
-  return `# Yonghsi Agent Skill Registry
+  return `# Yongxi LLM Skill Registry
 
-This is the public agent-first registry for https://github.com/twhsi/skills.
+This is the public multi-LLM skill registry for https://github.com/twhsi/skills.
 
 North Star: ${manifest.north_star}
-Split: 80% machine-readable Agent endpoints, 20% human-readable map.
+Split: 80% machine-readable LLM endpoints, 20% human-readable map.
 
-## Agent endpoints
+## LLM endpoints
 
-- /agent.json: canonical agent manifest.
+- /agent.json: canonical LLM and agent manifest.
 - /skills.json: generated skill index from skills/*/SKILL.md frontmatter.
 - /llms.txt: compact context for LLMs.
-- /install: human and agent install/deploy guide.
+- /install: human and LLM install/deploy guide.
+
+## Featured skill
+
+iMandalArt 2.01 is a CJK-friendly hard-line 3x3 thinking card format. It uses eight orthogonal angles labeled Ⓐ-Ⓗ, a double ◎◎◎◎◎ center axis, and exactly 11 physical text lines so the card survives chat previews, note apps, and clipboard workflows. An English-native version is planned.
 
 ## Routes
 
@@ -263,7 +267,7 @@ ${skillLines}
 
 ## Human review rule
 
-Agent should handle collection, parsing, indexing, conversion, validation and deployment preparation. Human should review taste, priority, publishing, deletion, overwrites and ambiguous judgment calls.
+LLM agents should handle collection, parsing, indexing, conversion, validation and deployment preparation. Human should review taste, priority, publishing, deletion, overwrites and ambiguous judgment calls.
 `;
 }
 

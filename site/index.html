@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Yonghsi Agent Skill Registry</title>
+    <title>Yongxi LLM Skill Registry</title>
     <meta
       name="description"
-      content="A public, agent-first registry for Codex and Hermes skills with generated manifests, skill metadata, versions, revisions, and update timestamps."
+      content="A public multi-LLM skill registry for ChatGPT, Claude, Gemini, Codex, Hermes, and other agentic clients, with generated manifests, skill metadata, versions, revisions, and update timestamps."
     />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/assets/site.css" />
@@ -16,16 +16,20 @@
       <div class="site-shell">
         <a class="brand" href="/">
           <span class="brand-mark">YS</span>
-          <span>Yonghsi Agent Skill Registry</span>
+          <span>Yongxi LLM Skill Registry</span>
         </a>
         <nav class="top-nav" aria-label="Main navigation">
+          <a class="nav-link" href="#imandalart">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v6H4z" /><path d="M14 4h6v6h-6z" /><path d="M4 14h6v6H4z" /><path d="M14 14h6v6h-6z" /></svg>
+            iMandalArt
+          </a>
           <a class="nav-link" href="#updates">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h5l3-7 3 14 3-7h2" /></svg>
             Updates
           </a>
           <a class="nav-link" href="#agent-index">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7l5 5-5 5" /><path d="M13 17h6" /></svg>
-            Agent Index
+            LLM Index
           </a>
           <a class="nav-link" href="#skills">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z" /><path d="M8 9h3" /><path d="M8 13h8" /></svg>
@@ -47,18 +51,19 @@
       <section class="hero site-shell">
         <div class="hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Agent-first, human-readable</p>
-            <h1>Codex skills with live metadata.</h1>
-            <p class="split-line"><span>Fast work for agents,</span><span> slow judgment for humans.</span></p>
+            <p class="eyebrow">Multi-LLM, human-readable</p>
+            <h1>Reusable skills with live metadata.</h1>
+            <p class="split-line"><span>Fast structure for LLMs,</span><span> slow judgment for humans.</span></p>
             <p class="lead">
-              This site turns the <strong>twhsi/skills</strong> GitHub repository into a public skill registry.
-              Agents read generated JSON manifests. Humans see the current skill map, version labels,
-              last update times, and install paths from the same source of truth.
+              This site turns the <strong>twhsi/skills</strong> GitHub repository into a public skill registry
+              for ChatGPT, Claude, Gemini, Codex, Hermes, and other LLM agents. Machines read generated
+              manifests. Humans see the current skill map, version labels, last update times, and install paths
+              from the same source of truth.
             </p>
             <div class="hero-actions">
               <a class="button" href="/agent.json">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7l5 5-5 5" /><path d="M13 17h6" /></svg>
-                Open Agent Manifest
+                Open LLM Manifest
               </a>
               <a class="button secondary" href="#updates">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h5l3-7 3 14 3-7h2" /></svg>
@@ -73,12 +78,15 @@
             </div>
           </div>
 
-          <div class="hero-panels" aria-label="Agent and human views">
+          <div class="hero-panels" aria-label="LLM and human views">
             <div class="agent-console">
-              <div class="panel-label"><span>Agent View</span><span>80%</span></div>
+              <div class="panel-label"><span>LLM View</span><span>80%</span></div>
               <pre class="console-body">{
   <span>"registry"</span>: "twhsi/skills",
   <span>"revision"</span>: "<b data-console-revision>loading</b>",
+  <span>"runtimes"</span>: [
+    "ChatGPT", "Claude", "Gemini", "Codex", "Hermes"
+  ],
   <span>"endpoints"</span>: [
     "/agent.json",
     "/skills.json",
@@ -111,6 +119,52 @@
         </div>
       </section>
 
+      <section id="imandalart" class="section site-shell imandalart-showcase">
+        <div class="section-head feature-head">
+          <h2>iMandalArt 2.01</h2>
+          <p>
+            The featured skill in this registry: a hard-line 3x3 thinking card that lets mainstream LLMs turn loose notes,
+            plans, and source material into one compact CJK-friendly Mandala index.
+          </p>
+          <a href="https://github.com/twhsi/skills/tree/main/skills/imandalart">GitHub</a>
+        </div>
+        <div class="imandalart-grid">
+          <div class="imandalart-copy">
+            <p class="eyebrow">Featured skill</p>
+            <h3>One center, eight orthogonal angles, eleven physical lines.</h3>
+            <p>
+              iMandalArt 2.01 is optimized for CJK workflows today: each surrounding content phrase is exactly five Han
+              characters, each title is compact, and full-width separators keep the card stable in chat previews,
+              TheBrain/Cerebro notes, Hermes, Discord, and clipboard-based workflows.
+            </p>
+            <p>
+              The format is currently CJK-friendly. An English-native version is planned so the same 3x3 thinking rhythm
+              can work naturally for English notes without forcing a Chinese character contract.
+            </p>
+            <div class="case-list">
+              <span>Weekly planning</span>
+              <span>Writing focus</span>
+              <span>Knowledge capture</span>
+              <span>TheBrain notes</span>
+            </div>
+          </div>
+          <figure class="mandala-panel">
+            <figcaption>Example card generated by iMandalArt 2.01</figcaption>
+            <pre class="mandala-card">Ⓐ健康復節　Ⓑ書稿收束　Ⓒ財流降噪
+羽球慢回身　書章拉中心　訂閱先盤點
+跑走養節奏　青蛙先寫書　現流養書路
+
+Ⓓ家人點火　◎◎◎◎◎　Ⓔ人脈成路
+問夢不說教　二九週計劃　約談留三卡
+陪走百年路　◎◎◎◎◎　好友接技能
+
+Ⓕ內在放下　Ⓖ日文沉澱　Ⓗ休閒充電
+少說更點火　句子先編號　合唱鬆心身
+不急證明我　接詞成路徑　吉他聽太陽</pre>
+          </figure>
+        </div>
+      </section>
+
       <section id="updates" class="section site-shell">
         <div class="section-head">
           <h2>Latest Skill Updates</h2>
@@ -127,8 +181,8 @@
 
       <section id="agent-index" class="section site-shell">
         <div class="section-head">
-          <h2>Agent Endpoints</h2>
-          <p>These are the canonical machine-readable entry points for another agent to continue the work without reading the whole repository first.</p>
+          <h2>LLM Endpoints</h2>
+          <p>These are the canonical machine-readable entry points for another LLM agent or automation client to continue the work without reading the whole repository first.</p>
           <a href="/agent.json">/agent.json</a>
         </div>
         <table class="endpoint-table">
@@ -143,7 +197,7 @@
           <tbody>
             <tr>
               <td><a href="/agent.json">/agent.json</a></td>
-              <td>Canonical manifest with registry identity, routes, skill metadata, and agent contract.</td>
+              <td>Canonical manifest with registry identity, routes, skill metadata, and LLM agent contract.</td>
               <td><code>application/json</code></td>
               <td><button data-copy="/agent.json">Copy</button></td>
             </tr>
@@ -161,7 +215,7 @@
             </tr>
             <tr>
               <td><a href="/install">/install</a></td>
-              <td>Human and agent install guide for local Codex usage and static website deployment.</td>
+              <td>Human and LLM install guide for local runtime usage and static website deployment.</td>
               <td><code>text/html</code></td>
               <td><button data-copy="/install">Copy</button></td>
             </tr>
@@ -172,7 +226,7 @@
       <section class="section site-shell" aria-labelledby="route-title">
         <div class="section-head">
           <h2 id="route-title">Skill Routes</h2>
-          <p>Routes help agents select the right skill and help humans understand how the operating system is organized.</p>
+          <p>Routes help LLM agents select the right skill and help humans understand how the operating system is organized.</p>
           <a href="/skills.json">View all</a>
         </div>
         <div class="route-grid" data-route-grid>
@@ -221,7 +275,7 @@
             <button data-axis="all" aria-pressed="true">All</button>
             <button data-axis="time" aria-pressed="false">Time</button>
             <button data-axis="cards" aria-pressed="false">Cards</button>
-            <button data-axis="agent" aria-pressed="false">Agent</button>
+            <button data-axis="llm" aria-pressed="false">LLM</button>
             <button data-axis="desktop" aria-pressed="false">Desktop</button>
             <button data-axis="publish" aria-pressed="false">Publish</button>
           </div>
@@ -255,7 +309,7 @@
       <section class="section site-shell">
         <div class="section-head">
           <h2>Install & Deploy</h2>
-          <p>Use GitHub as the source of truth, Vercel as the static build host, and the generated JSON files as the agent entry points.</p>
+          <p>Use GitHub as the source of truth, Vercel as the static build host, and the generated JSON files as the LLM entry points.</p>
           <a href="/install">/install</a>
         </div>
         <div class="deploy-strip">
@@ -274,7 +328,7 @@
           <article class="deploy-step">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 17h11a4 4 0 0 0 0-8 6 6 0 0 0-11-1 5 5 0 0 0 0 9z" /><path d="M3 17h18" /></svg>
             <h3>Custom Domain</h3>
-            <p>Point <code>www.twhsi.com</code> to the Vercel project so the registry stays stable for humans and agents.</p>
+            <p>Point <code>www.twhsi.com</code> to the Vercel project so the registry stays stable for humans and LLM agents.</p>
             <a href="https://www.twhsi.com/">www.twhsi.com</a>
           </article>
         </div>
@@ -282,7 +336,7 @@
           <span>$ registry live</span>
           <span>versions generated</span>
           <span>timestamps published</span>
-          <span>agent-first</span>
+          <span>multi-LLM</span>
         </div>
       </section>
     </main>
@@ -292,12 +346,12 @@
         <div>
           <a class="brand" href="/">
             <span class="brand-mark">YS</span>
-            <span>Yonghsi Agent Skill Registry</span>
+            <span>Yongxi LLM Skill Registry</span>
           </a>
-          <p>A public Codex and Hermes skill registry with generated manifests, install commands, versions, revisions, and update timestamps.</p>
+          <p>A public skill registry for mainstream LLMs with generated manifests, install commands, versions, revisions, and update timestamps.</p>
         </div>
         <div>
-          <h3>Agent</h3>
+          <h3>LLM</h3>
           <div class="footer-links">
             <a href="/agent.json">/agent.json</a>
             <a href="/skills.json">/skills.json</a>

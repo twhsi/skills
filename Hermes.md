@@ -36,6 +36,7 @@ Hermes 的任務：
 
 | 用途 | Skill / 文件 | 角色 |
 |---|---|---|
+| 週檢視反向計劃 | [`skills/weekly-reverse-review/`](skills/weekly-reverse-review/) | 從年、週、日、Inbox 反向產生 8 Big Rocks |
 | 每日/每週聚焦 | [`skills/imandalart/`](skills/imandalart/) | 用九宮卡壓縮當下重點 |
 | 長期訓練圖 | [`skills/personal-athlete-81-grid/`](skills/personal-athlete-81-grid/) | 把目標拆成 8+64 行動 |
 | 閱讀/寫作節奏 | [`docs/book-links.md`](docs/book-links.md) | 讓章節和 Skill 有固定入口 |
@@ -43,6 +44,7 @@ Hermes 的任務：
 時間管理軸的原則：
 
 - 用九宮格做「今日重心」，不用長清單耗損注意力。
+- 用反向週檢視做「本週取捨」，不用成就焦慮淹沒幸福與寧靜。
 - 用 81 宮做「長期訓練」，不用單日情緒決定人生方向。
 - 用 GitHub link 做「書籍節奏」，讓每一章有可回訪的工具入口。
 
@@ -178,6 +180,7 @@ README.md    GitHub 首頁與讀者入口
 
 | Skill | 主軸 | 副軸 | 狀態 | 下一步 |
 |---|---|---|---|---|
+| [`weekly-reverse-review`](skills/weekly-reverse-review/) | 時間管理 | 卡片筆記 / Agent | active | 連到週計劃、README 與首頁介紹 |
 | [`personal-athlete-81-grid`](skills/personal-athlete-81-grid/) | 時間管理 | Desktop / 卡片 | active | 可作為長期目標管理範例 |
 | [`fire-analysis-card`](skills/fire-analysis-card/) | 卡片筆記 | Agent | active | 補 examples，展示中文文章分析 |
 | [`imandalart`](skills/imandalart/) | 卡片筆記 | 時間管理 | active | 作為每日/章節九宮卡核心 |

@@ -1,12 +1,24 @@
 # AI Agent Skills for Chinese Knowledge Workers
 
-> iMandalArt, FIRE semantic analysis, planning, and publishing workflows for Claude Code, Codex, and mainstream LLM agents.
+> 讓 AI 協助週檢視、九宮格、FIRE 分析、卡片筆記、寫作出版與知識工作流；把重複結構交給 LLM，人保留慢判斷、關係、節奏與幸福感。
+
+iMandalArt, FIRE semantic analysis, planning, and publishing workflows for Claude Code, Codex, and mainstream LLM agents.
 
 [![Hermes All Skills Map](assets/hermes-all-skills-map.png)](assets/hermes-all-skills-map.png)
 
 This repository is Yunghsi's public agent-skill system for Chinese knowledge workers. It turns repeatable writing, planning, note-making, and publishing workflows into skills that can be used by Claude Code, Codex, ChatGPT, Gemini, Hermes, and other LLM agents.
 
 The source of truth lives in `skills/*/SKILL.md`; the website turns those files into generated LLM manifests, a searchable skill index, install commands, version labels, Git revisions, and update timestamps.
+
+## 這個 repo 是什麼
+
+`twhsi/skills` 是一套可安裝、可分享、可被主流 LLM 讀取的 Skill 庫。它把我長年使用的週檢視、九宮格、FIRE 分析、卡片筆記、EPUB 出版、HyperCard 回流與 Desktop 工作流，整理成可以被 AI 重複執行、被人類檢查與改良的公開流程。
+
+這裡的核心不是讓人變成更快的機器，而是讓 AI 燒 tokens 處理繁瑣的結構工作，讓人腦回到慢生活：身體、家人、朋友、寫作、財務、學習、休閒，以及那個更安靜的問題：
+
+> 那件事情能帶來真正的幸福與寧靜？
+
+最新焦點是 [`weekly-reverse-review`](skills/weekly-reverse-review/)：把年計劃、百年人生計劃、上週檢視、七天日記、行事曆與 inbox 雜事，反向整理成下一週的 8 Big Rocks。
 
 Live site: [https://www.twhsi.com/](https://www.twhsi.com/)  
 Agent manifest: [https://www.twhsi.com/agent.json](https://www.twhsi.com/agent.json)  
@@ -28,6 +40,25 @@ Input: 200 days of daily plans, manuscript notes, or Markdown drafts
 Skills: imandalart + fire-analysis-card + project-note-json-to-epub
 Output: FIRE JSON + iMandalArt 2.01 card + Markdown / EPUB / booklet path
 ```
+
+## Featured: Weekly Reverse Review
+
+[`weekly-reverse-review`](skills/weekly-reverse-review/) turns an 11-step weekly review into an AI-assisted reverse planning loop.
+
+The skill reads four angles before writing the next week:
+
+- `YEAR`: annual plan and hundred-year life plan.
+- `Week`: last weekly plan and weekly review.
+- `Day`: daily plans, seven-day diary notes, and calendar evidence.
+- `Inbox`: loose tasks, reminders, subscriptions, errands, and collected noise.
+
+It then asks what should be smaller, slower, deleted, delayed, or kept as presence instead of achievement. The center question is:
+
+> 那件事情能帶來真正的幸福與寧靜？
+
+Default answer:
+
+> 少說，陪伴，慢慢做。
 
 For an LLM or agent, start with:
 
@@ -80,6 +111,7 @@ Use it for weekly planning, writing focus, knowledge capture, and CJK note workf
 | [`imandalart`](skills/imandalart/) | Compress source material into one CJK-friendly 3x3 Mandala card. |
 | [`fire-analysis-card`](skills/fire-analysis-card/) | Turn Chinese notes and manuscripts into FIRE semantic analysis cards. |
 | [`todays-daily-plan`](skills/todays-daily-plan/) | Convert spoken planning notes into an Obsidian day-plan Mandala grid. |
+| [`weekly-reverse-review`](skills/weekly-reverse-review/) | Turn YEAR, Week, Day, and Inbox evidence into one happiness-and-peace-centered weekly plan. |
 | [`project-note-json-to-epub`](skills/project-note-json-to-epub/) | Turn structured project-note JSON into EPUB and publishing outputs. |
 | [`markdown-nine-grid-clipboard`](skills/markdown-nine-grid-clipboard/) | Convert grids and cards into Markdown table workflows. |
 
@@ -111,8 +143,8 @@ Featured metadata check: [`imandalart`](skills/imandalart/) declares `v2.01`, an
 
 | Route | Purpose | Representative skills |
 |---|---|---|
-| Time | Daily focus, planning rhythm, calendar actions, and long-range training loops. | `todays-daily-plan`, `imandalart`, `personal-athlete-81-grid`, `fantastical-calendar` |
-| Cards | FIRE analysis, grid cards, Markdown tables, and graph views. | `fire-analysis-card`, `markdown-nine-grid-clipboard`, `obsidian-graph-view` |
+| Time | Daily focus, planning rhythm, calendar actions, weekly review, and long-range training loops. | `weekly-reverse-review`, `todays-daily-plan`, `imandalart`, `personal-athlete-81-grid`, `fantastical-calendar` |
+| Cards | FIRE analysis, grid cards, Markdown tables, and graph views. | `weekly-reverse-review`, `fire-analysis-card`, `markdown-nine-grid-clipboard`, `obsidian-graph-view` |
 | LLM | Repeatable LLM workflows, structured inputs, scripts, and metadata. | `project-note-json-to-epub`, `epub-hypercard-obsidian` |
 | Desktop | Local Mac workflows, clipboard outputs, calendar bridges, and working-desk routines. | `fantastical-calendar`, `markdown-nine-grid-clipboard` |
 | Publish | Booklets, EPUBs, HyperCard returns, and public GitHub publishing paths. | `project-note-json-to-epub`, `epub-hypercard-obsidian` |
@@ -137,6 +169,7 @@ From the repository root:
 ```bash
 cp -R skills/fire-analysis-card ~/.codex/skills/
 cp -R skills/todays-daily-plan ~/.codex/skills/
+cp -R skills/weekly-reverse-review ~/.codex/skills/
 cp -R skills/imandalart ~/.codex/skills/
 ```
 

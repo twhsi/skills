@@ -15,15 +15,15 @@ const axisRules = [
     id: "time",
     label: "Time",
     route: "/time",
-    summary: "Daily focus, weekly rhythm, calendar and long-range training loops.",
-    match: ["imandalart", "personal-athlete-81-grid", "fantastical-calendar"]
+    summary: "Daily focus, weekly review, planning rhythm, calendar and long-range training loops.",
+    match: ["weekly-reverse-review", "todays-daily-plan", "imandalart", "personal-athlete-81-grid", "fantastical-calendar"]
   },
   {
     id: "cards",
     label: "Cards",
     route: "/cards",
     summary: "FIRE analysis, nine-grid cards, Markdown tables and graph views.",
-    match: ["fire-analysis-card", "imandalart", "markdown-nine-grid-clipboard", "obsidian-graph-view"]
+    match: ["weekly-reverse-review", "fire-analysis-card", "imandalart", "markdown-nine-grid-clipboard", "obsidian-graph-view"]
   },
   {
     id: "llm",
@@ -241,7 +241,7 @@ function createLlmsText(manifest, skillsIndex) {
 
   return `# AI Agent Skills for Chinese Knowledge Workers
 
-This is Yunghsi's public agent-skill system for Chinese knowledge workers: iMandalArt, FIRE semantic analysis, daily planning, Markdown, EPUB, and booklet workflows for Claude Code, Codex, ChatGPT, Gemini, Hermes, and other LLM agents.
+This is Yunghsi's public agent-skill system for Chinese knowledge workers: Weekly Reverse Review, iMandalArt, FIRE semantic analysis, daily planning, Markdown, EPUB, and booklet workflows for Claude Code, Codex, ChatGPT, Gemini, Hermes, and other LLM agents.
 
 North Star: ${manifest.north_star}
 Split: 80% machine-readable LLM endpoints, 20% human-readable map.
@@ -253,15 +253,17 @@ Split: 80% machine-readable LLM endpoints, 20% human-readable map.
 - /llms.txt: compact context for LLMs.
 - /install: human and LLM install/deploy guide.
 
-## Featured skill
+## Featured skills
+
+Weekly Reverse Review turns annual plans, hundred-year life plans, last weekly reviews, seven-day diaries, calendars, and inbox notes into one happiness-and-peace-centered 8 Big Rocks weekly plan. Its center question is: 那件事情能帶來真正的幸福與寧靜？
 
 iMandalArt 2.01 is the flagship CJK-friendly hard-line 3x3 thinking card format. It uses eight orthogonal angles labeled Ⓐ-Ⓗ, a double ◎◎◎◎◎ center axis, and exactly 11 physical text lines so the card survives chat previews, note apps, and clipboard workflows. An English-native version is planned.
 
 ## Copyable demo
 
-Input: 200 days of daily plans, manuscript notes, or Markdown drafts.
-Skills: imandalart + fire-analysis-card + project-note-json-to-epub.
-Output: FIRE JSON + iMandalArt 2.01 card + Markdown / EPUB / booklet path.
+Input: annual plan, hundred-year life plan, weekly review, seven-day diaries, calendar, inbox notes, manuscript notes, or Markdown drafts.
+Skills: weekly-reverse-review + imandalart + fire-analysis-card + project-note-json-to-epub.
+Output: 8 Big Rocks weekly plan + FIRE JSON + iMandalArt 2.01 card + Markdown / EPUB / booklet path.
 
 ## Routes
 

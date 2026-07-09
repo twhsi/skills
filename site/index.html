@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hant">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AI Agent Skills for Chinese Knowledge Workers | Yunghsi</title>
+    <title>AI Agent Skills for Chinese Knowledge Workers | twhsi/skills</title>
     <meta
       name="description"
-      content="A Chinese-first agent skill system for Claude Code, Codex, ChatGPT, Gemini, Hermes, and other LLM agents: iMandalArt, FIRE semantic analysis, planning, and publishing workflows."
+      content="twhsi/skills 是一套公開 LLM Skill 庫，讓 AI 協助週檢視、iMandalArt、FIRE 分析、卡片筆記與知識工作流，人保留慢判斷與幸福寧靜。"
     />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/assets/site.css" />
@@ -26,6 +26,10 @@
           <a class="nav-link" href="#demo">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v16H6z" /><path d="M9 8h6" /><path d="M9 12h6" /><path d="M9 16h4" /></svg>
             Demo
+          </a>
+          <a class="nav-link" href="#weekly-review">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2v4" /><path d="M17 2v4" /><path d="M4 6h16v15H4z" /><path d="M4 11h16" /><path d="M8 15h3" /><path d="M13 15h3" /></svg>
+            Weekly Review
           </a>
           <a class="nav-link" href="#updates">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h5l3-7 3 14 3-7h2" /></svg>
@@ -56,21 +60,21 @@
         <div class="hero-grid">
           <div class="hero-copy">
             <p class="eyebrow">AI agent skills for Chinese knowledge workers</p>
-            <h1>Turn Chinese notes into agent-ready workflows.</h1>
-            <p class="split-line"><span>iMandalArt, FIRE, planning,</span><span> publishing.</span></p>
+            <h1>讓 AI 做結構，人保留慢判斷。</h1>
+            <p class="split-line"><span>週檢視、九宮格、FIRE、</span><span>出版工作流。</span></p>
             <p class="lead">
-              This is Yunghsi's public skill system for Claude Code, Codex, ChatGPT, Gemini, Hermes, and other
-              LLM agents. It packages Chinese-first knowledge workflows into reusable skills for 9-grid thinking,
-              FIRE semantic analysis, daily planning, Markdown, EPUB, and booklet outputs.
+              這是永錫的公開 LLM Skill 庫，整理週檢視、iMandalArt、FIRE 分析、
+              卡片筆記、EPUB 出版與 Desktop 工作流。AI 負責讀檔、比對、索引、
+              轉換與驗證；人保留關係、節奏，以及「哪件事帶來真正幸福與寧靜」的選擇。
             </p>
             <div class="hero-actions">
               <a class="button" href="/agent.json">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7l5 5-5 5" /><path d="M13 17h6" /></svg>
-                Open LLM Manifest
+                開啟 LLM Manifest
               </a>
               <a class="button secondary" href="#demo">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v16H6z" /><path d="M9 8h6" /><path d="M9 12h6" /><path d="M9 16h4" /></svg>
-                See Copyable Demo
+                看可複製範例
               </a>
             </div>
             <div class="status-rail" aria-label="Registry status">
@@ -91,7 +95,7 @@
     "ChatGPT", "Claude", "Gemini", "Codex", "Hermes"
   ],
   <span>"stack"</span>: [
-    "iMandalArt", "FIRE", "planning", "publishing"
+    "Weekly Review", "iMandalArt", "FIRE", "publishing"
   ],
   <span>"endpoints"</span>: [
     "/agent.json",
@@ -110,15 +114,15 @@
               <div class="panel-label human"><span>Human View</span><span>20%</span></div>
               <a class="human-item" href="#updates">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h5l3-7 3 14 3-7h2" /></svg>
-                <span><strong>Freshness</strong><span>Versions, revisions, and timestamps</span></span>
+                <span><strong>Freshness</strong><span>版本、修訂與時間</span></span>
               </a>
               <a class="human-item" href="#skills">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z" /><path d="M8 9h3" /><path d="M8 13h8" /></svg>
-                <span><strong>Skill Index</strong><span>Searchable install registry</span></span>
+                <span><strong>Skill Index</strong><span>可搜尋安裝索引</span></span>
               </a>
               <a class="human-item" href="/install">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6z" /><path d="M14 3v4h4" /><path d="M9 12h6" /><path d="M9 16h6" /></svg>
-                <span><strong>Install</strong><span>Local and web deployment guide</span></span>
+                <span><strong>Install</strong><span>本機與網站部署</span></span>
               </a>
             </aside>
           </div>
@@ -128,7 +132,7 @@
       <section id="demo" class="section site-shell demo-section">
         <div class="section-head feature-head">
           <h2>Copyable Demo</h2>
-          <p>Phase one focuses on a clear repo story and an immediately understandable workflow. Screenshots come in phase two.</p>
+          <p>先用一個可以複製的流程看懂這個 repo：AI 處理結構，人保留判斷。</p>
           <a href="https://github.com/twhsi/skills">GitHub</a>
         </div>
         <div class="demo-grid">
@@ -136,12 +140,12 @@
             <p class="eyebrow">One line promise</p>
             <h3>AI Agent Skills for Chinese Knowledge Workers</h3>
             <p>
-              Turn daily plans, manuscript notes, and Markdown drafts into structured agent workflows:
-              iMandalArt cards, FIRE semantic analysis, reusable metadata, and publishing paths.
+              把日計劃、週檢視、手稿筆記與 Markdown 草稿，轉成可被 Agent 接續的流程：
+              iMandalArt 卡、FIRE 語意分析、可重用 metadata 與出版路徑。
             </p>
-            <pre class="demo-code">Input: 200 days of daily plans
-Skills: imandalart + fire-analysis-card + project-note-json-to-epub
-Output: FIRE JSON + iMandalArt 2.01 + Markdown / EPUB / booklet</pre>
+            <pre class="demo-code">Input: 年計劃 + 週檢視 + 七天日記 + inbox
+Skills: weekly-reverse-review + imandalart + fire-analysis-card
+Output: 8 Big Rocks + FIRE JSON + iMandalArt 2.01</pre>
           </article>
           <article class="demo-card">
             <strong>For LLM agents</strong>
@@ -158,6 +162,48 @@ Output: FIRE JSON + iMandalArt 2.01 + Markdown / EPUB / booklet</pre>
             <p>Visual proof will come after the message is stable: screenshots, share cards, and example outputs.</p>
             <code>no screenshots in phase one</code>
           </article>
+        </div>
+      </section>
+
+      <section id="weekly-review" class="section site-shell imandalart-showcase">
+        <div class="section-head feature-head">
+          <h2>Weekly Reverse Review</h2>
+          <p>
+            一個迭代近二十年的週檢視流程，轉成 AI-assisted Skill：
+            讀取 YEAR、Week、Day、Inbox 四個角度，再生成一週安靜而精彩的 8 Big Rocks。
+          </p>
+          <a href="https://github.com/twhsi/skills/tree/main/skills/weekly-reverse-review">GitHub</a>
+        </div>
+        <div class="imandalart-grid">
+          <div class="imandalart-copy">
+            <p class="eyebrow">New skill</p>
+            <h3>讓 AI 燒 tokens，人腦保留安靜判斷。</h3>
+            <p>
+              Weekly Reverse Review 會收集年計劃、百年人生計劃、上週計劃與週檢視、
+              七天日計劃與日記、行事曆，以及 inbox 裡的雜事。目標不是增加任務，
+              而是問：哪件事能帶來真正的幸福與寧靜？
+            </p>
+            <div class="case-list">
+              <span>腦力節省：11 個步驟從兩三小時變得更輕。</span>
+              <span>四個視角：YEAR、Week、Day、Inbox 先互相比對。</span>
+              <span>反向願望清單：變小、變慢、刪掉、延後，或留下陪伴。</span>
+              <span>核心答案：少說，陪伴，慢慢做。</span>
+            </div>
+          </div>
+          <figure class="mandala-panel">
+            <figcaption>Happiness-and-peace weekly plan</figcaption>
+            <pre class="mandala-card">Ⓕ內在放下　Ⓒ財流降噪　Ⓖ日文沉澱
+少說更點火　訂閱先盤點　句子先編號
+不急證明我　現流養書路　接詞成路徑
+
+Ⓑ書稿收束　◎◎◎◎◎　Ⓓ家人點火
+書章拉中心　幸福寧靜週　問夢不說教
+青蛙先寫書　◎◎◎◎◎　陪走百年路
+
+Ⓔ人脈成路　Ⓐ健康復節　Ⓗ休閒充電
+約談留三卡　羽球慢回身　合唱鬆心身
+好友接技能　跑走養節奏　吉他聽太陽</pre>
+          </figure>
         </div>
       </section>
 
@@ -273,9 +319,14 @@ Output: FIRE JSON + iMandalArt 2.01 + Markdown / EPUB / booklet</pre>
         </div>
         <div class="route-grid" data-route-grid>
           <article class="route-row">
+            <div><strong>Time</strong><a href="#skills">/time</a></div>
+            <p>Daily focus, weekly review, planning rhythm, calendar actions, and long-range training loops.</p>
+            <code>weekly-reverse-review  todays-daily-plan  imandalart  personal-athlete-81-grid</code>
+          </article>
+          <article class="route-row">
             <div><strong>Cards</strong><a href="#skills">/cards</a></div>
             <p>FIRE analysis, grid cards, Markdown tables, and graph views.</p>
-            <code>fire-analysis-card  markdown-nine-grid-clipboard  obsidian-graph-view</code>
+            <code>weekly-reverse-review  fire-analysis-card  markdown-nine-grid-clipboard  obsidian-graph-view</code>
           </article>
         </div>
       </section>
@@ -390,7 +441,7 @@ Output: FIRE JSON + iMandalArt 2.01 + Markdown / EPUB / booklet</pre>
             <span class="brand-mark">YS</span>
             <span>Yunghsi Agent Skills</span>
           </a>
-          <p>A public skill registry for mainstream LLMs with generated manifests, install commands, versions, revisions, and update timestamps.</p>
+          <p>A public skill registry for mainstream LLMs with Weekly Reverse Review, iMandalArt, FIRE analysis, generated manifests, install commands, versions, revisions, and update timestamps.</p>
         </div>
         <div>
           <h3>LLM</h3>

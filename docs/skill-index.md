@@ -43,6 +43,13 @@
 - Main file: [`../skills/imandalart/SKILL.md`](../skills/imandalart/SKILL.md)
 - Current resources: script, style reference, sample JSON, sample HTML, sample PNG
 
+## weekly-reverse-review
+
+- Purpose: Turn inbox notes, daily plans, diaries, calendars, annual plans, and hundred-year life plans into one happiness-and-peace-centered weekly plan.
+- Main file: [`../skills/weekly-reverse-review/SKILL.md`](../skills/weekly-reverse-review/SKILL.md)
+- Current resources: `references/weekly-eight-domain-layout.md`, `references/reverse-review-questions.md`, `references/output-json-schema.md`, `agents/openai.yaml`
+- Connects to: `fire-analysis-card`, `imandalart`, `markdown-nine-grid-clipboard`, `project-note-json-to-epub`, calendar evidence workflows.
+
 ## imessage-nine-grid-hypercard
 
 - Purpose: Create narrow iMessage/PTT Border-Light HyperCard style nine-grid cards with long data moved into Context.

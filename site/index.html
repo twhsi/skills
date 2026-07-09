@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hant">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Yongxi LLM Skill Registry</title>
+    <title>Yongxi LLM Skill Registry | twhsi/skills</title>
     <meta
       name="description"
-      content="A public skill registry for mainstream LLMs, featuring iMandalArt 2.01, Weekly Reverse Review, and reusable thinking workflows from twhsi/skills."
+      content="twhsi/skills 是一套公開 LLM Skill 庫，讓 AI 協助週檢視、iMandalArt、FIRE 分析、卡片筆記與知識工作流，人保留慢判斷與幸福寧靜。"
     />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/assets/site.css" />
@@ -51,21 +51,21 @@
       <section class="hero site-shell">
         <div class="hero-grid">
           <div class="hero-copy">
-            <h1>Yongxi LLM Skill Registry</h1>
-            <p class="split-line"><span>Reusable skills for</span><span>mainstream LLMs</span></p>
+            <h1>讓 AI 做結構，人保留幸福與寧靜的判斷</h1>
+            <p class="split-line"><span>Yongxi LLM Skill Registry</span><span>twhsi/skills</span></p>
             <p class="lead">
-              A public registry that packages repeatable thinking workflows for ChatGPT, Claude, Gemini,
-              Codex, Hermes, and other LLM agents. Machines read manifests, indexes, and install paths;
-              humans read maps, examples, and judgment checkpoints.
+              這是一套公開的 LLM Skill 庫，整理週檢視、九宮格、FIRE 分析、卡片筆記、
+              EPUB 出版與 Desktop 工作流。AI 負責讀檔、比對、索引、轉換與驗證；
+              人保留慢判斷、關係、節奏，以及「哪件事帶來真正幸福與寧靜」的選擇。
             </p>
             <div class="hero-actions">
               <a class="button" href="/agent.json">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7l5 5-5 5" /><path d="M13 17h6" /></svg>
-                Open LLM Manifest
+                開啟 LLM Manifest
               </a>
               <a class="button secondary" href="#human-map">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l5-2 6 2 5-2v14l-5 2-6-2-5 2z" /><path d="M9 4v14" /><path d="M15 6v14" /></svg>
-                Browse Human Map
+                看 Human Map
               </a>
             </div>
             <div class="status-rail" aria-label="Registry status">
@@ -93,6 +93,10 @@
     "/skills.json",
     "/llms.txt",
     "/install"
+  ],
+  <span>"featured"</span>: [
+    "weekly-reverse-review",
+    "imandalart"
   ]
 }</pre>
               <div class="signal-chart" aria-hidden="true">
@@ -105,15 +109,15 @@
               <div class="panel-label human"><span>Human View</span><span>20%</span></div>
               <a class="human-item" href="#human-map">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 18-8-4-8 4z" /><path d="M12 3v14" /></svg>
-                <span><strong>Map</strong><span>routes and intent</span></span>
+                <span><strong>Map</strong><span>路由與意圖</span></span>
               </a>
               <a class="human-item" href="#skills">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z" /><path d="M8 9h3" /><path d="M8 13h8" /></svg>
-                <span><strong>Skill Index</strong><span>metadata and install</span></span>
+                <span><strong>Skill Index</strong><span>metadata 與安裝</span></span>
               </a>
               <a class="human-item" href="/install">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6z" /><path d="M14 3v4h4" /><path d="M9 12h6" /><path d="M9 16h6" /></svg>
-                <span><strong>Install</strong><span>local and web</span></span>
+                <span><strong>Install</strong><span>本機與網站</span></span>
               </a>
             </aside>
           </div>
@@ -178,32 +182,32 @@
         <div class="section-head feature-head">
           <h2>Weekly Reverse Review</h2>
           <p>
-            A twenty-year weekly review practice converted into an AI-assisted Skill:
-            read YEAR, Week, Day, and Inbox evidence, then build one quiet weekly plan.
+            一個迭代近二十年的週檢視流程，轉成 AI-assisted Skill：
+            讀取 YEAR、Week、Day、Inbox 四個角度，再生成一週安靜而精彩的 8 Big Rocks。
           </p>
           <a href="https://github.com/twhsi/skills/tree/main/skills/weekly-reverse-review">GitHub</a>
         </div>
         <div class="imandalart-grid">
           <article class="imandalart-copy">
             <p class="eyebrow">New Skill</p>
-            <h3>Let AI burn tokens so the human keeps the quiet judgment.</h3>
+            <h3>讓 AI 燒 tokens，人腦保留安靜判斷。</h3>
             <p>
-              Weekly Reverse Review gathers annual and hundred-year plans, last week's review,
-              daily plans, seven diary notes, calendar traces, and inbox noise. The goal is not
-              to add more tasks. It is to ask which actions bring real happiness and peace.
+              Weekly Reverse Review 會收集年計劃、百年人生計劃、上週計劃與週檢視、
+              七天日計劃與日記、行事曆，以及 inbox 裡的雜事。目標不是增加任務，
+              而是問：哪件事能帶來真正的幸福與寧靜？
             </p>
             <div class="case-list" aria-label="Weekly Reverse Review highlights">
               <article>
-                <strong>Brain load saved</strong>
-                <span>An 11-step weekly review that used to need two to three uninterrupted hours becomes lighter and less draining.</span>
+                <strong>腦力節省</strong>
+                <span>原本 11 個步驟、需要兩三個小時不被打斷的週檢視，變得更輕、更不耗損。</span>
               </article>
               <article>
-                <strong>Four evidence angles</strong>
-                <span>YEAR, Week, Day, and Inbox are compared before the next 8 Big Rocks are chosen.</span>
+                <strong>四個視角</strong>
+                <span>YEAR、Week、Day、Inbox 先互相比對，再決定下一週真正值得保留的 8 Big Rocks。</span>
               </article>
               <article>
-                <strong>Reverse wish list</strong>
-                <span>Protect the week by asking what should be smaller, slower, deleted, delayed, or kept as presence.</span>
+                <strong>反向願望清單</strong>
+                <span>保護這一週：哪些事要變小、變慢、刪掉、延後，或只留下陪伴而不是成就。</span>
               </article>
             </div>
           </article>

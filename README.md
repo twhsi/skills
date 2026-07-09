@@ -1,8 +1,20 @@
 # Yongxi LLM Skill Registry
 
-> A public registry of reusable thinking skills for mainstream LLMs: ChatGPT, Claude, Gemini, Codex, Hermes, and other agentic clients.
+> 讓 AI 協助週檢視、卡片筆記、寫作出版與知識工作流；把重複結構交給 LLM，人保留慢判斷、關係、節奏與幸福感。
+
+This is a public registry of reusable thinking skills for mainstream LLMs: ChatGPT, Claude, Gemini, Codex, Hermes, and other agentic clients.
 
 [![Hermes All Skills Map](assets/hermes-all-skills-map.png)](assets/hermes-all-skills-map.png)
+
+## 這個 repo 是什麼
+
+`twhsi/skills` 是一套可安裝、可分享、可被主流 LLM 讀取的 Skill 庫。它把我長年使用的週檢視、九宮格、FIRE 分析、卡片筆記、EPUB 出版、HyperCard 回流與 Desktop 工作流，整理成可以被 AI 重複執行、被人類檢查與改良的公開流程。
+
+這裡的核心不是讓人變成更快的機器，而是讓 AI 燒 tokens 處理繁瑣的結構工作，讓人腦回到慢生活：身體、家人、朋友、寫作、財務、學習、休閒，以及那個更安靜的問題：
+
+> 那件事情能帶來真正的幸福與寧靜？
+
+最新焦點是 [`weekly-reverse-review`](skills/weekly-reverse-review/)：把年計劃、百年人生計劃、上週檢視、七天日記、行事曆與 inbox 雜事，反向整理成下一週的 8 Big Rocks。
 
 ## Featured: iMandalArt 2.01
 

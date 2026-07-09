@@ -466,6 +466,100 @@ code {
   line-height: 1.7;
 }
 
+.imandalart-showcase {
+  padding-top: 40px;
+}
+
+.feature-head {
+  border-bottom-width: 4px;
+}
+
+.imandalart-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(430px, 1.12fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.imandalart-copy,
+.mandala-panel {
+  border: 1px solid var(--line-strong);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: var(--shadow);
+}
+
+.imandalart-copy {
+  padding: 30px;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--cyan-dark);
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  font-weight: 760;
+  text-transform: uppercase;
+}
+
+.imandalart-copy h3 {
+  margin: 0;
+  max-width: 560px;
+  font-size: 2.3rem;
+  line-height: 1.1;
+}
+
+.imandalart-copy p:not(.eyebrow) {
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.case-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.case-list article {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+.case-list strong {
+  display: block;
+  font-family: var(--mono);
+}
+
+.case-list span {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.mandala-panel {
+  overflow: hidden;
+}
+
+.mandala-card {
+  margin: 0;
+  padding: 26px;
+  background: var(--code);
+  color: #eafdff;
+  font-family: var(--mono);
+  font-size: clamp(0.8rem, 1.42vw, 1.04rem);
+  line-height: 1.78;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.mandala-panel p {
+  margin: 0;
+  border-top: 1px solid var(--line);
+  padding: 18px 22px;
+  color: var(--muted);
+  line-height: 1.62;
+}
+
 .map-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.78fr) minmax(360px, 1fr);
@@ -677,6 +771,7 @@ code {
 
   .hero-grid,
   .hero-panels,
+  .imandalart-grid,
   .map-layout {
     grid-template-columns: 1fr;
     min-width: 0;

@@ -168,7 +168,7 @@ function extractVersion(markdown, frontmatter) {
 function createAgentManifest(skills) {
   return {
     id: "twhsi/skills",
-    name: "Yongxi LLM Skill Registry",
+    name: "Yunghsi LLM Skill Registry",
     tagline: "Reusable skills for mainstream LLMs",
     north_star: "Let LLMs handle repeatable structure while humans keep judgment, taste, and pace.",
     audience_split: {
@@ -239,7 +239,7 @@ function createLlmsText(manifest, skillsIndex) {
     .map((axis) => `- ${axis.label} (${axis.route}): ${axis.summary} Skills: ${axis.skills.join(", ")}`)
     .join("\n");
 
-  return `# Yongxi LLM Skill Registry
+  return `# Yunghsi LLM Skill Registry
 
 This is the public multi-LLM skill registry for https://github.com/twhsi/skills.
 

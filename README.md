@@ -1,4 +1,4 @@
-# Yongxi LLM Skill Registry
+# Yunghsi LLM Skill Registry
 
 > Reusable thinking skills for mainstream LLMs, with live metadata for humans and machines.
 

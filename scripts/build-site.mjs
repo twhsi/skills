@@ -22,8 +22,8 @@ const axisRules = [
     id: "cards",
     label: "Cards",
     route: "/cards",
-    summary: "FIRE analysis, nine-grid cards, Markdown tables and graph views.",
-    match: ["weekly-reverse-review", "fire-analysis-card", "imandalart", "markdown-nine-grid-clipboard", "obsidian-graph-view"]
+    summary: "FIRE analysis, nine-grid cards, Markdown tables, keyword graphs and graph views.",
+    match: ["weekly-reverse-review", "fire-analysis-card", "imandalart", "markdown-nine-grid-clipboard", "keyword-graph-view", "obsidian-graph-view"]
   },
   {
     id: "llm",

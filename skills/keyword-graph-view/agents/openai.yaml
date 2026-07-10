@@ -1,0 +1,4 @@
+interface:
+  display_name: "Keyword Graph View"
+  short_description: "8 keywords to weighted graph"
+  default_prompt: "Use $keyword-graph-view to turn this text into an 8-keyword weighted distributed graph."

@@ -6,7 +6,7 @@
     <title>AI Agent Skills for Chinese Knowledge Workers | twhsi/skills</title>
     <meta
       name="description"
-      content="twhsi/skills is a public LLM skill registry for weekly review, iMandalArt, FIRE analysis, card-based notes, publishing workflows, and Chinese knowledge work."
+      content="twhsi/skills is a public LLM skill registry for keyword graphs, weekly review, iMandalArt, FIRE analysis, card-based notes, publishing workflows, and Chinese knowledge work."
     />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/assets/site.css" />
@@ -26,6 +26,10 @@
           <a class="nav-link" href="#demo">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v16H6z" /><path d="M9 8h6" /><path d="M9 12h6" /><path d="M9 16h4" /></svg>
             Demo
+          </a>
+          <a class="nav-link" href="#keyword-graph">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="7" r="2" /><circle cx="18" cy="6" r="2" /><circle cx="12" cy="17" r="2" /><path d="M8 7l8-1M7 9l4 6M17 8l-4 7" /></svg>
+            Graph
           </a>
           <a class="nav-link" href="#weekly-review">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2v4" /><path d="M17 2v4" /><path d="M4 6h16v15H4z" /><path d="M4 11h16" /><path d="M8 15h3" /><path d="M13 15h3" /></svg>
@@ -61,7 +65,7 @@
           <div class="hero-copy">
             <p class="eyebrow">AI agent skills for Chinese knowledge workers</p>
             <h1>Let AI handle structure. Keep human judgment slow.</h1>
-            <p class="split-line"><span>Weekly review, iMandalArt, FIRE,</span><span> publishing workflows.</span></p>
+            <p class="split-line"><span>Keyword graphs, weekly review, iMandalArt,</span><span> FIRE and publishing workflows.</span></p>
             <p class="lead">
               Yunghsi's public LLM skill registry packages weekly review, iMandalArt, FIRE analysis,
               card-based notes, EPUB publishing, and desktop workflows. AI handles reading, comparing,
@@ -73,9 +77,9 @@
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7l5 5-5 5" /><path d="M13 17h6" /></svg>
                 Open LLM Manifest
               </a>
-              <a class="button secondary" href="#demo">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v16H6z" /><path d="M9 8h6" /><path d="M9 12h6" /><path d="M9 16h4" /></svg>
-                See Copyable Demo
+              <a class="button secondary" href="https://keyword-graph-view.twhsi.chatgpt.site/">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="7" r="2" /><circle cx="18" cy="6" r="2" /><circle cx="12" cy="17" r="2" /><path d="M8 7l8-1M7 9l4 6M17 8l-4 7" /></svg>
+                Open Keyword Graph
               </a>
             </div>
             <div class="status-rail" aria-label="Registry status">
@@ -96,7 +100,7 @@
     "ChatGPT", "Claude", "Gemini", "Codex", "Hermes"
   ],
   <span>"stack"</span>: [
-    "Weekly Review", "iMandalArt", "FIRE", "publishing"
+    "Keyword Graph", "Weekly Review", "iMandalArt", "FIRE"
   ],
   <span>"endpoints"</span>: [
     "/agent.json",
@@ -120,6 +124,10 @@
               <a class="human-item" href="#skills">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z" /><path d="M8 9h3" /><path d="M8 13h8" /></svg>
                 <span><strong>Skill Index</strong><span>Searchable install registry</span></span>
+              </a>
+              <a class="human-item" href="https://keyword-graph-view.twhsi.chatgpt.site/">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="7" r="2" /><circle cx="18" cy="6" r="2" /><circle cx="12" cy="17" r="2" /><path d="M8 7l8-1M7 9l4 6M17 8l-4 7" /></svg>
+                <span><strong>Keyword Graph</strong><span>Open the live weighted network</span></span>
               </a>
               <a class="human-item" href="/install">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6z" /><path d="M14 3v4h4" /><path d="M9 12h6" /><path d="M9 16h6" /></svg>
@@ -163,6 +171,36 @@ Output: 8 Big Rocks + FIRE JSON + iMandalArt 2.01</pre>
             <p>Visual proof will come after the message is stable: screenshots, share cards, and example outputs.</p>
             <code>no screenshots in phase one</code>
           </article>
+        </div>
+      </section>
+
+      <section id="keyword-graph" class="section site-shell keyword-graph-showcase">
+        <div class="section-head feature-head">
+          <h2>Keyword Graph View</h2>
+          <p>Paste an article, extract exactly eight context-sensitive keywords, and inspect a centerless weighted network with definitions and evidence.</p>
+          <a href="https://keyword-graph-view.twhsi.chatgpt.site/">Open live tool</a>
+        </div>
+        <div class="keyword-graph-layout">
+          <a class="keyword-graph-media" href="https://keyword-graph-view.twhsi.chatgpt.site/" aria-label="Open Keyword Graph View">
+            <img src="/assets/keyword-graph-view.png" alt="Keyword Graph View weighted network preview" />
+          </a>
+          <div class="keyword-graph-copy">
+            <p class="eyebrow">Live Skill</p>
+            <h3>Eight keywords. No center. One weighted network.</h3>
+            <p>
+              Blacklist structural terms, generate the graph, then click any node to read its definition,
+              note, evidence sentences, and strongest connections. Edge color and thickness both show weight.
+            </p>
+            <div class="graph-feature-list" aria-label="Keyword Graph View features">
+              <span>Traditional Chinese, English, and mixed text</span>
+              <span>Rainbow weights from purple W1 to red W9</span>
+              <span>Zoom controls and fixed full-screen workspace</span>
+            </div>
+            <div class="keyword-graph-actions">
+              <a class="button" href="https://keyword-graph-view.twhsi.chatgpt.site/">Open Graph View</a>
+              <a class="source-link" href="https://github.com/twhsi/skills/tree/main/skills/keyword-graph-view">View Skill source</a>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -622,6 +622,85 @@ code {
   white-space: pre;
 }
 
+.keyword-graph-showcase {
+  padding-top: 54px;
+}
+
+.keyword-graph-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.7fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.keyword-graph-media {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: #05070a;
+  box-shadow: var(--shadow);
+}
+
+.keyword-graph-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+}
+
+.keyword-graph-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 5px solid var(--cyan);
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.keyword-graph-copy h3 {
+  margin: 0;
+  font-size: 2.25rem;
+  line-height: 1.12;
+}
+
+.keyword-graph-copy > p:not(.eyebrow) {
+  margin: 18px 0 0;
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.graph-feature-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.graph-feature-list span {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 10px;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.keyword-graph-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.source-link {
+  color: var(--cyan-dark);
+  font-family: var(--mono);
+  font-weight: 720;
+}
+
 .imandalart-showcase {
   padding-top: 54px;
 }
@@ -928,6 +1007,7 @@ code {
 
   .hero-grid,
   .hero-panels,
+  .keyword-graph-layout,
   .imandalart-grid,
   .map-layout {
     grid-template-columns: 1fr;
@@ -944,6 +1024,11 @@ code {
 
   .hero-panels {
     grid-template-columns: 1fr;
+  }
+
+  .keyword-graph-media img {
+    min-height: 0;
+    aspect-ratio: 16 / 9;
   }
 
   .human-rail {

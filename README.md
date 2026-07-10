@@ -1,6 +1,6 @@
 # AI Agent Skills for Chinese Knowledge Workers
 
-> Reusable agent skills for weekly review, iMandalArt, FIRE analysis, card-based notes, writing, publishing, and Chinese knowledge workflows.
+> Reusable agent skills for keyword graphs, weekly review, iMandalArt, FIRE analysis, card-based notes, writing, publishing, and Chinese knowledge workflows.
 
 iMandalArt, FIRE semantic analysis, planning, and publishing workflows for Claude Code, Codex, and mainstream LLM agents.
 
@@ -18,9 +18,11 @@ The point is not to make humans behave like faster machines. The point is to let
 
 > Which action brings real happiness and peace?
 
-The newest featured skill is [`weekly-reverse-review`](skills/weekly-reverse-review/): it turns annual plans, hundred-year life plans, last week's review, seven days of diary notes, calendar evidence, and inbox noise into the next week's 8 Big Rocks.
+The newest featured skill is [`keyword-graph-view`](skills/keyword-graph-view/): it extracts eight context-sensitive keywords from an article and turns them into a centerless weighted network with blacklist filtering, node notes, and evidence.
 
 Live site: [https://www.twhsi.com/](https://www.twhsi.com/)  
+Live Keyword Graph: [https://keyword-graph-view.twhsi.chatgpt.site/](https://keyword-graph-view.twhsi.chatgpt.site/)
+
 Agent manifest: [https://www.twhsi.com/agent.json](https://www.twhsi.com/agent.json)  
 Skill index: [https://www.twhsi.com/skills.json](https://www.twhsi.com/skills.json)  
 LLM context: [https://www.twhsi.com/llms.txt](https://www.twhsi.com/llms.txt)
@@ -31,6 +33,7 @@ LLM context: [https://www.twhsi.com/llms.txt](https://www.twhsi.com/llms.txt)
 - Apply FIRE semantic analysis for card-box thinking, retrieval, and writing structure.
 - Generate agent-readable metadata through `agent.json`, `skills.json`, and `llms.txt`.
 - Route daily planning, weekly planning, booklet, EPUB, Markdown, and knowledge-management workflows.
+- Extract eight keywords and render a distributed weighted graph with definitions, evidence, and blacklist control.
 - Package Chinese-first workflows so LLM agents can operate on them consistently.
 
 ## Copyable Demo
@@ -40,6 +43,12 @@ Input: 200 days of daily plans, manuscript notes, or Markdown drafts
 Skills: imandalart + fire-analysis-card + project-note-json-to-epub
 Output: FIRE JSON + iMandalArt 2.01 card + Markdown / EPUB / booklet path
 ```
+
+## Featured: Keyword Graph View
+
+[`keyword-graph-view`](skills/keyword-graph-view/) turns Chinese, English, or mixed text into a distributed network of exactly eight keywords. It removes blacklisted terms, weights co-occurrence edges from `W1` to `W9`, and gives every node a definition, note, and source evidence.
+
+Open the live tool: [keyword-graph-view.twhsi.chatgpt.site](https://keyword-graph-view.twhsi.chatgpt.site/)
 
 ## Featured: Weekly Reverse Review
 
@@ -112,6 +121,7 @@ Use it for weekly planning, writing focus, knowledge capture, and CJK note workf
 | [`fire-analysis-card`](skills/fire-analysis-card/) | Turn Chinese notes and manuscripts into FIRE semantic analysis cards. |
 | [`todays-daily-plan`](skills/todays-daily-plan/) | Convert spoken planning notes into an Obsidian day-plan Mandala grid. |
 | [`weekly-reverse-review`](skills/weekly-reverse-review/) | Turn YEAR, Week, Day, and Inbox evidence into one happiness-and-peace-centered weekly plan. |
+| [`keyword-graph-view`](skills/keyword-graph-view/) | Extract eight keywords and build a centerless weighted network with node notes and evidence. |
 | [`project-note-json-to-epub`](skills/project-note-json-to-epub/) | Turn structured project-note JSON into EPUB and publishing outputs. |
 | [`markdown-nine-grid-clipboard`](skills/markdown-nine-grid-clipboard/) | Convert grids and cards into Markdown table workflows. |
 
@@ -144,7 +154,7 @@ Featured metadata check: [`imandalart`](skills/imandalart/) declares `v2.01`, an
 | Route | Purpose | Representative skills |
 |---|---|---|
 | Time | Daily focus, planning rhythm, calendar actions, weekly review, and long-range training loops. | `weekly-reverse-review`, `todays-daily-plan`, `imandalart`, `personal-athlete-81-grid`, `fantastical-calendar` |
-| Cards | FIRE analysis, grid cards, Markdown tables, and graph views. | `weekly-reverse-review`, `fire-analysis-card`, `markdown-nine-grid-clipboard`, `obsidian-graph-view` |
+| Cards | FIRE analysis, grid cards, Markdown tables, keyword graphs, and graph views. | `weekly-reverse-review`, `fire-analysis-card`, `markdown-nine-grid-clipboard`, `keyword-graph-view`, `obsidian-graph-view` |
 | LLM | Repeatable LLM workflows, structured inputs, scripts, and metadata. | `project-note-json-to-epub`, `epub-hypercard-obsidian` |
 | Desktop | Local Mac workflows, clipboard outputs, calendar bridges, and working-desk routines. | `fantastical-calendar`, `markdown-nine-grid-clipboard` |
 | Publish | Booklets, EPUBs, HyperCard returns, and public GitHub publishing paths. | `project-note-json-to-epub`, `epub-hypercard-obsidian` |
@@ -171,6 +181,7 @@ cp -R skills/fire-analysis-card ~/.codex/skills/
 cp -R skills/todays-daily-plan ~/.codex/skills/
 cp -R skills/weekly-reverse-review ~/.codex/skills/
 cp -R skills/imandalart ~/.codex/skills/
+cp -R skills/keyword-graph-view ~/.codex/skills/
 ```
 
 Then validate a skill:

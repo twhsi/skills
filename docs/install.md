@@ -16,6 +16,7 @@ cp -R skills/weekly-reverse-review ~/.codex/skills/
 cp -R skills/imessage-nine-grid-hypercard ~/.codex/skills/
 cp -R skills/markdown-nine-grid-clipboard ~/.codex/skills/
 cp -R skills/fire-analysis-card ~/.codex/skills/
+cp -R skills/thebrain-bird-address ~/.codex/skills/
 cp -R skills/fire-card-to-epub ~/.codex/skills/
 cp -R skills/pdca ~/.codex/skills/
 cp -R skills/fantastical-calendar ~/.codex/skills/
@@ -37,6 +38,7 @@ python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/w
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/imessage-nine-grid-hypercard
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/markdown-nine-grid-clipboard
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/fire-analysis-card
+python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/thebrain-bird-address
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/fire-card-to-epub
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/pdca
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/fantastical-calendar
@@ -56,6 +58,7 @@ Use $weekly-reverse-review to turn my inbox, diary, calendar, and long-range pla
 Use $imessage-nine-grid-hypercard to organize these notes into an iMessage-ready 九宮 short card with Context below.
 Use $markdown-nine-grid-clipboard to turn this iMandalArt into an Obsidian Markdown nine-grid table.
 Use $fire-analysis-card to prepare this note for semantic search with Full-D, Index, Route, and Evolution.
+Use $thebrain-bird-address to turn these permanent notes into a validated BIRD 2.0 Excel and TheBrain manuscript scaffold.
 Use $fire-card-to-epub to turn FIRE cards into a validated EPUB with keyword index links.
 Use $pdca to turn this problem into a Chinese compass-style PDCA/CAPD card.
 Use $fantastical-calendar to add tomorrow's project review to Fantastical.

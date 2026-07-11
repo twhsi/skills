@@ -1,0 +1,4 @@
+interface:
+  display_name: "BIRD 2.0 拆書分析"
+  short_description: "把複雜文本拆成 BIRD 2.0 Excel 與知識節點"
+  default_prompt: "Use $thebrain-bird-address to deconstruct this manuscript into a validated BIRD 2.0 Excel-ready knowledge address system."

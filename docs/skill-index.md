@@ -68,6 +68,13 @@
 - Main file: [`../skills/fire-analysis-card/SKILL.md`](../skills/fire-analysis-card/SKILL.md)
 - Current resources: `agents/openai.yaml`
 
+## thebrain-bird-address
+
+- Purpose: Turn complex manuscript text and permanent notes into BIRD 2.0 Book Addresses, structured Knowledge Indexes, Routes, verified Deep Links, Excel workbooks, and TheBrain Type/Tag writing scaffolds.
+- Main file: [`../skills/thebrain-bird-address/SKILL.md`](../skills/thebrain-bird-address/SKILL.md)
+- Current resources: BIRD 2.0 specification, Excel schema, manuscript structuring rules, TheBrain single-node and bulk-scaffold instructions, `agents/openai.yaml`
+- Keywords: BIRD, Book Address, Knowledge Index, Route, Deep Link, TheBrain, Type, Tag, 拆書, 書稿鷹架.
+
 ## fire-card-to-epub
 
 - Purpose: Convert FIRE analysis cards or project-note JSON into validated EPUB books with TOC, index cards, backlinks, and attached ebook assets.

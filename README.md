@@ -31,6 +31,7 @@ LLM context: [https://www.twhsi.com/llms.txt](https://www.twhsi.com/llms.txt)
 
 - Convert long Markdown notes into iMandalArt 2.01 hard-line 9-grid cards.
 - Apply FIRE semantic analysis for card-box thinking, retrieval, and writing structure.
+- Turn permanent notes into BIRD 2.0 Book Addresses, Knowledge Indexes, Routes, Deep Links, and TheBrain manuscript scaffolds.
 - Generate agent-readable metadata through `agent.json`, `skills.json`, and `llms.txt`.
 - Route daily planning, weekly planning, booklet, EPUB, Markdown, and knowledge-management workflows.
 - Extract eight keywords and render a distributed weighted graph with definitions, evidence, and blacklist control.
@@ -119,6 +120,7 @@ Use it for weekly planning, writing focus, knowledge capture, and CJK note workf
 |---|---|
 | [`imandalart`](skills/imandalart/) | Compress source material into one CJK-friendly 3x3 Mandala card. |
 | [`fire-analysis-card`](skills/fire-analysis-card/) | Turn Chinese notes and manuscripts into FIRE semantic analysis cards. |
+| [`thebrain-bird-address`](skills/thebrain-bird-address/) | Turn permanent notes and complex manuscripts into validated BIRD 2.0 Excel and TheBrain Type/Tag writing scaffolds. |
 | [`todays-daily-plan`](skills/todays-daily-plan/) | Convert spoken planning notes into an Obsidian day-plan Mandala grid. |
 | [`weekly-reverse-review`](skills/weekly-reverse-review/) | Turn YEAR, Week, Day, and Inbox evidence into one happiness-and-peace-centered weekly plan. |
 | [`keyword-graph-view`](skills/keyword-graph-view/) | Extract eight keywords and build a centerless weighted network with node notes and evidence. |
@@ -149,15 +151,17 @@ Open the live generated table:
 
 Featured metadata check: [`imandalart`](skills/imandalart/) declares `v2.01`, and [`fire-analysis-card`](skills/fire-analysis-card/) declares `v2.0`.
 
+[`thebrain-bird-address`](skills/thebrain-bird-address/) implements BIRD 2.0: `B = Book Address`, `I = Knowledge Index`, `R = Route`, and `D = Deep Link`. It complements FIRE by moving from reusable permanent notes into project notes, chapter structures, and book production.
+
 ## Registry Routes
 
 | Route | Purpose | Representative skills |
 |---|---|---|
 | Time | Daily focus, planning rhythm, calendar actions, weekly review, and long-range training loops. | `weekly-reverse-review`, `todays-daily-plan`, `imandalart`, `personal-athlete-81-grid`, `fantastical-calendar` |
-| Cards | FIRE analysis, grid cards, Markdown tables, keyword graphs, and graph views. | `weekly-reverse-review`, `fire-analysis-card`, `markdown-nine-grid-clipboard`, `keyword-graph-view`, `obsidian-graph-view` |
+| Cards | FIRE analysis, BIRD book addresses, grid cards, Markdown tables, keyword graphs, and graph views. | `weekly-reverse-review`, `fire-analysis-card`, `thebrain-bird-address`, `markdown-nine-grid-clipboard`, `keyword-graph-view`, `obsidian-graph-view` |
 | LLM | Repeatable LLM workflows, structured inputs, scripts, and metadata. | `project-note-json-to-epub`, `epub-hypercard-obsidian` |
 | Desktop | Local Mac workflows, clipboard outputs, calendar bridges, and working-desk routines. | `fantastical-calendar`, `markdown-nine-grid-clipboard` |
-| Publish | Booklets, EPUBs, HyperCard returns, and public GitHub publishing paths. | `project-note-json-to-epub`, `epub-hypercard-obsidian` |
+| Publish | BIRD manuscript scaffolds, booklets, EPUBs, HyperCard returns, and public GitHub publishing paths. | `thebrain-bird-address`, `project-note-json-to-epub`, `epub-hypercard-obsidian` |
 
 ## Core Files
 
@@ -178,6 +182,7 @@ From the repository root:
 
 ```bash
 cp -R skills/fire-analysis-card ~/.codex/skills/
+cp -R skills/thebrain-bird-address ~/.codex/skills/
 cp -R skills/todays-daily-plan ~/.codex/skills/
 cp -R skills/weekly-reverse-review ~/.codex/skills/
 cp -R skills/imandalart ~/.codex/skills/

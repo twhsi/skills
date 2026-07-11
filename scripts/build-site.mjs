@@ -22,8 +22,8 @@ const axisRules = [
     id: "cards",
     label: "Cards",
     route: "/cards",
-    summary: "FIRE analysis, nine-grid cards, Markdown tables, keyword graphs and graph views.",
-    match: ["weekly-reverse-review", "fire-analysis-card", "imandalart", "markdown-nine-grid-clipboard", "keyword-graph-view", "obsidian-graph-view"]
+    summary: "FIRE analysis, BIRD book addresses, nine-grid cards, Markdown tables, keyword graphs and graph views.",
+    match: ["weekly-reverse-review", "fire-analysis-card", "thebrain-bird-address", "imandalart", "markdown-nine-grid-clipboard", "keyword-graph-view", "obsidian-graph-view"]
   },
   {
     id: "llm",
@@ -43,8 +43,8 @@ const axisRules = [
     id: "publish",
     label: "Publish",
     route: "/publish",
-    summary: "Booklets, EPUBs, HyperCard returns and public GitHub publishing paths.",
-    match: ["project-note-json-to-epub", "epub-hypercard-obsidian", "eight-page-booklet"]
+    summary: "BIRD manuscript scaffolds, booklets, EPUBs, HyperCard returns and public GitHub publishing paths.",
+    match: ["thebrain-bird-address", "project-note-json-to-epub", "epub-hypercard-obsidian", "eight-page-booklet"]
   }
 ];
 

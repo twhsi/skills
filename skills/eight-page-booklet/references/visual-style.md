@@ -21,6 +21,12 @@ Use the public BIRD and twhsi.com visual system when a colored digital surface i
 
 Use Rockwell or another slab serif for large English display words. Use PingFang TC or Noto Sans TC for Chinese and body copy. Use thick black rules, square cards, restrained shadows, and one accent color at a time.
 
+## Paper Field Direction
+
+For the public registry, combine the BIRD palette with a field-poster rhythm: tactile paper grain, documentary photography, oversized slab-serif headlines, compact black navigation, high-saturation flat color bands, simple flower or seed marks, and slightly imperfect print-like offsets. The adaptation is informed by the editorial energy of [Daisy Chain Fields](https://www.daisychainfields.com/) while keeping Yunghsi's own photos, BIRD routes, words, colors, and knowledge-system identity.
+
+Do not reproduce another site's logo, flower artwork, copy, layout sequence, or branded decorative assets. Translate principles, not proprietary expression.
+
 ## Paper Rules
 
 - Prefer black-and-white for the actual booklet pages.
@@ -44,4 +50,3 @@ Use the booklet as the paper endpoint of a BIRD route:
 `Permanent Note → Book Address → Route → BookletManifest → Folded Booklet`
 
 Show structure first. Color identifies layers; it does not replace hierarchy, addresses, or source evidence.
-

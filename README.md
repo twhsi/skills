@@ -6,7 +6,7 @@ iMandalArt, FIRE semantic analysis, planning, and publishing workflows for Claud
 
 [![Hermes All Skills Map](assets/hermes-all-skills-map.png)](assets/hermes-all-skills-map.png)
 
-This repository is Yunghsi's public agent-skill system for Chinese knowledge workers. It turns repeatable writing, planning, note-making, and publishing workflows into skills that can be used by Claude Code, Codex, ChatGPT, Gemini, Hermes, and other LLM agents.
+This repository is TWHSI's public agent-skill system for Chinese knowledge workers. It turns repeatable writing, planning, note-making, and publishing workflows into skills that can be used by Claude Code, Codex, ChatGPT, Gemini, Hermes, and other LLM agents.
 
 The source of truth lives in `skills/*/SKILL.md`; the website turns those files into generated LLM manifests, a searchable skill index, install commands, version labels, Git revisions, and update timestamps.
 
@@ -106,6 +106,21 @@ Prove nothing   Build index   Guitar and sun
 ```
 
 Use it for weekly planning, writing focus, knowledge capture, and CJK note workflows where visual stability matters as much as semantic compression.
+
+## Featured: Eight Page Booklet 2.0｜八頁小書
+
+[`eight-page-booklet`](skills/eight-page-booklet/) 把文字、筆記、圖片、BIRD Graph JSON、iMandalArt／九宮／64＋8＋1、FIRE、日計畫、Bike／Bonsai 大綱、範本或 PDF，整理成一張可列印、裁切與折疊的 A4 八頁小書。
+
+它不是只把內容塞進八格，而是先把內容與版面分開：內容整理為 `BookletManifest 2.0`，再由同一份 manifest 產生全部閱讀、列印與驗證成果。
+
+- 第 1 頁可放封面與總覽；BIRD／64＋8＋1 模式則放「目錄九宮＋關鍵字九宮」。
+- 第 2–8 頁可形成七條 Route，每頁保留一個中心主張、三至五個重點與一條閱讀路徑。
+- 支援 iMandalArt の字型座標，保留來源 ID、BIRD Address、引用與跨路徑註記。
+- 產生八張直立單頁 PDF、八頁閱讀 PDF、A4 橫式拼版、預覽圖與驗證報告。
+- 固定拼版順序為上排 `4, 3, 2, 1`（倒置），下排 `5, 6, 7, 8`（正向）。
+- 依 V1 結構、V2 字型、V3 拼版、V4 視覺四層檢查頁碼、中文字型、裁切、旋轉、空白與文字重疊。
+
+完整技能說明與安裝來源：[`skills/eight-page-booklet/SKILL.md`](skills/eight-page-booklet/SKILL.md)
 
 ## What This Is
 

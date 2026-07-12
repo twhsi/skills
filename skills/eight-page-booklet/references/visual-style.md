@@ -23,7 +23,7 @@ Use Rockwell or another slab serif for large English display words. Use PingFang
 
 ## Paper Field Direction
 
-For the public registry, combine the BIRD palette with a field-poster rhythm: tactile paper grain, documentary photography, oversized slab-serif headlines, compact black navigation, high-saturation flat color bands, simple flower or seed marks, and slightly imperfect print-like offsets. The adaptation is informed by the editorial energy of [Daisy Chain Fields](https://www.daisychainfields.com/) while keeping Yunghsi's own photos, BIRD routes, words, colors, and knowledge-system identity.
+For the public registry, combine the BIRD palette with a field-poster rhythm: tactile paper grain, documentary photography, oversized slab-serif headlines, compact black navigation, high-saturation flat color bands, simple flower or seed marks, and slightly imperfect print-like offsets. The adaptation is informed by the editorial energy of [Daisy Chain Fields](https://www.daisychainfields.com/) while keeping TWHSI's own photos, BIRD routes, words, colors, and knowledge-system identity.
 
 Do not reproduce another site's logo, flower artwork, copy, layout sequence, or branded decorative assets. Translate principles, not proprietary expression.
 
@@ -38,6 +38,9 @@ Do not reproduce another site's logo, flower artwork, copy, layout sequence, or 
 ## Public Preview Rules
 
 - Place the portrait booklet photo inside a forest, paper, or ink-colored field.
+- Give live text and photography separate layout regions at every breakpoint; they must never overlap.
+- Never place white or paper-colored text over the white booklet. Keep foreground and background visibly high-contrast.
+- Let text wrap inside its own region without colliding with adjacent text, controls, borders, or images.
 - Keep the full physical object visible; do not crop away its standing form or fold.
 - Pair the photo with a short functional promise such as “One A4 sheet. Eight pages. One thinking route.”
 - Avoid fake paper textures, glossy product rendering, excessive gradients, and decorative AI motifs.

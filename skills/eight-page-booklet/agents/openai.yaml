@@ -1,0 +1,7 @@
+interface:
+  display_name: "八頁小書／A4 摺頁書"
+  short_description: "把文章、九宮、計劃或 PDF 做成一張可折的八頁小書"
+  default_prompt: "Use $eight-page-booklet to turn this material into an A4 foldable eight-page mini book with upright pages, a reading PDF, a print-ready imposition, previews, and validation."
+
+policy:
+  allow_implicit_invocation: true

@@ -857,6 +857,22 @@ footer a { color: var(--pink); font-weight: 900; }
 .map-frame { margin: 0; overflow: hidden; border-left: 3px solid var(--ink); background: var(--white); }
 .map-frame img { width: 100%; height: 100%; display: block; object-fit: contain; }
 
+.booklet-showcase { background: var(--forest); color: var(--white); }
+.booklet-showcase .section-head { border-color: var(--yellow); }
+.booklet-showcase .section-head h2,
+.booklet-showcase .section-head p,
+.booklet-showcase .section-head a { color: var(--white); }
+.booklet-layout { display: grid; grid-template-columns: minmax(320px, .8fr) minmax(0, 1.2fr); border: 3px solid var(--ink); background: var(--paper); color: var(--ink); }
+.booklet-photo { min-height: 620px; display: grid; grid-template-rows: 1fr auto; margin: 0; padding: 38px; background: var(--forest); border-right: 3px solid var(--ink); }
+.booklet-photo img { width: 100%; height: 100%; min-height: 500px; display: block; object-fit: contain; object-position: center; }
+.booklet-photo figcaption { margin-top: 18px; color: var(--yellow); font-family: Georgia, "Noto Serif TC", serif; line-height: 1.5; }
+.booklet-copy { padding: clamp(34px, 5vw, 72px); }
+.booklet-copy h3 { max-width: 720px; margin: 0; font-family: Rockwell, "Arial Black", "PingFang TC", serif; font-size: clamp(42px, 6vw, 78px); line-height: .96; }
+.booklet-copy > p:not(.eyebrow) { max-width: 58ch; font-size: 18px; line-height: 1.7; }
+.booklet-route { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 28px 0; padding: 16px; border: 3px solid var(--ink); background: var(--yellow); font-weight: 900; }
+.booklet-route b { color: var(--pink); font-size: 24px; }
+.booklet-copy .case-list { margin-bottom: 28px; }
+
 #skills { background: var(--paper); }
 .skill-tools { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; }
 .skill-tools input { flex: 1 1 280px; min-height: 48px; padding: 0 14px; border: 3px solid var(--ink); background: var(--white); font: inherit; }
@@ -909,6 +925,7 @@ main > .section.site-shell:last-of-type { background: var(--yellow); }
   .imandalart-grid,
   .updates-grid,
   .route-row,
+  .booklet-layout,
   .map-layout,
   .deploy-strip,
   .footer-grid { grid-template-columns: 1fr; }
@@ -917,7 +934,9 @@ main > .section.site-shell:last-of-type { background: var(--yellow); }
   .demo-card:last-child,
   .update-card:last-child { border-bottom: 0; }
   .keyword-graph-copy,
+  .booklet-photo,
   .map-frame { border-top: 3px solid var(--ink); border-left: 0; }
+  .booklet-photo { min-height: 520px; border-right: 0; border-bottom: 3px solid var(--ink); }
   .imandalart-copy { border-right: 0; border-bottom: 3px solid var(--ink); }
   .deploy-step { border-top: 3px solid var(--ink); border-left: 0; }
   .deploy-step:first-child { border-top: 0; }

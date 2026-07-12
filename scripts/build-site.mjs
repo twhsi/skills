@@ -22,7 +22,7 @@ const axisRules = [
     id: "cards",
     label: "Cards",
     route: "/cards",
-    summary: "FIRE analysis, BIRD book addresses, nine-grid cards, Markdown tables, keyword graphs and graph views.",
+    summary: "FIRE analysis, BIRD book addresses, Roam JSON export, nine-grid cards, Markdown tables, keyword graphs and graph views.",
     match: ["weekly-reverse-review", "fire-analysis-card", "thebrain-bird-address", "imandalart", "markdown-nine-grid-clipboard", "keyword-graph-view", "obsidian-graph-view"]
   },
   {
@@ -43,7 +43,7 @@ const axisRules = [
     id: "publish",
     label: "Publish",
     route: "/publish",
-    summary: "BIRD manuscript scaffolds, booklets, EPUBs, HyperCard returns and public GitHub publishing paths.",
+    summary: "BIRD manuscript scaffolds, Roam JSON, booklets, EPUBs, HyperCard returns and public GitHub publishing paths.",
     match: ["thebrain-bird-address", "project-note-json-to-epub", "epub-hypercard-obsidian", "eight-page-booklet"]
   }
 ];
@@ -291,10 +291,27 @@ async function copySite() {
   if (existsSync(mapSource)) {
     await cp(mapSource, path.join(publicAssetDir, "hermes-all-skills-map.png"));
   }
+
+  const roamConverterSource = path.join(
+    skillsDir,
+    "thebrain-bird-address",
+    "scripts",
+    "roam-converter.mjs"
+  );
+  if (existsSync(roamConverterSource)) {
+    await cp(roamConverterSource, path.join(distDir, "bird", "roam-converter.js"));
+  }
 }
 
 async function ensureDistIsReadable() {
-  const files = ["index.html", "agent.json", "skills.json", "llms.txt", "install/index.html"];
+  const files = [
+    "index.html",
+    "agent.json",
+    "skills.json",
+    "llms.txt",
+    "install/index.html",
+    "bird/roam-converter.js"
+  ];
   for (const file of files) {
     const target = path.join(distDir, file);
     const info = await stat(target);

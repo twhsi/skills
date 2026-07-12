@@ -1,11 +1,11 @@
 ---
 name: thebrain-bird-address
-description: "Apply the formal BIRD 2.0 Knowledge Address protocol to complex manuscript text and TheBrain Thoughts. Use when splitting books into chapter/section/item knowledge nodes, producing BIRD analysis Excel workbooks, assigning Book Address, structured Knowledge Index (Weight, Type, Keyword, Alias), Routes, verified Deep Links, optional BIRD-I 2.1 Semantic Roles, importing a Type/Tag manuscript scaffold into TheBrain, or auditing existing TheBrain/Excel book indexes."
+description: "Apply the formal BIRD 2.0 Knowledge Address protocol to complex manuscript text and TheBrain Thoughts. Use when splitting books into chapter/section/item knowledge nodes, producing BIRD analysis Excel workbooks, assigning Book Address, structured Knowledge Index (Weight, Type, Keyword, Alias), Routes, verified Deep Links, optional BIRD-I 2.1 Semantic Roles, importing a Type/Tag manuscript scaffold into TheBrain, exporting BIRD or Excel rows as Roam Research import JSON, or auditing existing TheBrain/Excel book indexes."
 ---
 
 # BIRD 2.0 Book Deconstructor
 
-Convert complex structural text into addressable, searchable, cross-linked book nodes for TheBrain, Excel, Obsidian, and AI Agents.
+Convert complex structural text into addressable, searchable, cross-linked book nodes for TheBrain, Excel, Roam Research, Obsidian, and AI Agents.
 
 ## Formal Protocol
 
@@ -31,6 +31,7 @@ Never put `章` into `IndexType`, or `Concept` into `StructuralType`.
 - **Deconstruct Text**: split complex prose into chapter, section, and atomic item nodes.
 - **Excel Workbook**: create a validated `.xlsx` with BIRD analysis, manuscript Notes, and code tables.
 - **TheBrain Scaffold**: turn the validated Excel hierarchy into empty or selectively populated Thoughts with structural Types and workflow Tags.
+- **Roam JSON Export**: convert canonical BIRD objects or flat `BIRD分析` rows into a Roam-importable page/block array.
 - **Audit/Migrate**: check or convert existing TheBrain or legacy Excel rows.
 
 ## Deconstruct Text
@@ -85,6 +86,21 @@ Read [`references/excel-schema.md`](references/excel-schema.md). Create these sh
 3. `代碼表`: Weight, Index Type, Semantic Role, StructuralType, and Tag dictionaries.
 
 Use a real spreadsheet library. Freeze headers, enable filters, wrap long text, set practical widths, and validate the workbook after saving. Preserve legacy columns only in a separate `舊表對照` sheet when migration is requested.
+
+## Export Roam Research JSON
+
+Read [`references/roam-json-import.md`](references/roam-json-import.md), then use the deterministic converter:
+
+```bash
+node scripts/bird_to_roam_json.mjs bird.json roam-import.json
+```
+
+- Accept one canonical BIRD object, an array, or an object containing `items`, `records`, or flat Excel `rows`.
+- Emit an array of Roam pages using only supported page/block keys.
+- Omit block `uid` by default; add UIDs only when preserving existing block references is explicitly required and collision risk has been audited.
+- Stop on duplicate generated page titles. Roam merges matching titles, so silent duplicates can add content to the wrong page.
+- Preserve `D_DeepLink` byte-for-byte inside the `D::` block.
+- Validate the final JSON before delivery and recommend importing into a test graph first.
 
 ## Audit Rules
 

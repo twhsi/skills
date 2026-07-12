@@ -24,6 +24,7 @@
       <a href="#address">BIRD Overview</a>
       <a href="#fire-bird">FIRE × BIRD</a>
       <a href="#scaffold">TheBrain Scaffold</a>
+      <a href="#roam-json">Roam JSON</a>
     </nav>
     <a class="header-cta" href="https://github.com/twhsi/skills/tree/main/skills/thebrain-bird-address">Get the Skill</a>
   </header>
@@ -154,12 +155,53 @@
       </div>
     </section>
 
+    <section class="roam-export" id="roam-json" aria-labelledby="roam-title">
+      <div class="roam-export-inner">
+        <div class="roam-copy">
+          <p class="section-kicker">Roam Research interchange</p>
+          <h2 id="roam-title">BIRD → Roam JSON</h2>
+          <div class="roam-facts" aria-label="Export contract">
+            <span>Page array</span>
+            <span>Nested blocks</span>
+            <span>No UIDs</span>
+          </div>
+          <p class="roam-safety">Matching page titles merge in Roam. Test the file in a new graph before importing it into your main graph.</p>
+          <a class="roam-doc-link" href="https://roamresearch.com/#/app/help/page/Nxz8u0vXU">Official JSON schema</a>
+        </div>
+
+        <form class="roam-tool" data-roam-form novalidate>
+          <div class="roam-toolbar">
+            <strong>Local converter</strong>
+            <div>
+              <button class="tool-button" type="button" data-load-roam-example>Load example</button>
+              <button class="tool-button primary" type="submit">Convert</button>
+            </div>
+          </div>
+          <div class="roam-editors">
+            <label class="editor-field" for="bird-json-input">
+              <span>BIRD JSON</span>
+              <textarea id="bird-json-input" data-bird-json-input spellcheck="false" autocapitalize="off"></textarea>
+            </label>
+            <label class="editor-field output-field" for="roam-json-output">
+              <span>Roam import JSON</span>
+              <textarea id="roam-json-output" data-roam-json-output readonly spellcheck="false"></textarea>
+            </label>
+          </div>
+          <div class="roam-output-actions">
+            <span class="roam-status" data-roam-status role="status" aria-live="polite">Ready.</span>
+            <button class="tool-button" type="button" data-copy-roam disabled>Copy JSON</button>
+            <button class="tool-button primary" type="button" data-download-roam disabled>Download .json</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
     <section class="keyword-field" aria-labelledby="keyword-title">
       <div class="keyword-copy">
         <h2 id="keyword-title">81-Cell Keyword Field</h2>
         <p>An index is not a pile of Tags. It is a keyword field you can survey, zoom into, and traverse through Routes.</p>
         <a class="secondary-action" href="https://github.com/twhsi/skills/tree/main/skills/thebrain-bird-address">View the GitHub Skill</a>
-        <button class="copy-command" type="button" data-command="Use $thebrain-bird-address to turn these permanent notes into a validated BIRD 2.0 Excel and TheBrain manuscript scaffold.">Copy the Skill Prompt</button>
+        <button class="copy-command" type="button" data-command="Use $thebrain-bird-address to turn these permanent notes into a validated BIRD 2.0 Excel and TheBrain manuscript scaffold, then export Roam Research import JSON.">Copy the Skill Prompt</button>
         <p class="copy-status" role="status" aria-live="polite"></p>
       </div>
       <div class="mandala" id="mandala" aria-label="BIRD 81-cell keyword field"></div>
@@ -172,6 +214,6 @@
     <a href="https://github.com/twhsi/skills">twhsi/skills</a>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="app.js" type="module"></script>
 </body>
 </html>

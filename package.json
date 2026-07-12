@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build-site.mjs",
-    "preview": "python3 -m http.server 4177 --directory dist"
+    "preview": "python3 -m http.server 4177 --directory dist",
+    "test:roam": "node --test skills/thebrain-bird-address/scripts/roam-converter.test.mjs"
   }
 }

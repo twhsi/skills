@@ -9,7 +9,7 @@ The direction is informed by the public-facing energy of [Daisy Chain Fields](ht
 
 The adaptation remains original:
 
-- use Yunghsi's real eight-page booklet photograph;
+- use TWHSI's real eight-page booklet photograph;
 - retain the existing BIRD/twhsi palette and Rockwell-led typography;
 - use circles and seed marks generated in CSS rather than copied floral graphics;
 - retain the registry's BIRD, FIRE, iMandalArt, Skill Route, and machine-readable endpoint content;
@@ -19,4 +19,3 @@ The adaptation remains original:
 The central publishing route is:
 
 `Permanent Note → BIRD Address → BookletManifest → Folded Booklet`
-

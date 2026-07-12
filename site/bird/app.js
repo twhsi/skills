@@ -1,6 +1,6 @@
 const keywordMap = new Map([
   [0, ["Book", "core"]],
-  [4, ["章節", "core"]],
+  [4, ["Chapter", "core"]],
   [8, ["Address", "core"]],
   [12, ["Weight", "route"]],
   [16, ["Alias", "route"]],
@@ -16,12 +16,12 @@ const keywordMap = new Map([
   [48, ["Tag", "tool"]],
   [50, ["Note", "tool"]],
   [56, ["FIRE", "route"]],
-  [60, ["草稿", "route"]],
-  [64, ["定稿", "route"]],
+  [60, ["Draft", "route"]],
+  [64, ["Final", "route"]],
   [68, ["Project", "core"]],
-  [72, ["書稿", "core"]],
+  [72, ["Manuscript", "core"]],
   [76, ["Agent", "tool"]],
-  [80, ["輸出", "core"]],
+  [80, ["Export", "core"]],
 ]);
 
 const mandala = document.querySelector("#mandala");
@@ -41,8 +41,8 @@ const copyStatus = document.querySelector(".copy-status");
 copyButton.addEventListener("click", async () => {
   try {
     await navigator.clipboard.writeText(copyButton.dataset.command);
-    copyStatus.textContent = "已複製 BIRD Skill 指令。";
+    copyStatus.textContent = "BIRD Skill prompt copied.";
   } catch {
-    copyStatus.textContent = "請長按按鈕旁的 GitHub 連結使用 Skill。";
+    copyStatus.textContent = "Open the GitHub Skill link to use this prompt.";
   }
 });

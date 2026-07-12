@@ -12,130 +12,56 @@
     <link rel="stylesheet" href="/assets/site.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="announcement">
+      <a href="/bird">BIRD 2.0 is live: turn permanent notes into a book-ready knowledge address system.</a>
+    </div>
     <header class="site-header">
       <div class="site-shell">
         <a class="brand" href="/">
-          <span class="brand-mark">YS</span>
-          <span>Yunghsi Agent Skills</span>
+          <span>YUNGHSI</span>
+          <small>AGENT SKILLS</small>
         </a>
         <nav class="top-nav" aria-label="Main navigation">
-          <a class="nav-link" href="#imandalart">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v6H4z" /><path d="M14 4h6v6h-6z" /><path d="M4 14h6v6H4z" /><path d="M14 14h6v6h-6z" /></svg>
-            iMandalArt
-          </a>
-          <a class="nav-link" href="#demo">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v16H6z" /><path d="M9 8h6" /><path d="M9 12h6" /><path d="M9 16h4" /></svg>
-            Demo
-          </a>
-          <a class="nav-link" href="#keyword-graph">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="7" r="2" /><circle cx="18" cy="6" r="2" /><circle cx="12" cy="17" r="2" /><path d="M8 7l8-1M7 9l4 6M17 8l-4 7" /></svg>
-            Graph
-          </a>
-          <a class="nav-link" href="#weekly-review">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2v4" /><path d="M17 2v4" /><path d="M4 6h16v15H4z" /><path d="M4 11h16" /><path d="M8 15h3" /><path d="M13 15h3" /></svg>
-            Weekly Review
-          </a>
-          <a class="nav-link" href="#updates">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h5l3-7 3 14 3-7h2" /></svg>
-            Updates
-          </a>
-          <a class="nav-link" href="#agent-index">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7l5 5-5 5" /><path d="M13 17h6" /></svg>
-            LLM Index
-          </a>
-          <a class="nav-link" href="#skills">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z" /><path d="M8 9h3" /><path d="M8 13h8" /></svg>
-            Skills
-          </a>
-          <a class="nav-link" href="/install">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12" /><path d="M7 11l5 5 5-5" /><path d="M5 20h14" /></svg>
-            Install
-          </a>
-          <a class="nav-link" href="https://github.com/twhsi/skills">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3 19v-4c-3 1-4-1-4-1m11 5v-4c0-1 0-2-1-2 3 0 5-2 5-5 0-1 0-2-1-3 0-1 0-2-1-3 0 0-1 0-3 1a11 11 0 0 0-6 0C7 4 6 4 6 4c-1 1-1 2-1 3-1 1-1 2-1 3 0 3 2 5 5 5-1 0-1 1-1 2" /></svg>
-            GitHub
-          </a>
+          <a class="nav-link bird-nav" href="/bird">BIRD 2.0</a>
+          <a class="nav-link" href="#weekly-review">Weekly Review</a>
+          <a class="nav-link" href="#imandalart">iMandalArt</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="/install">Install</a>
+          <a class="nav-link nav-cta" href="https://github.com/twhsi/skills">GitHub</a>
         </nav>
       </div>
     </header>
 
-    <main>
-      <section class="hero site-shell">
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">AI agent skills for Chinese knowledge workers</p>
-            <h1>Let AI handle structure. Keep human judgment slow.</h1>
-            <p class="split-line"><span>Keyword graphs, weekly review, iMandalArt,</span><span> FIRE and publishing workflows.</span></p>
-            <p class="lead">
-              Yunghsi's public LLM skill registry packages weekly review, iMandalArt, FIRE analysis,
-              card-based notes, EPUB publishing, and desktop workflows. AI handles reading, comparing,
-              indexing, conversion, and validation; humans keep relationships, pace, and the choice of
-              what brings real happiness and peace.
-            </p>
-            <div class="hero-actions">
-              <a class="button" href="/agent.json">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7l5 5-5 5" /><path d="M13 17h6" /></svg>
-                Open LLM Manifest
-              </a>
-              <a class="button secondary" href="https://keyword-graph-view.twhsi.chatgpt.site/">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="7" r="2" /><circle cx="18" cy="6" r="2" /><circle cx="12" cy="17" r="2" /><path d="M8 7l8-1M7 9l4 6M17 8l-4 7" /></svg>
-                Open Keyword Graph
-              </a>
-            </div>
-            <div class="status-rail" aria-label="Registry status">
-              <span>registry: <strong>twhsi/skills</strong></span>
-              <span>revision: <strong data-registry-revision>loading</strong></span>
-              <span>generated: <strong data-registry-generated>loading</strong></span>
-              <span>skills: <strong data-registry-count>loading</strong></span>
-            </div>
+    <main id="main-content">
+      <section class="hero registry-hero" aria-labelledby="hero-title">
+        <img class="hero-background" src="/assets/keyword-graph-view.png" alt="Keyword Graph View showing a weighted network of connected ideas" />
+        <div class="hero-copy site-shell">
+          <h1 id="hero-title">Yunghsi<br />Agent Skills</h1>
+          <p class="split-line">Let AI handle structure.<br /><span>Keep human judgment slow.</span></p>
+          <p class="lead">Chinese-first workflows for BIRD, FIRE, weekly review, iMandalArt, knowledge graphs, and publishing.</p>
+          <div class="hero-actions">
+            <a class="button" href="/bird">Open BIRD 2.0</a>
+            <a class="button secondary" href="#skills">Browse Skills</a>
           </div>
-
-          <div class="hero-panels" aria-label="LLM and human views">
-            <div class="agent-console">
-              <div class="panel-label"><span>LLM View</span><span>80%</span></div>
-              <pre class="console-body">{
-  <span>"registry"</span>: "twhsi/skills",
-  <span>"revision"</span>: "<b data-console-revision>loading</b>",
-  <span>"runtimes"</span>: [
-    "ChatGPT", "Claude", "Gemini", "Codex", "Hermes"
-  ],
-  <span>"stack"</span>: [
-    "Keyword Graph", "Weekly Review", "iMandalArt", "FIRE"
-  ],
-  <span>"endpoints"</span>: [
-    "/agent.json",
-    "/skills.json",
-    "/llms.txt",
-    "/install"
-  ]
-}</pre>
-              <div class="signal-chart" aria-hidden="true">
-                <i style="--h: 22%"></i><i style="--h: 39%"></i><i style="--h: 30%"></i><i style="--h: 56%"></i><i style="--h: 44%"></i>
-                <i style="--h: 71%"></i><i style="--h: 61%"></i><i style="--h: 78%"></i><i style="--h: 46%"></i><i style="--h: 64%"></i>
-                <i style="--h: 36%"></i><i style="--h: 54%"></i><i style="--h: 43%"></i><i style="--h: 68%"></i><i style="--h: 82%"></i>
-              </div>
-            </div>
-            <aside class="human-rail">
-              <div class="panel-label human"><span>Human View</span><span>20%</span></div>
-              <a class="human-item" href="#updates">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h5l3-7 3 14 3-7h2" /></svg>
-                <span><strong>Freshness</strong><span>Versions, revisions, and timestamps</span></span>
-              </a>
-              <a class="human-item" href="#skills">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z" /><path d="M8 9h3" /><path d="M8 13h8" /></svg>
-                <span><strong>Skill Index</strong><span>Searchable install registry</span></span>
-              </a>
-              <a class="human-item" href="https://keyword-graph-view.twhsi.chatgpt.site/">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="7" r="2" /><circle cx="18" cy="6" r="2" /><circle cx="12" cy="17" r="2" /><path d="M8 7l8-1M7 9l4 6M17 8l-4 7" /></svg>
-                <span><strong>Keyword Graph</strong><span>Open the live weighted network</span></span>
-              </a>
-              <a class="human-item" href="/install">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6z" /><path d="M14 3v4h4" /><path d="M9 12h6" /><path d="M9 16h6" /></svg>
-                <span><strong>Install</strong><span>Local and web deployment guide</span></span>
-              </a>
-            </aside>
+          <div class="status-rail" aria-label="Registry status">
+            <span>registry: <strong>twhsi/skills</strong></span>
+            <span>revision: <strong data-registry-revision>loading</strong></span>
+            <span>generated: <strong data-registry-generated>loading</strong></span>
+            <span>skills: <strong data-registry-count>loading</strong></span>
           </div>
         </div>
+      </section>
+
+      <section class="bird-bridge" aria-labelledby="bird-bridge-title">
+        <a href="/bird" class="bird-bridge-inner">
+          <span class="bird-code">BIRD 2.0</span>
+          <div>
+            <h2 id="bird-bridge-title">Permanent notes become a book.</h2>
+            <p>Book Address · Knowledge Index · Route · Deep Link</p>
+          </div>
+          <strong>ENTER BIRD →</strong>
+        </a>
       </section>
 
       <section id="demo" class="section site-shell demo-section">

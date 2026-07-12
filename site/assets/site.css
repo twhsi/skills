@@ -1161,6 +1161,7 @@ body {
 .table-scroll,
 .deploy-strip { box-shadow: 7px 7px 0 rgba(32, 29, 30, .88); }
 
+.keyword-graph-media { position: relative; }
 .keyword-graph-media img { filter: saturate(.8) contrast(1.08); }
 .keyword-graph-media::after {
   content: "STRUCTURE FIELD";
@@ -1191,14 +1192,21 @@ body {
 }
 
 @media (max-width: 680px) {
+  html,
+  body { max-width: 100%; overflow-x: clip; }
   .registry-hero { min-height: 920px; height: 920px; background: linear-gradient(180deg, var(--yellow) 0 42%, var(--pink) 42% 100%); }
-  .hero-paper-object { top: 28px; right: 24px; width: 220px; height: 355px; padding: 13px 13px 10px; box-shadow: 8px 8px 0 var(--orange); }
+  .hero-paper-object { top: 28px; right: 8px; width: 210px; height: 355px; padding: 13px 13px 10px; box-shadow: 8px 8px 0 var(--orange); }
   .hero-paper-object figcaption { font-size: 10px; }
-  .registry-hero .hero-copy { width: calc(100% - 40px); left: 20px; bottom: 32px; }
+  .registry-hero .hero-copy { right: auto; width: calc(100% - 40px); max-width: calc(100% - 40px); left: 20px; bottom: 32px; }
   .hero-kicker { margin-bottom: 14px; font-size: 9px; }
-  .registry-hero h1 { font-size: clamp(54px, 18vw, 72px); }
-  .registry-hero .split-line { font-size: 22px; }
-  .registry-hero .lead { max-width: 100%; }
+  .registry-hero h1 { width: 320px; max-width: 100%; font-size: clamp(48px, 15vw, 58px); line-height: .82; letter-spacing: -.06em; white-space: normal !important; overflow-wrap: normal; }
+  .registry-hero .split-line { max-width: 100%; font-size: 21px; overflow-wrap: anywhere; }
+  .registry-hero .lead { max-width: 320px; font-size: 14px; overflow-wrap: anywhere; }
+  .status-rail { width: 100%; }
+  .bird-bridge-inner { max-width: 100%; overflow: hidden; }
+  .bird-bridge h2 { width: 300px; max-width: 100%; font-size: 30px; line-height: 1; white-space: normal !important; overflow-wrap: normal; }
+  .bird-bridge p { width: 320px; max-width: 100%; font-size: 13px; white-space: normal !important; overflow-wrap: anywhere; }
+  .bird-bridge strong { justify-self: start; }
   .field-mark-one { width: 78px; height: 78px; top: 310px; left: 18px; }
   .field-mark-two { display: none; }
   .section.site-shell { border-right: 0; border-left: 0; }

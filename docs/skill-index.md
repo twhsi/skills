@@ -1,5 +1,14 @@
 # Skill Index
 
+## eight-page-booklet
+
+- Purpose: Compile text, BIRD Graph JSON, iMandalArt, FIRE, plans, outlines, images, templates, or PDFs into a reproducible A4 foldable eight-page mini book.
+- Main file: [`../skills/eight-page-booklet/SKILL.md`](../skills/eight-page-booklet/SKILL.md)
+- Current resources: `references/manifest-schema.md`, `references/mandala-grid-v1.md`, `references/visual-style.md`, documentary paper-booklet photo, and `agents/openai.yaml`.
+- Outputs: `BookletManifest 2.0`, eight upright page PDFs, reading PDF, A4 print imposition, previews, companion Markdown, and validation report.
+- Keywords: 八頁小書, A4 小書, 摺頁書, 小誌, booklet, zine, 七路八頁, 64＋8＋1.
+- Connects to: `thebrain-bird-address`, `imandalart`, `fire-analysis-card`, `project-note-json-to-epub`, and PDF publishing workflows.
+
 ## todays-daily-plan
 
 - Purpose: Write spoken daily-plan notes into today's Obsidian Mandala Grid nine-grid time blocks and diary.

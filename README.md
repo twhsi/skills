@@ -124,6 +124,7 @@ Use it for weekly planning, writing focus, knowledge capture, and CJK note workf
 | [`todays-daily-plan`](skills/todays-daily-plan/) | Convert spoken planning notes into an Obsidian day-plan Mandala grid. |
 | [`weekly-reverse-review`](skills/weekly-reverse-review/) | Turn YEAR, Week, Day, and Inbox evidence into one happiness-and-peace-centered weekly plan. |
 | [`keyword-graph-view`](skills/keyword-graph-view/) | Extract eight keywords and build a centerless weighted network with node notes and evidence. |
+| [`eight-page-booklet`](skills/eight-page-booklet/) | Compile articles, BIRD routes, iMandalArt grids, plans, or PDFs into one printable A4 foldable eight-page mini book. |
 | [`project-note-json-to-epub`](skills/project-note-json-to-epub/) | Turn structured project-note JSON into EPUB and publishing outputs. |
 | [`markdown-nine-grid-clipboard`](skills/markdown-nine-grid-clipboard/) | Convert grids and cards into Markdown table workflows. |
 
@@ -187,6 +188,7 @@ cp -R skills/todays-daily-plan ~/.codex/skills/
 cp -R skills/weekly-reverse-review ~/.codex/skills/
 cp -R skills/imandalart ~/.codex/skills/
 cp -R skills/keyword-graph-view ~/.codex/skills/
+cp -R skills/eight-page-booklet ~/.codex/skills/
 ```
 
 Then validate a skill:

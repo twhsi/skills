@@ -1,4 +1,4 @@
 interface:
-  display_name: "A4 八頁 Eight Page Booklet"
-  short_description: "建立與驗證可列印的 A4 八頁 Eight Page Booklet PDF"
-  default_prompt: "Use $a4-eight-page-booklet to turn these eight pages into a verified A4 one-sheet foldable booklet."
+  display_name: "A4 八頁小書 2.2"
+  short_description: "把九宮與 BIRD Routes 做成可列印、可編輯八頁小書"
+  default_prompt: "Use $a4-eight-page-booklet 2.2 to turn this material into a verified A4 one-sheet foldable booklet with reading PDF, print sheet, and editable DOCX."

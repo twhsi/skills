@@ -7,7 +7,7 @@
     <title>AI Agent Skills for Chinese Knowledge Workers | twhsi/skills</title>
     <meta
       name="description"
-      content="twhsi/skills is a public LLM skill registry for keyword graphs, weekly review, iMandalArt, FIRE analysis, card-based notes, publishing workflows, and Chinese knowledge work."
+      content="Skills 三大天王 2.2: use iMandalArt to compress source material, BIRD to build knowledge addresses and Routes, and A4 Eight Page Booklet to publish verified paper artifacts."
     />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/assets/site.css" />
@@ -15,7 +15,7 @@
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="announcement">
-      <a href="/bird">New: BIRD 2.1 · Concise Key Points · A4 Eight Page Booklet 2.0</a>
+      <a href="#three-kings">Skills 三大天王 2.2: iMandalArt · BIRD · A4 Eight Page Booklet</a>
     </div>
     <header class="site-header">
       <div class="site-shell">
@@ -24,7 +24,8 @@
           <small>AGENT SKILLS</small>
         </a>
         <nav class="top-nav" aria-label="Main navigation">
-          <a class="nav-link bird-nav" href="/bird">BIRD 2.1</a>
+          <a class="nav-link" href="#three-kings">Three Kings 2.2</a>
+          <a class="nav-link bird-nav" href="/bird">BIRD 2.2</a>
           <a class="nav-link" href="#weekly-review">Weekly Review</a>
           <a class="nav-link" href="#imandalart">iMandalArt</a>
           <a class="nav-link" href="#skills">Skills</a>
@@ -43,9 +44,9 @@
           <p class="hero-kicker">BIRD · FIRE · MANDALA · PAPER</p>
           <h1 id="hero-title">TWHSI<br />Agent<br />Skills</h1>
           <p class="split-line">Let AI handle structure.<br /><span>Keep human judgment slow.</span></p>
-          <p class="lead">Chinese-first workflows for BIRD 2.1 knowledge addresses, concise answers, A4 paper booklets, FIRE, planning, and publishing.</p>
+          <p class="lead">Three Kings 2.2: compress with iMandalArt, address with BIRD, and publish with an A4 eight-page booklet.</p>
           <div class="hero-actions">
-            <a class="button" href="/bird">Open BIRD 2.1</a>
+            <a class="button" href="#three-kings">Open Three Kings 2.2</a>
             <a class="button secondary" href="#skills">Browse Skills</a>
           </div>
           <div class="status-rail" aria-label="Registry status">
@@ -67,13 +68,50 @@
 
       <section class="bird-bridge" aria-labelledby="bird-bridge-title">
         <a href="/bird" class="bird-bridge-inner">
-          <span class="bird-code">BIRD 2.1</span>
+          <span class="bird-code">BIRD SKILL 2.2</span>
           <div>
             <h2 id="bird-bridge-title">Permanent notes become a book.</h2>
             <p>Book Address · W+T+K+A Index · Route · Exact Deep Link · Semantic Role</p>
           </div>
           <strong>ENTER BIRD →</strong>
         </a>
+      </section>
+
+      <section id="three-kings" class="section site-shell demo-section">
+        <div class="section-head feature-head">
+          <h2>Skills 三大天王 2.2</h2>
+          <p>One continuous knowledge-publishing route: compress the material, give every idea an address, then return it to a verified paper object.</p>
+          <a href="/skill-tree.json">Open skill-tree.json</a>
+        </div>
+        <div class="demo-grid">
+          <article class="demo-card demo-primary">
+            <p class="eyebrow">Compression King</p>
+            <h3>iMandalArt 2.2</h3>
+            <p>Turn any source into one five-character center and eight orthogonal angles. Preserve の字型 identity for downstream indexes and Routes.</p>
+            <code>source → center + eight angles</code>
+            <a class="source-link" href="https://github.com/twhsi/skills/tree/main/skills/imandalart">Open iMandalArt</a>
+          </article>
+          <article class="demo-card">
+            <p class="eyebrow">Address King</p>
+            <h3>BIRD Book Deconstructor 2.2</h3>
+            <p>Assign Book Address, W+T+K+A Knowledge Index, Route, exact Deep Link, and optional Semantic Role. Export to TheBrain, Excel, Roam, or paper.</p>
+            <code>angle → address → Route</code>
+            <a class="source-link" href="https://github.com/twhsi/skills/tree/main/skills/thebrain-bird-address">Open BIRD</a>
+          </article>
+          <article class="demo-card">
+            <p class="eyebrow">Publishing King</p>
+            <h3>A4 Eight Page Booklet 2.2</h3>
+            <p>Place the overview on page 1 and seven BIRD Routes on pages 2–8. Deliver reading PDF, print sheet, editable DOCX, previews, and validation.</p>
+            <code>overview + 7 Routes → paper book</code>
+            <a class="source-link" href="https://github.com/twhsi/skills/tree/main/skills/a4-eight-page-booklet">Open A4 Booklet</a>
+          </article>
+          <article class="demo-card">
+            <p class="eyebrow">2.2 New</p>
+            <h3>Shared handoff, stable formats</h3>
+            <p>Center identity, spatial order, source IDs, citations, addresses, and Routes survive the whole chain. BIRD-2.1 and BookletManifest 2.0 remain compatible.</p>
+            <code>compress → address → publish → validate</code>
+          </article>
+        </div>
       </section>
 
       <section id="demo" class="section site-shell demo-section">
@@ -90,9 +128,9 @@
               Turn daily plans, weekly reviews, manuscript notes, and Markdown drafts into agent-ready
               workflows: BIRD 2.1 addresses, concise key points, iMandalArt cards, FIRE analysis, A4 booklets, and publishing paths.
             </p>
-            <pre class="demo-code">Input: manuscript + permanent notes + long AI answer
-Skills: thebrain-bird-address + concise-key-points + a4-eight-page-booklet
-Output: BIRD 2.1 route + concise key points + verified A4 mini book</pre>
+            <pre class="demo-code">Input: manuscript + permanent notes + PDF
+Skills: imandalart 2.2 + thebrain-bird-address 2.2 + a4-eight-page-booklet 2.2
+Output: eight angles + BIRD Routes + verified A4 mini book</pre>
           </article>
           <article class="demo-card">
             <strong>For LLM agents</strong>
@@ -186,7 +224,7 @@ Connect next    Build rhythm   Guitar and sun</pre>
 
       <section id="imandalart" class="section site-shell imandalart-showcase">
         <div class="section-head feature-head">
-          <h2>iMandalArt 2.01</h2>
+          <h2>iMandalArt 2.2</h2>
           <p>
             The featured skill in this registry: a hard-line 3x3 thinking card that lets mainstream LLMs turn loose notes,
             plans, and source material into one compact CJK-friendly Mandala index.
@@ -198,7 +236,7 @@ Connect next    Build rhythm   Guitar and sun</pre>
             <p class="eyebrow">Featured skill</p>
             <h3>One center, eight orthogonal angles, eleven physical lines.</h3>
             <p>
-              iMandalArt 2.01 is optimized for CJK workflows today: each surrounding content phrase is exactly five Han
+              iMandalArt 2.2 is optimized for CJK workflows: each surrounding content phrase is exactly five Han
               characters, each title is compact, and full-width separators keep the card stable in chat previews,
               TheBrain/Cerebro notes, Hermes, Discord, and clipboard-based workflows.
             </p>
@@ -214,7 +252,7 @@ Connect next    Build rhythm   Guitar and sun</pre>
             </div>
           </div>
           <figure class="mandala-panel">
-            <figcaption>Example card generated by iMandalArt 2.01</figcaption>
+            <figcaption>Example card generated by iMandalArt 2.2</figcaption>
             <pre class="mandala-card">ⒶHealth Reset  ⒷManuscript   ⒸMoney Noise
 Move with care  Pull one center Review first
 Build rhythm    Draft before all Fund the work
@@ -232,7 +270,7 @@ Prove nothing   Build index   Guitar and sun</pre>
 
       <section id="a4-eight-page-booklet" class="section site-shell booklet-showcase">
         <div class="section-head feature-head">
-          <h2>A4 Eight Page Booklet 2.0</h2>
+          <h2>A4 Eight Page Booklet 2.2</h2>
           <p>One A4 sheet becomes eight upright reading pages, one folded paper object, and one route from structured knowledge back to the hand.</p>
           <a href="https://github.com/twhsi/skills/tree/main/skills/a4-eight-page-booklet">GitHub</a>
         </div>

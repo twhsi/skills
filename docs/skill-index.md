@@ -2,12 +2,12 @@
 
 ## a4-eight-page-booklet
 
-- Purpose: Compile text, BIRD Graph JSON, iMandalArt, FIRE, plans, outlines, images, templates, or PDFs into a reproducible A4 foldable eight-page mini book.
+- Purpose: A4 八頁小書 2.2 is the publishing king: compile text, BIRD Routes, iMandalArt, plans, images, or PDFs into a reproducible A4 foldable eight-page mini book.
 - Main file: [`../skills/a4-eight-page-booklet/SKILL.md`](../skills/a4-eight-page-booklet/SKILL.md)
 - Current resources: deterministic imposition script, manifest schema, Japanese BIRD lesson mapping, Mandala layout reference, visual style, documentary paper-booklet photo, and `agents/openai.yaml`.
 - Outputs: `BookletManifest 2.0`, eight upright A7 page PDFs, reading PDF, A4 print imposition, editable DOCX, previews, companion Markdown, and validation report.
 - Keywords: 八頁小書, A4 小書, 摺頁書, 小誌, booklet, zine, 七路八頁, 64＋8＋1.
-- Connects to: `thebrain-bird-address`, `imandalart`, `fire-analysis-card`, `project-note-json-to-epub`, and PDF publishing workflows.
+- Three Kings role: receive the iMandalArt overview and seven BIRD Routes, then produce reading PDF, print sheet, editable DOCX, previews, and validation.
 
 ## todays-daily-plan
 
@@ -48,9 +48,10 @@
 
 ## imandalart
 
-- Purpose: Design and render iMandalArt-style square 3x3 index cards.
+- Purpose: iMandalArt 2.2 is the compression king: turn source material into one center, eight orthogonal angles, and an 11-line pure-text 3x3 index card.
 - Main file: [`../skills/imandalart/SKILL.md`](../skills/imandalart/SKILL.md)
-- Current resources: script, style reference, sample JSON, sample HTML, sample PNG
+- Current resources: legacy renderer, style reference, Skill Card JSON, sample JSON, sample HTML, sample PNG.
+- Three Kings role: pass the center, eight angles, spatial order, and source identity to BIRD and the A4 booklet.
 
 ## weekly-reverse-review
 
@@ -79,10 +80,11 @@
 
 ## thebrain-bird-address
 
-- Purpose: Turn complex manuscript text and permanent notes into BIRD 2.1 Book Addresses, structured Knowledge Indexes, Routes, verified Deep Links, Semantic Roles, Excel workbooks, TheBrain scaffolds, Roam JSON, and monochrome double nine-grids.
+- Purpose: BIRD 拆書分析 2.2 is the address king: turn complex manuscripts into BIRD 2.1 Book Addresses, structured Knowledge Indexes, Routes, verified Deep Links, Semantic Roles, Excel, TheBrain, Roam, and printable indexes.
 - Main file: [`../skills/thebrain-bird-address/SKILL.md`](../skills/thebrain-bird-address/SKILL.md)
 - Current resources: BIRD 2.0 migration reference, BIRD 2.1 specification, Excel schema, manuscript structuring rules, TheBrain instructions, Roam converter and tests, monochrome double-nine-grid rules, and `agents/openai.yaml`
 - Keywords: BIRD, Book Address, Knowledge Index, Route, Deep Link, TheBrain, Type, Tag, 拆書, 書稿鷹架.
+- Three Kings role: receive iMandalArt angles and send seven cited, ordered Routes into the booklet manifest.
 
 ## concise-key-points
 

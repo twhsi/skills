@@ -1,0 +1,92 @@
+{
+  "project": {
+    "name": "TWHSI Skills 三大天王",
+    "version": "2.2.0",
+    "updated": "2026-07-21"
+  },
+  "domains": ["structure", "think", "publish"],
+  "nodes": [
+    {
+      "id": "skill.imandalart",
+      "name": "iMandalArt 2.2",
+      "summary": "把任何素材壓縮成一個中心與八個正交視角的純文字九宮索引卡。",
+      "status": "active",
+      "level": 3,
+      "domain": "structure",
+      "surfaces": ["Codex", "ChatGPT", "Hermes", "TheBrain"],
+      "progress": {
+        "codex": "active",
+        "chatgpt": "prompt-ready",
+        "hermes": "implemented",
+        "thebrain": "implemented"
+      },
+      "deeplinks": {
+        "codex": "skills/imandalart/SKILL.md",
+        "github": "https://github.com/twhsi/skills/tree/main/skills/imandalart"
+      },
+      "requires": [],
+      "unlocks": ["skill.thebrain-bird-address"],
+      "overlaps": [],
+      "replaces": [],
+      "supports": ["skill.a4-eight-page-booklet"],
+      "outputs": ["11-line text card", "3x3 index", "64+8+1 spatial map"],
+      "owner": "永錫",
+      "review_cycle": "weekly",
+      "updated": "2026-07-21"
+    },
+    {
+      "id": "skill.thebrain-bird-address",
+      "name": "BIRD 拆書分析 2.2",
+      "summary": "把書稿拆成可定位、可檢索、可跨章路由、可回開的知識節點。",
+      "status": "active",
+      "level": 4,
+      "domain": "think",
+      "surfaces": ["Codex", "ChatGPT", "TheBrain", "Excel", "Roam", "Obsidian"],
+      "progress": {
+        "codex": "active",
+        "chatgpt": "prompt-ready",
+        "obsidian": "note-ready",
+        "thebrain": "active"
+      },
+      "deeplinks": {
+        "codex": "skills/thebrain-bird-address/SKILL.md",
+        "github": "https://github.com/twhsi/skills/tree/main/skills/thebrain-bird-address"
+      },
+      "requires": [],
+      "unlocks": ["skill.a4-eight-page-booklet"],
+      "overlaps": [],
+      "replaces": [],
+      "supports": ["skill.imandalart"],
+      "outputs": ["BIRD-2.1 JSON", "Excel workbook", "TheBrain scaffold", "Roam JSON", "seven Routes"],
+      "owner": "永錫",
+      "review_cycle": "weekly",
+      "updated": "2026-07-21"
+    },
+    {
+      "id": "skill.a4-eight-page-booklet",
+      "name": "A4 八頁小書 2.2",
+      "summary": "把九宮概覽與七條 BIRD Routes 變成可閱讀、可列印、可編輯、可驗證的紙本小書。",
+      "status": "active",
+      "level": 4,
+      "domain": "publish",
+      "surfaces": ["Codex", "ChatGPT", "PDF", "Word", "Apple Pages"],
+      "progress": {
+        "codex": "active",
+        "chatgpt": "prompt-ready"
+      },
+      "deeplinks": {
+        "codex": "skills/a4-eight-page-booklet/SKILL.md",
+        "github": "https://github.com/twhsi/skills/tree/main/skills/a4-eight-page-booklet"
+      },
+      "requires": [],
+      "unlocks": [],
+      "overlaps": [],
+      "replaces": [],
+      "supports": ["skill.imandalart", "skill.thebrain-bird-address"],
+      "outputs": ["BookletManifest 2.0", "reading PDF", "A4 print sheet", "editable DOCX", "validation report"],
+      "owner": "永錫",
+      "review_cycle": "weekly",
+      "updated": "2026-07-21"
+    }
+  ]
+}

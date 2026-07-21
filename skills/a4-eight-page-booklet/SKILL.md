@@ -1,13 +1,23 @@
 ---
 name: a4-eight-page-booklet
-description: Create, write, repair, impose, and validate a printable A4 one-sheet eight-page mini book or zine from text, notes, images, BIRD Graph JSON, iMandalArt/九宮, FIRE, outlines, templates, or PDFs. Use whenever the user says A4八頁小書, 八頁小書, 八頁小冊, 八格小書, A4一張八頁, 八頁在一頁, 8頁在一頁, 八張一頁, 一張紙變八頁, 摺頁書, 折頁小書, 迷你書, 小誌, zine, mini zine, booklet, 做成小書, 印成小書, 單張印出八頁, 幫我拼版, 八頁PDF, 合併八頁, 6-7-8-1／5-4-3-2排列, or asks for eight upright page PDFs, an eight-page reading PDF, or a correctly rotated A4 landscape print sheet.
+description: Use A4 Eight Page Booklet 2.2 to create, write, repair, impose, and validate a printable A4 one-sheet eight-page mini book or zine from text, notes, images, BIRD Graph JSON, iMandalArt/九宮, FIRE, outlines, templates, or PDFs. Use whenever the user says A4八頁小書, 八頁小書, 八頁小冊, 八格小書, A4一張八頁, 八頁在一頁, 8頁在一頁, 八張一頁, 一張紙變八頁, 摺頁書, 折頁小書, 迷你書, 小誌, zine, mini zine, booklet, 做成小書, 印成小書, 單張印出八頁, 幫我拼版, 八頁PDF, 合併八頁, 6-7-8-1／5-4-3-2排列, or asks for eight upright page PDFs, an eight-page reading PDF, an editable DOCX, or a correctly rotated A4 landscape print sheet.
 ---
 
-# A4 八頁 Eight Page Booklet 2.0
+# A4 八頁 Eight Page Booklet 2.2
 
-Compile source material into a reproducible paper thinking object. Separate content from layout: normalize source into a `BookletManifest 2.0`, then render every output from that manifest.
+Compile source material into a reproducible paper thinking object. Version 2.2 is the Skill integration release; it keeps `BookletManifest 2.0` for backward compatibility, then renders every output from that manifest.
 
-2.0 is in alpha while deterministic scripts are being implemented. Preserve the verified 1.x direct-PDF workflow as `legacy-direct`; do not claim script-backed validation when a named 2.0 script is absent.
+The 2.2 Skill remains in alpha while deterministic scripts are being implemented. Preserve the verified 1.x direct-PDF workflow as `legacy-direct`; do not claim script-backed validation when a named script is absent.
+
+## Three Kings 2.2 Integration
+
+A4 Eight Page Booklet is the **paper publishing king** in the three-skill chain:
+
+`iMandalArt 2.2 overview -> BIRD 2.2 seven Routes -> A4 Booklet 2.2 reading PDF + print sheet + DOCX`
+
+- Put the iMandalArt center and overview on page 1 without changing its spatial identities.
+- Put seven BIRD Routes on pages 2-8 and preserve source IDs, citations, addresses, and merge reasons.
+- Deliver synchronized reading, printing, editing, preview, companion, and validation artifacts.
 
 ## Output Contract
 
@@ -150,7 +160,7 @@ When the source is BIRD:
 
 Use `thebrain-bird-address` for BIRD assignment or audit. Do not invent weights, evidence, or deep links.
 
-## iMandalArt 2.01 Integration
+## iMandalArt 2.2 Integration
 
 Use `imandalart` for source analysis and complete 11-line text cards. Preserve these の字型 coordinates:
 
@@ -286,7 +296,7 @@ When using `legacy-direct`, create a manifest from the finished page plan so fut
 - Use the PDF skill for PDF creation, merging, rendering, and visual verification.
 - Use Skill Tree Manager when changing version, status, dependencies, cross-app links, or promotion from alpha to active.
 
-## 2.0 Promotion Gate
+## 2.2 Promotion Gate
 
 Keep 2.0 in alpha until all conditions pass:
 

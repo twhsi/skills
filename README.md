@@ -1,6 +1,6 @@
 # AI Agent Skills for Chinese Knowledge Workers
 
-> Reusable agent skills for keyword graphs, weekly review, iMandalArt, FIRE analysis, card-based notes, writing, publishing, and Chinese knowledge workflows.
+> Three Kings 2.2: compress with iMandalArt, address with BIRD, and publish with an A4 eight-page booklet.
 
 iMandalArt, FIRE semantic analysis, planning, and publishing workflows for Claude Code, Codex, and mainstream LLM agents.
 
@@ -8,7 +8,7 @@ iMandalArt, FIRE semantic analysis, planning, and publishing workflows for Claud
 
 This repository is TWHSI's public agent-skill system for Chinese knowledge workers. It turns repeatable writing, planning, note-making, and publishing workflows into skills that can be used by Claude Code, Codex, ChatGPT, Gemini, Hermes, and other LLM agents.
 
-The source of truth lives in `skills/*/SKILL.md`; the website turns those files into generated LLM manifests, a searchable skill index, install commands, version labels, Git revisions, and update timestamps.
+The source of truth lives in `skills/*/SKILL.md`; [`skill-tree.json`](skill-tree.json) records the Three Kings relationship, and the website turns the skills into generated LLM manifests, a searchable index, install commands, revisions, and update timestamps.
 
 ## What This Repository Is
 
@@ -18,7 +18,7 @@ The point is not to make humans behave like faster machines. The point is to let
 
 > Which action brings real happiness and peace?
 
-The newest featured skill is [`keyword-graph-view`](skills/keyword-graph-view/): it extracts eight context-sensitive keywords from an article and turns them into a centerless weighted network with blacklist filtering, node notes, and evidence.
+The flagship workflow is **Skills 三大天王 2.2**: [`imandalart`](skills/imandalart/) compresses a source, [`thebrain-bird-address`](skills/thebrain-bird-address/) gives every knowledge object an address and Route, and [`a4-eight-page-booklet`](skills/a4-eight-page-booklet/) returns the structure to a verified paper book.
 
 Live site: [https://www.twhsi.com/](https://www.twhsi.com/)  
 Live Keyword Graph: [https://keyword-graph-view.twhsi.chatgpt.site/](https://keyword-graph-view.twhsi.chatgpt.site/)
@@ -29,7 +29,7 @@ LLM context: [https://www.twhsi.com/llms.txt](https://www.twhsi.com/llms.txt)
 
 ## What It Does
 
-- Convert long Markdown notes into iMandalArt 2.01 hard-line 9-grid cards.
+- Convert source material into iMandalArt 2.2 hard-line 9-grid cards.
 - Apply FIRE semantic analysis for card-box thinking, retrieval, and writing structure.
 - Turn permanent notes into BIRD 2.1 Book Addresses, structured Knowledge Indexes, Routes, verified Deep Links, Semantic Roles, and TheBrain manuscript scaffolds.
 - Compress answers with `concise-key-points`: reduce default length by 70% while retaining at least 95% of essential information.
@@ -42,10 +42,32 @@ LLM context: [https://www.twhsi.com/llms.txt](https://www.twhsi.com/llms.txt)
 ## Copyable Demo
 
 ```text
-Input: 200 days of daily plans, manuscript notes, or Markdown drafts
-Skills: imandalart + fire-analysis-card + project-note-json-to-epub
-Output: FIRE JSON + iMandalArt 2.01 card + Markdown / EPUB / booklet path
+Input: manuscript, notes, PDF, or long conversation
+Skills: imandalart 2.2 -> thebrain-bird-address 2.2 -> a4-eight-page-booklet 2.2
+Output: eight-angle index -> BIRD addresses and Routes -> reading PDF + print sheet + DOCX
 ```
+
+## Skills 三大天王 2.2
+
+```text
+素材
+  -> iMandalArt 2.2：一個中心、八個正交視角
+  -> BIRD 拆書分析 2.2：Book Address、W+T+K+A、Route、Deep Link
+  -> A4 八頁小書 2.2：八頁閱讀版、折頁列印版、可編輯 DOCX、驗證報告
+```
+
+| Skill | Responsibility | Best use |
+|---|---|---|
+| [`iMandalArt 2.2`](skills/imandalart/) | 壓縮王：把混雜素材壓成中心與八個不重複視角。 | 每日計畫、章節總覽、64＋8＋1、手機九宮卡。 |
+| [`BIRD 拆書分析 2.2`](skills/thebrain-bird-address/) | 地址王：把主張變成可定位、可檢索、可跨章連結的知識節點。 | 拆書、TheBrain、Excel、Roam、Obsidian、書稿 Route。 |
+| [`A4 八頁小書 2.2`](skills/a4-eight-page-booklet/) | 出版王：把九宮概覽與七條 Routes 變成可讀、可印、可編輯的小書。 | A4 摺頁書、閱讀 PDF、紙本思考、教學與出版驗證。 |
+
+### 2.2 New Functions
+
+- **Shared handoff**：中心、八角度、來源 ID、BIRD Address、Route 與引用一路保留到紙本。
+- **Seven-Route publishing**：第 1 頁放 iMandalArt 總覽，第 2–8 頁放七條 BIRD Routes。
+- **Backward compatibility**：BIRD 仍輸出 `BIRD-2.1`；小書仍讀取 `BookletManifest 2.0`。
+- **Machine-readable tree**：[`skill-tree.json`](skill-tree.json) 記錄三者的版本、成熟度、輸出與解鎖關係。
 
 ## Featured: Keyword Graph View
 
@@ -78,18 +100,18 @@ For an LLM or agent, start with:
 curl -s https://www.twhsi.com/llms.txt
 ```
 
-## Featured: iMandalArt 2.01
+## Deep Dive: iMandalArt 2.2
 
 [`imandalart`](skills/imandalart/) turns loose source material into one hard-line 3x3 Mandala index card.
 
-iMandalArt 2.01 is designed around a strict text contract:
+iMandalArt 2.2 is designed around a strict text contract:
 
 - Eight orthogonal surrounding angles labeled `Ⓐ` through `Ⓗ`.
 - A double center axis displayed as `◎◎◎◎◎`.
 - Exactly 11 physical text lines, so the card survives chat previews, note apps, and clipboard workflows.
 - Compact CJK-friendly cells for TheBrain/Cerebro, Hermes, Discord, Codex, and other LLM chat surfaces.
 
-Current status: iMandalArt 2.01 is optimized for CJK workflows. An English-native version is planned so the same 3x3 thinking rhythm can work naturally for English notes without forcing a Chinese character contract.
+Current status: iMandalArt 2.2 is optimized for CJK workflows, pure-text stability, の字型 identity preservation, and clean handoff to BIRD and booklet Routes.
 
 Conceptual example:
 
@@ -109,17 +131,17 @@ Prove nothing   Build index   Guitar and sun
 
 Use it for weekly planning, writing focus, knowledge capture, and CJK note workflows where visual stability matters as much as semantic compression.
 
-## Latest Skill Updates
+## Deep Dive: BIRD and A4 2.2
 
-### BIRD 2.1 Book Deconstructor
+### BIRD Book Deconstructor 2.2
 
-[`thebrain-bird-address`](skills/thebrain-bird-address/) turns manuscripts and permanent notes into addressable knowledge objects. BIRD 2.1 formalizes `B = Book Address`, `I = Weight + Type + Keyword + Alias`, `R = Route`, and `D = exact Deep Link`, with optional evidence-based Semantic Roles. It supports Excel, TheBrain scaffolds, Roam JSON, and monochrome double nine-grid outputs.
+[`thebrain-bird-address`](skills/thebrain-bird-address/) turns manuscripts and permanent notes into addressable knowledge objects. The 2.2 Skill release applies the backward-compatible BIRD 2.1 protocol: `B = Book Address`, `I = Weight + Type + Keyword + Alias`, `R = Route`, and `D = exact Deep Link`, with optional evidence-based Semantic Roles. It supports Excel, TheBrain scaffolds, Roam JSON, monochrome double nine-grids, and a direct seven-Route booklet handoff.
 
-### 言簡意賅｜講重點｜Concise
+### Supporting Skill: 言簡意賅｜講重點｜Concise
 
 [`concise-key-points`](skills/concise-key-points/) produces high-information-density answers: conclusion first, three to five key points, minimal repetition, and no unnecessary background. Its default target is 70% shorter while retaining at least 95% of essential information.
 
-### A4 Eight Page Booklet 2.0
+### A4 Eight Page Booklet 2.2
 
 [`a4-eight-page-booklet`](skills/a4-eight-page-booklet/) turns text, notes, images, BIRD Graph JSON, iMandalArt grids, 64+8+1 structures, FIRE material, daily plans, Bike or Bonsai outlines, templates, and PDFs into a printable, cuttable, and foldable eight-page booklet made from one A4 sheet.
 
@@ -145,14 +167,14 @@ Full skill specification and installation source: [`skills/a4-eight-page-booklet
 
 | Skill | Role |
 |---|---|
-| [`imandalart`](skills/imandalart/) | Compress source material into one CJK-friendly 3x3 Mandala card. |
+| [`imandalart`](skills/imandalart/) | iMandalArt 2.2 compression king: one center and eight orthogonal retrieval angles. |
 | [`fire-analysis-card`](skills/fire-analysis-card/) | Turn Chinese notes and manuscripts into FIRE semantic analysis cards. |
-| [`thebrain-bird-address`](skills/thebrain-bird-address/) | Turn permanent notes and complex manuscripts into validated BIRD 2.1 knowledge addresses, Excel, TheBrain, Roam, and printable index outputs. |
+| [`thebrain-bird-address`](skills/thebrain-bird-address/) | BIRD 2.2 address king: validated knowledge addresses, Routes, Excel, TheBrain, Roam, and printable indexes. |
 | [`concise-key-points`](skills/concise-key-points/) | Compress answers to the fewest useful words while retaining essential facts, constraints, and action items. |
 | [`todays-daily-plan`](skills/todays-daily-plan/) | Convert spoken planning notes into an Obsidian day-plan Mandala grid. |
 | [`weekly-reverse-review`](skills/weekly-reverse-review/) | Turn YEAR, Week, Day, and Inbox evidence into one happiness-and-peace-centered weekly plan. |
 | [`keyword-graph-view`](skills/keyword-graph-view/) | Extract eight keywords and build a centerless weighted network with node notes and evidence. |
-| [`a4-eight-page-booklet`](skills/a4-eight-page-booklet/) | Compile articles, BIRD routes, iMandalArt grids, plans, or PDFs into one verified A4 foldable eight-page mini book. |
+| [`a4-eight-page-booklet`](skills/a4-eight-page-booklet/) | A4 Booklet 2.2 publishing king: reading PDF, print imposition, editable DOCX, previews, and validation. |
 | [`project-note-json-to-epub`](skills/project-note-json-to-epub/) | Turn structured project-note JSON into EPUB and publishing outputs. |
 | [`markdown-nine-grid-clipboard`](skills/markdown-nine-grid-clipboard/) | Convert grids and cards into Markdown table workflows. |
 
@@ -178,7 +200,7 @@ Open the live generated table:
 - [https://www.twhsi.com/#updates](https://www.twhsi.com/#updates)
 - [https://www.twhsi.com/skills.json](https://www.twhsi.com/skills.json)
 
-Featured metadata check: [`imandalart`](skills/imandalart/) declares `v2.01`, and [`fire-analysis-card`](skills/fire-analysis-card/) declares `v2.0`.
+Featured release check: iMandalArt, BIRD Book Deconstructor, and A4 Eight Page Booklet are presented together as **Skills 三大天王 2.2**. Their stable interchange formats remain backward compatible.
 
 [`thebrain-bird-address`](skills/thebrain-bird-address/) implements BIRD 2.1: `B = Book Address`, `I = Weight + Type + Keyword + Alias`, `R = Route`, and `D = exact Deep Link`, with optional evidence-based Semantic Roles. It complements FIRE by moving from reusable permanent notes into project notes, chapter structures, and book production.
 
@@ -188,9 +210,9 @@ Featured metadata check: [`imandalart`](skills/imandalart/) declares `v2.01`, an
 |---|---|---|
 | Time | Daily focus, planning rhythm, calendar actions, weekly review, and long-range training loops. | `weekly-reverse-review`, `todays-daily-plan`, `imandalart`, `personal-athlete-81-grid`, `fantastical-calendar` |
 | Cards | FIRE analysis, BIRD book addresses, grid cards, Markdown tables, keyword graphs, and graph views. | `weekly-reverse-review`, `fire-analysis-card`, `thebrain-bird-address`, `markdown-nine-grid-clipboard`, `keyword-graph-view`, `obsidian-graph-view` |
-| LLM | Repeatable LLM workflows, structured inputs, scripts, and metadata. | `project-note-json-to-epub`, `epub-hypercard-obsidian` |
+| LLM | Repeatable LLM workflows, structured inputs, scripts, and metadata. | `imandalart`, `thebrain-bird-address`, `a4-eight-page-booklet`, `project-note-json-to-epub` |
 | Desktop | Local Mac workflows, clipboard outputs, calendar bridges, and working-desk routines. | `fantastical-calendar`, `markdown-nine-grid-clipboard` |
-| Publish | BIRD manuscript scaffolds, booklets, EPUBs, HyperCard returns, and public GitHub publishing paths. | `thebrain-bird-address`, `project-note-json-to-epub`, `epub-hypercard-obsidian` |
+| Publish | BIRD manuscript scaffolds, booklets, EPUBs, HyperCard returns, and public GitHub publishing paths. | `thebrain-bird-address`, `a4-eight-page-booklet`, `project-note-json-to-epub`, `epub-hypercard-obsidian` |
 
 ## Core Files
 
@@ -201,6 +223,7 @@ docs/        install notes, book links, and skill index
 examples/    sample inputs and outputs
 archive/     older drafts and retired skills
 Hermes.md    system map and command file
+skill-tree.json  Three Kings 2.2 machine-readable relationship map
 site/        static website source
 dist/        generated website output, ignored by git
 ```

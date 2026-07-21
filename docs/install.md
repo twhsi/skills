@@ -57,14 +57,14 @@ Use $auto-luhmann-numberer to scan this folder and assign Luhmann-style book/car
 Use $project-note-json-to-epub to convert this project-note JSON into an EPUB.
 Use $epub-hypercard-obsidian to convert this EPUB into an Obsidian HyperCard folder with verified links and a portable zip.
 Use $obsidian-graph-view to render a weighted graph view from this keyword index.
-Use $imandalart to turn this theme into a nine-grid card.
+Use $imandalart to turn this theme into an iMandalArt 2.2 pure-text nine-grid card.
 Use $weekly-reverse-review to turn my inbox, diary, calendar, and long-range plan into a reverse weekly review and 8 Big Rocks.
 Use $imessage-nine-grid-hypercard to organize these notes into an iMessage-ready 九宮 short card with Context below.
 Use $markdown-nine-grid-clipboard to turn this iMandalArt into an Obsidian Markdown nine-grid table.
 Use $fire-analysis-card to prepare this note for semantic search with Full-D, Index, Route, and Evolution.
-Use $thebrain-bird-address to turn these permanent notes into validated BIRD 2.1 knowledge addresses and a TheBrain manuscript scaffold.
+Use $thebrain-bird-address 2.2 to turn these permanent notes into validated BIRD 2.1 knowledge addresses, seven Routes, and a TheBrain manuscript scaffold.
 Use $concise-key-points to answer with the conclusion and only the essential key points.
-Use $a4-eight-page-booklet to turn this material into a verified A4 one-sheet foldable eight-page booklet.
+Use $a4-eight-page-booklet 2.2 to turn the iMandalArt overview and BIRD Routes into a verified A4 one-sheet foldable eight-page booklet.
 Use $fire-card-to-epub to turn FIRE cards into a validated EPUB with keyword index links.
 Use $pdca to turn this problem into a Chinese compass-style PDCA/CAPD card.
 Use $fantastical-calendar to add tomorrow's project review to Fantastical.

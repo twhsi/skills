@@ -169,7 +169,7 @@ function createAgentManifest(skills) {
   return {
     id: "twhsi/skills",
     name: "AI Agent Skills for Chinese Knowledge Workers",
-    tagline: "iMandalArt, FIRE, planning, and publishing workflows for mainstream LLM agents",
+    tagline: "Three Kings 2.2: iMandalArt compression, BIRD addressing, and A4 booklet publishing",
     north_star: "Package Chinese-first knowledge workflows so LLM agents can handle repeatable structure while humans keep judgment, taste, and pace.",
     audience_split: {
       agent: 0.8,
@@ -183,6 +183,7 @@ function createAgentManifest(skills) {
       agent_manifest: "/agent.json",
       skills_index: "/skills.json",
       llm_context: "/llms.txt",
+      skill_tree: "/skill-tree.json",
       human_home: "/",
       install_guide: "/install"
     },
@@ -241,7 +242,7 @@ function createLlmsText(manifest, skillsIndex) {
 
   return `# AI Agent Skills for Chinese Knowledge Workers
 
-This is Yunghsi's public agent-skill system for Chinese knowledge workers: Weekly Reverse Review, iMandalArt, FIRE semantic analysis, daily planning, Markdown, EPUB, and booklet workflows for Claude Code, Codex, ChatGPT, Gemini, Hermes, and other LLM agents.
+This is Yunghsi's public agent-skill system for Chinese knowledge workers. Its flagship Three Kings 2.2 route compresses source material with iMandalArt, assigns knowledge addresses and Routes with BIRD, and publishes the result as a verified A4 eight-page booklet.
 
 North Star: ${manifest.north_star}
 Split: 80% machine-readable LLM endpoints, 20% human-readable map.
@@ -251,19 +252,22 @@ Split: 80% machine-readable LLM endpoints, 20% human-readable map.
 - /agent.json: canonical LLM and agent manifest.
 - /skills.json: generated skill index from skills/*/SKILL.md frontmatter.
 - /llms.txt: compact context for LLMs.
+- /skill-tree.json: machine-readable Three Kings 2.2 relationship map.
 - /install: human and LLM install/deploy guide.
 
 ## Featured skills
 
-Weekly Reverse Review turns annual plans, hundred-year life plans, last weekly reviews, seven-day diaries, calendars, and inbox notes into one happiness-and-peace-centered 8 Big Rocks weekly plan. Its center question is: Which action brings real happiness and peace?
+iMandalArt 2.2 is the compression king: one center, eight orthogonal angles, and an 11-line pure-text CJK card.
 
-iMandalArt 2.01 is the flagship CJK-friendly hard-line 3x3 thinking card format. It uses eight orthogonal angles labeled Ⓐ-Ⓗ, a double ◎◎◎◎◎ center axis, and exactly 11 physical text lines so the card survives chat previews, note apps, and clipboard workflows. An English-native version is planned.
+BIRD Book Deconstructor 2.2 is the address king: Book Address, W+T+K+A Knowledge Index, Route, exact Deep Link, Semantic Role, and cross-tool exports. Canonical interchange remains BIRD-2.1.
+
+A4 Eight Page Booklet 2.2 is the publishing king: page 1 overview, pages 2-8 seven Routes, reading PDF, print sheet, editable DOCX, previews, and validation. Canonical manifests remain BookletManifest 2.0.
 
 ## Copyable demo
 
-Input: annual plan, hundred-year life plan, weekly review, seven-day diaries, calendar, inbox notes, manuscript notes, or Markdown drafts.
-Skills: weekly-reverse-review + imandalart + fire-analysis-card + project-note-json-to-epub.
-Output: 8 Big Rocks weekly plan + FIRE JSON + iMandalArt 2.01 card + Markdown / EPUB / booklet path.
+Input: manuscript, notes, PDF, daily plan, or long conversation.
+Skills: imandalart 2.2 -> thebrain-bird-address 2.2 -> a4-eight-page-booklet 2.2.
+Output: eight-angle index -> BIRD addresses and seven Routes -> verified reading PDF, print sheet, and editable DOCX.
 
 ## Routes
 
@@ -301,6 +305,11 @@ async function copySite() {
   if (existsSync(roamConverterSource)) {
     await cp(roamConverterSource, path.join(distDir, "bird", "roam-converter.js"));
   }
+
+  const skillTreeSource = path.join(root, "skill-tree.json");
+  if (existsSync(skillTreeSource)) {
+    await cp(skillTreeSource, path.join(distDir, "skill-tree.json"));
+  }
 }
 
 async function ensureDistIsReadable() {
@@ -309,6 +318,7 @@ async function ensureDistIsReadable() {
     "agent.json",
     "skills.json",
     "llms.txt",
+    "skill-tree.json",
     "install/index.html",
     "bird/roam-converter.js"
   ];

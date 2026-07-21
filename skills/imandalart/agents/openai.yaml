@@ -1,4 +1,4 @@
 interface:
-  display_name: "iMandalArt"
-  short_description: "做成Ⓐ-Ⓗ八角度、雙◎中心軸的2.01九宮卡。"
-  default_prompt: "請使用 $imandalart，把這段內容做成 iMandalArt 2.01 純文字九宮卡："
+  display_name: "iMandalArt 2.2"
+  short_description: "把素材壓成八角度、雙◎中心軸的純文字九宮卡"
+  default_prompt: "請使用 $imandalart，把這段內容做成 iMandalArt 2.2 純文字九宮卡："

@@ -1,4 +1,4 @@
 interface:
-  display_name: "BIRD 2.1 拆書分析"
-  short_description: "拆解書稿並輸出 TheBrain、Roam 與黑白雙九宮"
-  default_prompt: "Use $thebrain-bird-address to deconstruct this manuscript with BIRD 2.1 and create a monochrome printable double nine-grid when requested."
+  display_name: "BIRD 拆書分析 2.2"
+  short_description: "建立書稿地址、知識索引、Route 與跨工具輸出"
+  default_prompt: "Use $thebrain-bird-address 2.2 to deconstruct this manuscript with the BIRD 2.1 protocol and route it toward TheBrain, Roam, or an A4 booklet."

@@ -1,11 +1,23 @@
 ---
 name: thebrain-bird-address
-description: "Apply the formal BIRD 2.1 Knowledge Address protocol to complex manuscript text and TheBrain Thoughts. Use when splitting books into chapter/section/item knowledge nodes, assigning Book Address, structured Knowledge Index (Weight, Type, Keyword, Alias), Routes, verified Deep Links, and Semantic Roles; producing BIRD Excel workbooks, TheBrain scaffolds, Roam JSON, or monochrome printable double nine-grid cards; or auditing and migrating existing BIRD/TheBrain indexes."
+description: "Use BIRD Book Deconstructor 2.2 to apply the formal BIRD 2.1 Knowledge Address protocol to complex manuscript text and TheBrain Thoughts. Use when splitting books into chapter/section/item knowledge nodes, assigning Book Address, structured Knowledge Index (Weight, Type, Keyword, Alias), Routes, verified Deep Links, and Semantic Roles; producing BIRD Excel workbooks, TheBrain scaffolds, Roam JSON, monochrome printable double nine-grid cards, or a routed handoff from iMandalArt to A4 eight-page booklets; or auditing and migrating existing BIRD/TheBrain indexes."
 ---
 
-# BIRD 2.1 Book Deconstructor
+# BIRD Book Deconstructor 2.2
 
 Convert complex structural text into addressable, searchable, cross-linked book nodes for TheBrain, Excel, Roam Research, Obsidian, and AI Agents.
+
+Version 2.2 is the Skill integration release. Canonical interchange objects remain `BIRD-2.1` for backward compatibility.
+
+## Three Kings 2.2 Integration
+
+BIRD is the **address and route king** in the three-skill publishing chain:
+
+`iMandalArt 2.2 eight angles -> BIRD 2.2 Book Address + Index + Route + Deep Link -> A4 Booklet 2.2`
+
+- Receive the center, eight angles, source identities, and spatial order from iMandalArt.
+- Turn reusable claims into stable Book Addresses and `W + T + K + A` Knowledge Indexes.
+- Send seven ordered Routes, citations, pending Deep Links, and merge reasons to the booklet manifest.
 
 ## Formal Protocol
 

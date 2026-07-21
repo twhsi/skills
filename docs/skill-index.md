@@ -1,11 +1,11 @@
 # Skill Index
 
-## eight-page-booklet
+## a4-eight-page-booklet
 
 - Purpose: Compile text, BIRD Graph JSON, iMandalArt, FIRE, plans, outlines, images, templates, or PDFs into a reproducible A4 foldable eight-page mini book.
-- Main file: [`../skills/eight-page-booklet/SKILL.md`](../skills/eight-page-booklet/SKILL.md)
-- Current resources: `references/manifest-schema.md`, `references/mandala-grid-v1.md`, `references/visual-style.md`, documentary paper-booklet photo, and `agents/openai.yaml`.
-- Outputs: `BookletManifest 2.0`, eight upright page PDFs, reading PDF, A4 print imposition, previews, companion Markdown, and validation report.
+- Main file: [`../skills/a4-eight-page-booklet/SKILL.md`](../skills/a4-eight-page-booklet/SKILL.md)
+- Current resources: deterministic imposition script, manifest schema, Japanese BIRD lesson mapping, Mandala layout reference, visual style, documentary paper-booklet photo, and `agents/openai.yaml`.
+- Outputs: `BookletManifest 2.0`, eight upright A7 page PDFs, reading PDF, A4 print imposition, editable DOCX, previews, companion Markdown, and validation report.
 - Keywords: 八頁小書, A4 小書, 摺頁書, 小誌, booklet, zine, 七路八頁, 64＋8＋1.
 - Connects to: `thebrain-bird-address`, `imandalart`, `fire-analysis-card`, `project-note-json-to-epub`, and PDF publishing workflows.
 
@@ -79,10 +79,17 @@
 
 ## thebrain-bird-address
 
-- Purpose: Turn complex manuscript text and permanent notes into BIRD 2.0 Book Addresses, structured Knowledge Indexes, Routes, verified Deep Links, Excel workbooks, and TheBrain Type/Tag writing scaffolds.
+- Purpose: Turn complex manuscript text and permanent notes into BIRD 2.1 Book Addresses, structured Knowledge Indexes, Routes, verified Deep Links, Semantic Roles, Excel workbooks, TheBrain scaffolds, Roam JSON, and monochrome double nine-grids.
 - Main file: [`../skills/thebrain-bird-address/SKILL.md`](../skills/thebrain-bird-address/SKILL.md)
-- Current resources: BIRD 2.0 specification, Excel schema, manuscript structuring rules, TheBrain single-node and bulk-scaffold instructions, `agents/openai.yaml`
+- Current resources: BIRD 2.0 migration reference, BIRD 2.1 specification, Excel schema, manuscript structuring rules, TheBrain instructions, Roam converter and tests, monochrome double-nine-grid rules, and `agents/openai.yaml`
 - Keywords: BIRD, Book Address, Knowledge Index, Route, Deep Link, TheBrain, Type, Tag, 拆書, 書稿鷹架.
+
+## concise-key-points
+
+- Purpose: Compress answers to high-density key points, defaulting to 70% shorter while retaining at least 95% of essential information.
+- Main file: [`../skills/concise-key-points/SKILL.md`](../skills/concise-key-points/SKILL.md)
+- Current resources: `agents/openai.yaml`
+- Keywords: 言簡意賅, 講重點, Concise, 精簡回答, 只講重點, brief, TL;DR.
 
 ## fire-card-to-epub
 

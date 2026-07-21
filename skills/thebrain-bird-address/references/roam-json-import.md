@@ -1,6 +1,6 @@
 # Roam Research JSON Import
 
-Use this reference when converting BIRD 2.0 objects or Excel rows into a file that Roam Research can import.
+Use this reference when converting BIRD 2.1 objects or compatible BIRD 2.0/Excel rows into a file that Roam Research can import.
 
 ## Official Contract
 
@@ -44,7 +44,7 @@ Do not add BIRD fields as unknown JSON object keys. Put them into supported Roam
   {
     "title": "3.4.D.B Eight Rocks Weekly Review",
     "children": [
-      { "string": "BIRD-2.0", "heading": 2 },
+      { "string": "BIRD-2.1", "heading": 2 },
       { "string": "B:: Whole System/Part III/3.4/3.4.D.B" },
       { "string": "I:: I3 | S · Skill | [[Eight Rocks Weekly Review]]" },
       { "string": "A:: [[Weekly Review to 8 Rocks]]" },

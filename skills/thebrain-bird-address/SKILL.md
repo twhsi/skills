@@ -1,9 +1,9 @@
 ---
 name: thebrain-bird-address
-description: "Apply the formal BIRD 2.0 Knowledge Address protocol to complex manuscript text and TheBrain Thoughts. Use when splitting books into chapter/section/item knowledge nodes, producing BIRD analysis Excel workbooks, assigning Book Address, structured Knowledge Index (Weight, Type, Keyword, Alias), Routes, verified Deep Links, optional BIRD-I 2.1 Semantic Roles, importing a Type/Tag manuscript scaffold into TheBrain, exporting BIRD or Excel rows as Roam Research import JSON, or auditing existing TheBrain/Excel book indexes."
+description: "Apply the formal BIRD 2.1 Knowledge Address protocol to complex manuscript text and TheBrain Thoughts. Use when splitting books into chapter/section/item knowledge nodes, assigning Book Address, structured Knowledge Index (Weight, Type, Keyword, Alias), Routes, verified Deep Links, and Semantic Roles; producing BIRD Excel workbooks, TheBrain scaffolds, Roam JSON, or monochrome printable double nine-grid cards; or auditing and migrating existing BIRD/TheBrain indexes."
 ---
 
-# BIRD 2.0 Book Deconstructor
+# BIRD 2.1 Book Deconstructor
 
 Convert complex structural text into addressable, searchable, cross-linked book nodes for TheBrain, Excel, Roam Research, Obsidian, and AI Agents.
 
@@ -14,9 +14,9 @@ Convert complex structural text into addressable, searchable, cross-linked book 
 - `R = Route`: ordered cross-node or cross-chapter paths; answer "where does it lead?"
 - `D = Deep Link`: exact permanent application address; answer "how is it opened?"
 
-Read [`references/bird-2.0-spec.md`](references/bird-2.0-spec.md) before assigning Index Weight, Index Type, or Semantic Role.
+Read [`references/bird-2.1-spec.md`](references/bird-2.1-spec.md) before assigning Index Weight, Index Type, or Semantic Role.
 
-Do not use the old `B = Branch` or unstructured `I = title` interpretation. Mark legacy input as `BIRD 1.x` and map it into 2.0.
+Do not use the old `B = Branch` or unstructured `I = title` interpretation. Mark legacy input as `BIRD 1.x` and map it into 2.1. Preserve valid BIRD 2.0 fields during migration; add `Role` only when evidence supports it.
 
 ## Distinguish Two Types
 
@@ -32,6 +32,7 @@ Never put `章` into `IndexType`, or `Concept` into `StructuralType`.
 - **Excel Workbook**: create a validated `.xlsx` with BIRD analysis, manuscript Notes, and code tables.
 - **TheBrain Scaffold**: turn the validated Excel hierarchy into empty or selectively populated Thoughts with structural Types and workflow Tags.
 - **Roam JSON Export**: convert canonical BIRD objects or flat `BIRD分析` rows into a Roam-importable page/block array.
+- **Monochrome Double Nine-Grid**: compose one A4 landscape printable visual with the main table of contents and three Routes on the left, and the Knowledge Index on the right.
 - **Audit/Migrate**: check or convert existing TheBrain or legacy Excel rows.
 
 ## Deconstruct Text
@@ -59,7 +60,7 @@ For every node, apply this order:
 2. Choose `T`: one code from the controlled Index Type table.
 3. Choose `W`: importance to this specific book, not general fame.
 4. Add `A`: genuine synonyms, translations, abbreviations, or established alternate spellings. Exclude the canonical keyword itself.
-5. Optionally assign `Role` using BIRD-I 2.1 only when graph or hierarchy evidence supports it; otherwise leave blank.
+5. Assign the optional BIRD 2.1 `Role` only when graph or hierarchy evidence supports it; otherwise leave blank.
 
 Do not turn every noun into an Index. Create an index object only when the term supports retrieval, interpretation, or routing.
 
@@ -102,6 +103,17 @@ node scripts/bird_to_roam_json.mjs bird.json roam-import.json
 - Preserve `D_DeepLink` byte-for-byte inside the `D::` block.
 - Validate the final JSON before delivery and recommend importing into a test graph first.
 
+## Create a Monochrome Double Nine-Grid
+
+Read [`references/black-white-double-nine-grid.md`](references/black-white-double-nine-grid.md) whenever the user asks for a double nine-grid, print card, printable image, or left-directory/right-keyword visual.
+
+- Use one A4 landscape page with two aligned 3×3 grids.
+- Put five main contents, three meaningful Routes, and the core BIRD object in the left grid.
+- Put eight Knowledge Index objects around the core Index in the right grid.
+- Use a pure white background and black text/lines only. Do not use cell fills, gray backgrounds, gradients, shadows, or decorative color.
+- Deliver editable SVG plus a 3508×2480 PNG. Also deliver a verified one-page A4 landscape PDF when print output is requested.
+- Keep every displayed BIRD field faithful to the canonical objects. Do not invent Book Addresses or Deep Links to fill the layout.
+
 ## Audit Rules
 
 Report the smallest correction for:
@@ -121,7 +133,7 @@ Do not move, rename, merge, or delete live Thoughts without explicit authorizati
 ## Standard BIRD Output
 
 ```text
-【BIRD 2.0】
+【BIRD 2.1】
 B: 全系統/第三部/3.4/3.4.D/3.4.D.B
 I:
   W: I3
@@ -139,7 +151,7 @@ For Agent interchange, also output:
 
 ```json
 {
-  "version": "BIRD-2.0",
+  "version": "BIRD-2.1",
   "bookAddress": "全系統/第三部/3.4/3.4.D/3.4.D.B",
   "index": {
     "weight": "I3",

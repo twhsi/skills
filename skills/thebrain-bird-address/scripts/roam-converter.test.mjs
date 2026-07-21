@@ -3,7 +3,7 @@ import test from "node:test";
 import { birdToRoamPages, parseBirdJson, validateRoamPages } from "./roam-converter.mjs";
 
 const example = {
-  version: "BIRD-2.0",
+  version: "BIRD-2.1",
   bookAddress: "Whole System/Part III/3.4/3.4.D.B",
   index: {
     weight: "I3",
@@ -24,7 +24,7 @@ test("converts canonical BIRD JSON into an importable Roam page array", () => {
   const pages = birdToRoamPages(example);
   assert.equal(pages.length, 1);
   assert.equal(pages[0].title, "3.4.D.B Eight Rocks Weekly Review");
-  assert.deepEqual(pages[0].children[0], { string: "BIRD-2.0", heading: 2 });
+  assert.deepEqual(pages[0].children[0], { string: "BIRD-2.1", heading: 2 });
   assert.ok(pages[0].children.some((block) => block.string.includes("[[Weekly Review]] → [[Weekly Plan]]")));
   assert.ok(pages[0].children.some((block) => block.string === "D:: brain://example/weekly-review"));
   const note = pages[0].children.find((block) => block.string === "Manuscript Note");

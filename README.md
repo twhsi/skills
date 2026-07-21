@@ -31,7 +31,9 @@ LLM context: [https://www.twhsi.com/llms.txt](https://www.twhsi.com/llms.txt)
 
 - Convert long Markdown notes into iMandalArt 2.01 hard-line 9-grid cards.
 - Apply FIRE semantic analysis for card-box thinking, retrieval, and writing structure.
-- Turn permanent notes into BIRD 2.0 Book Addresses, Knowledge Indexes, Routes, Deep Links, and TheBrain manuscript scaffolds.
+- Turn permanent notes into BIRD 2.1 Book Addresses, structured Knowledge Indexes, Routes, verified Deep Links, Semantic Roles, and TheBrain manuscript scaffolds.
+- Compress answers with `concise-key-points`: reduce default length by 70% while retaining at least 95% of essential information.
+- Compile source material into a verified A4 one-sheet eight-page booklet, synchronized reading PDF, print imposition, and editable DOCX.
 - Generate agent-readable metadata through `agent.json`, `skills.json`, and `llms.txt`.
 - Route daily planning, weekly planning, booklet, EPUB, Markdown, and knowledge-management workflows.
 - Extract eight keywords and render a distributed weighted graph with definitions, evidence, and blacklist control.
@@ -107,20 +109,30 @@ Prove nothing   Build index   Guitar and sun
 
 Use it for weekly planning, writing focus, knowledge capture, and CJK note workflows where visual stability matters as much as semantic compression.
 
-## Featured: Eight Page Booklet 2.0
+## Latest Skill Updates
 
-[`eight-page-booklet`](skills/eight-page-booklet/) turns text, notes, images, BIRD Graph JSON, iMandalArt grids, 64+8+1 structures, FIRE material, daily plans, Bike or Bonsai outlines, templates, and PDFs into a printable, cuttable, and foldable eight-page booklet made from one A4 sheet.
+### BIRD 2.1 Book Deconstructor
+
+[`thebrain-bird-address`](skills/thebrain-bird-address/) turns manuscripts and permanent notes into addressable knowledge objects. BIRD 2.1 formalizes `B = Book Address`, `I = Weight + Type + Keyword + Alias`, `R = Route`, and `D = exact Deep Link`, with optional evidence-based Semantic Roles. It supports Excel, TheBrain scaffolds, Roam JSON, and monochrome double nine-grid outputs.
+
+### 言簡意賅｜講重點｜Concise
+
+[`concise-key-points`](skills/concise-key-points/) produces high-information-density answers: conclusion first, three to five key points, minimal repetition, and no unnecessary background. Its default target is 70% shorter while retaining at least 95% of essential information.
+
+### A4 Eight Page Booklet 2.0
+
+[`a4-eight-page-booklet`](skills/a4-eight-page-booklet/) turns text, notes, images, BIRD Graph JSON, iMandalArt grids, 64+8+1 structures, FIRE material, daily plans, Bike or Bonsai outlines, templates, and PDFs into a printable, cuttable, and foldable eight-page booklet made from one A4 sheet.
 
 The skill does more than place content into eight panels. It separates content from layout, normalizes the source into `BookletManifest 2.0`, and generates every reading, printing, preview, and validation artifact from the same manifest.
 
 - Page 1 can hold the cover and overview. In BIRD or 64+8+1 mode, it contains one directory nine-grid and one keyword nine-grid.
 - Pages 2–8 can form seven Routes. Each page keeps one central claim, three to five concise points, and one ordered reading path.
 - iMandalArt spiral-order coordinates are preserved together with source IDs, BIRD Addresses, citations, and cross-route notes.
-- Outputs include eight upright single-page PDFs, an eight-page reading PDF, an A4 landscape print imposition, preview images, and a validation report.
-- The fixed imposition order is `4, 3, 2, 1` upside down on the top row and `5, 6, 7, 8` upright on the bottom row.
-- Four validation levels check structure, typography, imposition, and visual quality, including page numbers, Chinese-capable fonts, clipping, rotation, blank pages, and text overlap.
+- Outputs include eight upright A7 page PDFs, an eight-page reading PDF, an A4 landscape print imposition, an editable DOCX, preview images, and a validation report.
+- The fixed imposition order is `6, 7, 8, 1` upright on the top row and `5, 4, 3, 2` rotated 180 degrees on the bottom row.
+- Validation checks structure, typography, imposition, visual quality, Apple Pages compatibility, and source fidelity when required.
 
-Full skill specification and installation source: [`skills/eight-page-booklet/SKILL.md`](skills/eight-page-booklet/SKILL.md)
+Full skill specification and installation source: [`skills/a4-eight-page-booklet/SKILL.md`](skills/a4-eight-page-booklet/SKILL.md)
 
 ## What This Is
 
@@ -135,11 +147,12 @@ Full skill specification and installation source: [`skills/eight-page-booklet/SK
 |---|---|
 | [`imandalart`](skills/imandalart/) | Compress source material into one CJK-friendly 3x3 Mandala card. |
 | [`fire-analysis-card`](skills/fire-analysis-card/) | Turn Chinese notes and manuscripts into FIRE semantic analysis cards. |
-| [`thebrain-bird-address`](skills/thebrain-bird-address/) | Turn permanent notes and complex manuscripts into validated BIRD 2.0 Excel and TheBrain Type/Tag writing scaffolds. |
+| [`thebrain-bird-address`](skills/thebrain-bird-address/) | Turn permanent notes and complex manuscripts into validated BIRD 2.1 knowledge addresses, Excel, TheBrain, Roam, and printable index outputs. |
+| [`concise-key-points`](skills/concise-key-points/) | Compress answers to the fewest useful words while retaining essential facts, constraints, and action items. |
 | [`todays-daily-plan`](skills/todays-daily-plan/) | Convert spoken planning notes into an Obsidian day-plan Mandala grid. |
 | [`weekly-reverse-review`](skills/weekly-reverse-review/) | Turn YEAR, Week, Day, and Inbox evidence into one happiness-and-peace-centered weekly plan. |
 | [`keyword-graph-view`](skills/keyword-graph-view/) | Extract eight keywords and build a centerless weighted network with node notes and evidence. |
-| [`eight-page-booklet`](skills/eight-page-booklet/) | Compile articles, BIRD routes, iMandalArt grids, plans, or PDFs into one printable A4 foldable eight-page mini book. |
+| [`a4-eight-page-booklet`](skills/a4-eight-page-booklet/) | Compile articles, BIRD routes, iMandalArt grids, plans, or PDFs into one verified A4 foldable eight-page mini book. |
 | [`project-note-json-to-epub`](skills/project-note-json-to-epub/) | Turn structured project-note JSON into EPUB and publishing outputs. |
 | [`markdown-nine-grid-clipboard`](skills/markdown-nine-grid-clipboard/) | Convert grids and cards into Markdown table workflows. |
 
@@ -167,7 +180,7 @@ Open the live generated table:
 
 Featured metadata check: [`imandalart`](skills/imandalart/) declares `v2.01`, and [`fire-analysis-card`](skills/fire-analysis-card/) declares `v2.0`.
 
-[`thebrain-bird-address`](skills/thebrain-bird-address/) implements BIRD 2.0: `B = Book Address`, `I = Knowledge Index`, `R = Route`, and `D = Deep Link`. It complements FIRE by moving from reusable permanent notes into project notes, chapter structures, and book production.
+[`thebrain-bird-address`](skills/thebrain-bird-address/) implements BIRD 2.1: `B = Book Address`, `I = Weight + Type + Keyword + Alias`, `R = Route`, and `D = exact Deep Link`, with optional evidence-based Semantic Roles. It complements FIRE by moving from reusable permanent notes into project notes, chapter structures, and book production.
 
 ## Registry Routes
 
@@ -199,11 +212,12 @@ From the repository root:
 ```bash
 cp -R skills/fire-analysis-card ~/.codex/skills/
 cp -R skills/thebrain-bird-address ~/.codex/skills/
+cp -R skills/concise-key-points ~/.codex/skills/
 cp -R skills/todays-daily-plan ~/.codex/skills/
 cp -R skills/weekly-reverse-review ~/.codex/skills/
 cp -R skills/imandalart ~/.codex/skills/
 cp -R skills/keyword-graph-view ~/.codex/skills/
-cp -R skills/eight-page-booklet ~/.codex/skills/
+cp -R skills/a4-eight-page-booklet ~/.codex/skills/
 ```
 
 Then validate a skill:

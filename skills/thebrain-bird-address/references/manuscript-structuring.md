@@ -1,4 +1,4 @@
-# BIRD 2.0 Manuscript Structuring
+# BIRD 2.1 Manuscript Structuring
 
 ## Segmentation Test
 
@@ -19,7 +19,7 @@ Create a new item when the core claim, reader question, independent case, defini
 │   ├── [項編號] 項名
 │   └── [項編號] 項名
 
-【BIRD 2.0 清單】
+【BIRD 2.1 清單】
 BookAddress | StructuralType | I.Weight | I.TypeCode | I.Keyword | I.Alias | Role | Route | DeepLink | Tag
 
 【BIRD JSON】

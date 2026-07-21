@@ -108,7 +108,7 @@ Keep unverified claims explicit. Do not place long citations in small paper cell
 
 ## Render
 
-Store paper size, page size, safe inset, template ID, font choice, output names, and preview resolution. The canonical imposition is A4 landscape with top `4,3,2,1` rotated 180 degrees and bottom `5,6,7,8` upright.
+Store paper size, page size, safe inset, template ID, font choice, output names, and preview resolution. The canonical imposition is A4 landscape with top `6,7,8,1` upright and bottom `5,4,3,2` rotated 180 degrees.
 
 ## Validation
 
@@ -125,4 +125,3 @@ Represent every check as:
 ```
 
 Allow `pass`, `fail`, and `not-run`. Allow `automated`, `visual`, `physical`, and `mixed` methods. Never use `pass` without evidence from the current build.
-

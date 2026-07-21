@@ -115,7 +115,7 @@ export function normalizeBirdRecord(record, position = 0) {
   const code = bookCode(bookAddress, textValue(record.bookCode, record.BookCode));
 
   return {
-    version: textValue(record.version, record["版本"], "BIRD-2.0"),
+    version: textValue(record.version, record["版本"], "BIRD-2.1"),
     bookAddress,
     bookCode: code,
     title: pageTitle(record, code, keyword),

@@ -1,4 +1,4 @@
 interface:
-  display_name: "BIRD 2.0 拆書分析"
-  short_description: "把書稿拆成 BIRD Excel、TheBrain 與 Roam JSON"
-  default_prompt: "Use $thebrain-bird-address to deconstruct this manuscript into a validated BIRD 2.0 knowledge address system and export Roam Research import JSON when requested."
+  display_name: "BIRD 2.1 拆書分析"
+  short_description: "拆解書稿並輸出 TheBrain、Roam 與黑白雙九宮"
+  default_prompt: "Use $thebrain-bird-address to deconstruct this manuscript with BIRD 2.1 and create a monochrome printable double nine-grid when requested."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "言簡意賅｜講重點｜Concise"
+  short_description: "以最低字數保留最高資訊密度，快速輸出完整核心答案內容"
+  default_prompt: "Use $concise-key-points to answer concisely and focus only on the key points."

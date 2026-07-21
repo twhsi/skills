@@ -1,4 +1,4 @@
-# BIRD 2.0 Excel Schema
+# BIRD 2.1 Excel Schema
 
 ## BIRD分析
 
@@ -10,7 +10,7 @@ Use one knowledge node per row in this exact order:
 
 Rules:
 
-- Set `版本` to `BIRD-2.0`; use `BIRD-2.1-preview` only when Role is intentionally assigned.
+- Set `版本` to `BIRD-2.1`. Keep Role blank unless it is intentionally assigned from sufficient evidence.
 - Keep `B_BookAddress` unique for each structural node.
 - Use only `I4/I3/I2/I1` in `I_Weight`.
 - Use only controlled codes in `I_TypeCode`; write the matching English type in `I_Type`.
@@ -44,7 +44,7 @@ Create separate table blocks for:
 
 Create only for legacy migration. Map:
 
-| Legacy | BIRD 2.0 |
+| Legacy | BIRD 2.1 |
 |---|---|
 | 書名/部/章/節/項/目 | B_BookAddress components |
 | 標題 | I_Keyword or display title |

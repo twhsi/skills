@@ -30,7 +30,7 @@ const axisRules = [
     label: "LLM",
     route: "/llm",
     summary: "Repeatable skills, structured inputs, scripts and metadata for mainstream LLM agents.",
-    match: ["project-note-json-to-epub", "epub-hypercard-obsidian", "eight-page-booklet"]
+    match: ["concise-key-points", "project-note-json-to-epub", "epub-hypercard-obsidian", "a4-eight-page-booklet"]
   },
   {
     id: "desktop",
@@ -44,7 +44,7 @@ const axisRules = [
     label: "Publish",
     route: "/publish",
     summary: "BIRD manuscript scaffolds, Roam JSON, booklets, EPUBs, HyperCard returns and public GitHub publishing paths.",
-    match: ["thebrain-bird-address", "project-note-json-to-epub", "epub-hypercard-obsidian", "eight-page-booklet"]
+    match: ["thebrain-bird-address", "project-note-json-to-epub", "epub-hypercard-obsidian", "a4-eight-page-booklet"]
   }
 ];
 
